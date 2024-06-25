@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container">
+      <div class="my_page my_favorite">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 관심상품</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li class="active">
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li>
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pd_found_gp favorite_pd_found_gp">
+          <h6>
+            등록되어 있는 관심상품은 총 <span class="txt_red">2</span> 개
+            입니다.
+          </h6>
+          <div class="custom-select">
+            <select name="" id="">
+              <option value="">상품정렬방식</option>
+              <option value="">조회수 순</option>
+              <option value="">최근등록순 순</option>
+              <option value="">최저가격 순</option>
+              <option value="">최고가격 순</option>
+            </select>
+          </div>
+        </div>
+        <div class="my_page my_favorite favorite_cont">
+          <table class="favorite_cont table_cont">
+            <thead>
+              <tr>
+                <th class="th_label2" style="width: 5%">선택</th>
+                <th class="th_label2" colspan="2">관심상품정보</th>
+                <th class="th_label2" style="width: 15%">판매가</th>
+                <th class="th_label2" style="width: 15%">저장일시</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td_label4" style="padding: 8px 0px">
+                  <input type="checkbox" name="select_checkbox" />
+                </td>
+                <td class="td_label4" style="padding-left: 10px">
+                  <a href="/dist/product_detail.html">
+                    <img
+                      src="/assets/imgs/sub02/my_order/toy.jpg"
+                      alt="img"
+                      style="width: 60px; height: 60px"
+                    />
+                  </a>
+                </td>
+                <td
+                  class="td_label4"
+                  style="
+                    text-align: left;
+                    padding: 8px 0px 8px 12px;
+                    width: 597px;
+                  "
+                >
+                  <p>
+                    <a href="/dist/product_detail.html"> UV 칫솔살균기 리틀어피치 </a>
+                    <img
+                      src="/assets/imgs/sub02/icon_rec.gif"
+                      alt="img"
+                      class="icon"
+                    />
+                  </p>
+                </td>
+                <td class="td_label4" style="padding: 8px 0px">23,750원</td>
+                <td class="td_label4" style="padding: 8px 0px">2024-06-12</td>
+              </tr>
+              <tr>
+                <td class="td_label4" style="padding: 8px 0px">
+                  <input type="checkbox" name="select_checkbox" />
+                </td>
+                <td class="td_label4" style="padding-left: 10px">
+                  <a href="">
+                    <img
+                      src="/assets/imgs/sub02/my_order/coffee.jpg"
+                      alt="img"
+                      style="width: 60px; height: 60px"
+                    />
+                  </a>
+                </td>
+                <td
+                  class="td_label4"
+                  style="
+                    text-align: left;
+                    padding: 8px 0px 8px 12px;
+                    width: 597px;
+                  "
+                >
+                  <p>
+                    <a href=""> 3단 자동 우산 </a>
+                    <img
+                      src="/assets/imgs/sub02/icon_rec_purple.gif"
+                      alt="img"
+                      class="icon"
+                    />
+                    <img
+                      src="/assets/imgs/sub02/icon_rec_yellow.gif"
+                      alt="img"
+                      class="icon"
+                    />
+                    <img
+                      src="/assets/imgs/sub02/icon_sale.gif"
+                      alt="img"
+                      class="icon"
+                    />
+                  </p>
+                  <p>색상 : 흰색, 사이즈 : 230,</p>
+                </td>
+                <td class="td_label4" style="padding: 8px 0px">9,900원</td>
+                <td class="td_label4" style="padding: 8px 0px">2024-06-12</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button_list_conts2">
+            <div class="list_btn_container">
+              <a href="#" class="list_btn">선택삭제</a>
+              <a href="#" class="list_btn">장바구니 담기</a>
+            </div>
+          </div>
+        </div>
+        <div class="page_btns">
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-first.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-prev.jpg"
+              alt=""
+            />
+          </button>
+          <div class="page_no">
+            <a href="#">1</a>
+          </div>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-last.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-next.jpg"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

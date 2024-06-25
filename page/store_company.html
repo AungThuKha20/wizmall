@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="container store_company">
+      <div class="store_info">
+        <div class="store_info_img">
+          <img
+            src="/assets/imgs/sub3_img/mini_shop.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="store_info_content">
+          <div class="store_btn_gp">
+            <h4>입점업체<span>2</span></h4>
+            <button class="store_ppl_btn">
+              <img
+                src="/assets/imgs/sub02/mall_save.png"
+                alt=""
+              />
+              <span>찜스토어 2명</span>
+            </button>
+            <button class="inqury_btn">
+              <span>상품문의</span>
+            </button>
+            <button class="pd_review_btn">
+              <span>상품후기</span>
+            </button>
+          </div>
+          <div class="store_mail_basic">
+            <h3>기본정보</h3>
+            <table class="mail_basic_table">
+              <tr class="tr_head">
+                <th class="mail_th_1">판매자</th>
+                <th class="mail_th_2">대표자(testmall2)</th>
+                <th class="mail_th_1">개설일</th>
+                <th class="mail_th_3">2023-04-24 14:30:52</th>
+              </tr>
+              <tr>
+                <th class="mail_th_1">대표번호</th>
+                <th class="mail_th_2">000-0000-0000	</th>
+                <th class="mail_th_1">이메일</th>
+                <th class="mail_th_3">test@test.com</th>
+              </tr>
+              <tr class="tr_last">
+                <th class="mail_th_1">판매자</th>
+                <th class="mail_th_2">서울 송파구 동남로 99 0000</th>
+                <th class="mail_th_1"></th>
+                <th class="mail_th_3"></th>
+              </tr>
+            </table>
+          </div>
+        </div> 
+      </div>
+      <div class="store_cate">
+        <h5>전체카테고리 <span class="txt_red">9</span>개 카테고리 / 총 <span class="txt_red">7</span>개 상품이 있습니다</h5>
+        <div  class="store_input_gp">
+          <input placeholder="상품명을 입력하세요." type="text">
+          <button class="store_submit_btn">검색</button>
+        </div>
+      </div>
+      <div class="store_cate_list">
+        <div class="store_cate_sub_list">
+          <a href="">여성의류 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">남성의류 (<strong>4</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">패션잡화 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">화장품/뷰티 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">출산/완구/아동용품 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">가구/인테리어/리빙 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">취미/스포츠/자동차 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">디지털/가전 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href="">도서/상품권 (<strong>0</strong>)</a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href=""></a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href=""></a>
+        </div>
+        <div class="store_cate_sub_list">
+          <a href=""></a>
+        </div>
+
+      </div>
+      <div class="pd_found_gp">
+        <h6>총<span class="txt_red">4</span> 개의 상품이 검색되었습니다.</h6>
+        <div class="custom-select">
+          <select name="" id="">
+            <option value="">상품정렬방식</option>
+            <option value="">조회수 순</option>
+            <option value="">최근등록순 순</option>
+            <option value="">최저가격 순</option>
+            <option value="">최고가격 순</option>
+          </select>
+        </div>
+      </div>
+      <div class="product_cards_container">
+        <!--------- card1 -------------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/icons/plus_files/2004210027_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">3단 자동 우산</h4>
+            <div>
+              <img
+                src="/assets/imgs/icons/plus_files/icon_sale.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/icons/plus_files/icon_new.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/icons/plus_files/icon_hit.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700"> 9,900 </strong>원</span
+              >
+              <span class="product_cost">
+                <strong style="font-weight: 700">22000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+        <!---------- card2--- ----------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/icons/plus_files/2004210016_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">
+              [디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)
+            </h4>
+            <div>
+              <img
+                src="/assets/imgs/icons/plus_files/icon_new.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/icons/plus_files/icon_new.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">22,000</strong> 원</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!------- card3-------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/icons/plus_files/2004210009_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">[디즈니] 클립보드</h4>
+            <div>
+              <img
+                src="/assets/imgs/sub02/icon_new.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price">
+                <strong style="font-weight: 700"> 6,840 </strong>
+                원
+              </span>
+              <span class="product_cost">
+                <strong style="font-weight: 700">7,600</strong>원
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!---------- card4 ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/icons/plus_files/2004210004_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">
+              TS 뉴프리미엄 TS샴품 500g X 2P + 100g
+            </h4>
+            <div>
+              <img
+                src="/assets/imgs/icons/plus_files/icon_new.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">196,230</strong>원</span
+              >
+              <span class="product_cost"
+                ><strong style="font-weight: 700">211,000</strong> 원</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!------------- card 5 ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/icons/plus_files/2004210016_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">
+              [클레린] 스마트 쿡포트 CLN-X303 색상 택1
+            </h4>
+            <div>
+              <img
+                src="	/assets/imgs/icons/plus_files/icon_new.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/icons/plus_files/icon_new.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">37,900</strong>원</span
+              >
+              <span class="product_cost"
+                ><strong style="font-weight: 700">129,000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!------------- card 6 ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/icons/plus_files/2004210030_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">
+              [마이템] 시원에어 무릎케어 안마기 GKNM-001
+            </h4>
+            <div>
+              <img
+                src="/assets/imgs/icons/plus_files/icon_sale.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/icons/plus_files/icon_new.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/icons/plus_files/icon_hit.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price">
+                <strong style="font-weight: 700">134,000</strong>원</span
+              >
+              <span class="product_cost"
+                ><strong style="font-weight: 700">255,000</strong>원
+              </span>
+            </div>
+          </div>
+        </a>
+        <!------------- card7  ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/icons/plus_files/2004210010_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">
+              TS 뉴프리미엄 TS샴품 500g X 2P + 100g
+            </h4>
+            <div class="icon">
+              <img
+                src="/assets/imgs/icons/plus_files/icon_best.gif"
+              />&nbsp;
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">12000</strong>원</span
+              >
+              <span class="product_cost">
+                <strong style="font-weight: 700">211,000</strong>원
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- pages buttons -->
+    <div class="page_btns">
+      <button class="page_btn">
+        <img
+          src="/assets/imgs/icons/page-first.jpg"
+          alt=""
+        />
+      </button>
+      <button class="page_btn" style="margin: 0 5px">
+        <img
+          src="/assets/imgs/icons/page-prev.jpg"
+          alt=""
+        />
+      </button>
+      <div class="page_no">
+        <a href="#">1</a>
+      </div>
+      <button class="page_btn" style="margin: 0 5px">
+        <img
+          src="/assets/imgs/icons/page-last.jpg"
+          alt=""
+        />
+      </button>
+      <button class="page_btn">
+        <img
+          src="/assets/imgs/icons/page-next.jpg"
+          alt=""
+        />
+      </button>
+    </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

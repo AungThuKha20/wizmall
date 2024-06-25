@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="post_container delivery_container">
+      <div class="delivery_box">
+        <h2 class="delivery_title">배송지 관리</h2>
+        <ul>
+          <li>배송지명</li>
+          <li>수취인명</li>
+          <li>연락처</li>
+          <li>주소</li>
+        </ul>
+        <h2 class="delivery_title">배송지 관리</h2>
+        <ul>
+          <li>배송지명</li>
+          <li>수취인명</li>
+          <li>연락처</li>
+          <li>주소</li>
+        </ul>
+        <div class="delivery-mem-btn only">
+          <a href="javascript:window.close();">닫기</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/window.js"></script>
+  </body>
+</html>

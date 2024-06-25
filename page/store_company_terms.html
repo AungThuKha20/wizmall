@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container store_company_terms my_page_container">
+      <div class="store_company_terms form_table_container">
+        <div class="title_container">
+          <h2 class="title">입점업체 정보 입력</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">입점업체 정보 입력</span>
+          </div>
+        </div>
+       <div class="table1_container">
+        <h2 class="store_company_terms_header">기본정보 입력</h2>
+        <table class="form_table">
+          <tbody>
+            <tr class="tr_responsive">
+              <td class="td_label">아이디 *</td>
+              <td class="td_content">
+                <div class="td_content sub_span_container">
+                  <input type="text" id="ID" name="ID" class="text_box" />
+                  <button>중복확인</button>
+                  <span class="td_content sub_span"
+                    >(3~12 영문, 숫자, 가입 후 ID변경은 불가함을
+                    알려드립니다.)</span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">비밀번호 *</td>
+              <td class="td_content">
+                <div class="td_content sub_span_container">
+                  <input type="password" id="psw" name="psw" class="Psw_box" />
+                  <span class="td_content sub_span"
+                    >(특수문자 및 한글입력은 불가하며 대소문자를 구별합니다.
+                    6자리 이상 입력해주시기 바랍니다)</span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">비밀번호 확인 *</td>
+              <td class="td_content">
+                <div class="td_content sub_span_container">
+                  <input
+                    type="password"
+                    id="Confirmpsw"
+                    name="Confirmpsw"
+                    class="Psw_box"
+                  />
+                  <span class="td_content sub_span"
+                    >비밀번호 확인을 위해 다시 한 번 입력해 주시기
+                    바랍니다.</span
+                  >
+                </div>
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">담당자 *</td>
+              <td class="td_content">
+                <input type="password" id="psw" name="psw" class="Psw_box" />
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">예금주 *</td>
+              <td class="td_content">
+                <input
+                  type="text"
+                  id="acc_name"
+                  name="acc_name"
+                  class="text_box"
+                />
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">은행명 *</td>
+              <td class="td_content">
+                <input
+                  type="text"
+                  id="acc_bank"
+                  name="acc_bank"
+                  class="text_box"
+                />
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">계좌번호 *</td>
+              <td class="td_content">
+                <input
+                  type="text"
+                  id="acc_num"
+                  name="acc_num"
+                  class="text_box"
+                />
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">전화번호</td>
+              <td class="td_content3">
+                <div class="td_content_sub">
+                  <input type="text" id="tphone1" name="tphone1" /> -
+                  <input type="text" id="tphone2" name="tphone2" /> -
+                  <input type="text" id="tphone3" name="tphone3" />
+                </div>
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">휴대폰 번호 *</td>
+              <td class="td_content4">
+                <div class="td_content_sub">
+                  <input type="text" id="hphone1" name="hphone1" /> -
+                  <input type="text" id="hphone2" name="hphone2" /> -
+                  <input type="text" id="hphone3" name="hphone3" />
+                </div>
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">팩스</td>
+              <td class="td_content4">
+                <div class="td_content_sub">
+                  <input type="text" id="com_fax1" name="com_fax1" /> -
+                  <input type="text" id="com_fax2" name="com_fax2" /> -
+                  <input type="text" id="com_fax3" name="com_fax3" />
+                </div>
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">이메일 *</td>
+              <td class="td_content5">
+                <input type="text" id="email" name="email" /><br />
+              </td>
+            </tr>
+            <tr class="tr_responsive">
+              <td class="td_label">홈페이지</td>
+              <td class="td_content_sub3">
+                <span>http://</span>
+                <input
+                  type="text"
+                  id="homepage"
+                  name="homepage"
+                  class="text_box"
+                  size="30"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+        <div class="table2_container">
+          <h2 class="store_company_terms_header">기본정보 입력</h2>
+          <table class="form_table">
+            <tbody>
+              <tr class="tr_responsive">
+                <td class="td_label">사업자번호 *</td>
+                <td class="td_content">
+                  <input
+                    type="text"
+                    id="com_num"
+                    name="com_num"
+                    class="text_box"
+                  />
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="td_label">회사명 *</td>
+                <td class="td_content">
+                  <input
+                    type="text"
+                    id="com_name"
+                    name="com_name"
+                    class="text_box"
+                  />
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="td_label">대표자 *</td>
+                <td class="td_content">
+                  <input
+                    type="text"
+                    id="com_owner"
+                    name="com_owner"
+                    class="text_box"
+                  />
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="td_label2">주소 *</td>
+                <td colspan="9" class="td_content2">
+                  <div class="postalCode_box2_cont">
+                    <div>
+                      <input
+                        class="postalCode_box2"
+                        type="text"
+                        id="postalCode1"
+                        name="postalCode1"
+                      />
+                    </div>
+                    <div>
+                      <button>우편번호 찾기</button>
+                    </div>
+                  </div>
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode2"
+                    name="postalCode2"
+                  /><br />
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode3"
+                    name="postalCode3"
+                  />
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="td_label">업태 *</td>
+                <td class="td_content">
+                  <input
+                    type="text"
+                    id="com_class"
+                    name="com_class"
+                    class="text_box"
+                  />
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="td_label">종목 *</td>
+                <td class="td_content">
+                  <input
+                    type="text"
+                    id="com_kind"
+                    name="com_kind"
+                    class="text_box"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table3_container">
+          <h2 class="store_company_terms_header"></h2>
+          <table class="form_table">
+            <tbody>
+              <tr class="tr_responsive">
+                <td class="td_label">자동등록방지코드 *</td>
+                <td class="td_content">
+                  <div class="td_content sub_container">
+                    <img
+                      src="/assets/imgs/sub02/norobot_image.png"
+                      alt=""
+                      style="width: 82px; height: 22px"
+                    />
+                    <input
+                      type="text"
+                      id="vcode"
+                      name="vcode"
+                      class="text_box"
+                      style="margin-left: 0px"
+                    />
+                    <span class="td_content sub_span">
+                      * 왼쪽의 자동등록방지 코드를 입력하세요.</span
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="hidden_btn_cont">
+        <button type="submit" class="submit_btn hidden_btn">수정</button>
+      </div>
+      <div class="button_list_conts">
+        <div></div>
+        <div>
+          <button type="submit" class="submit_btn">확인</button>
+          <button type="button" class="cancel_btn">취소</button>
+        </div>
+        <div></div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

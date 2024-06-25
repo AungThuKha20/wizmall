@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="gry_bar1"></div>
+    <div class="container product_list product_list_category">
+      <h2 class="product_list_title">여성의류</h2>
+      <div class="list_menu_container product_list_menu">
+        <ul class="list_menu">
+          <li>
+            <a href="/dist/product_list_category1.html"> 하위분류 1</a>
+          </li>
+          <li>
+            <a href="/dist/product_list_category1.html"> 하위분류 2</a>
+          </li>
+          <li>
+            <a href="/dist/product_list_category1.html">하위분류 3</a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+        </ul>
+      </div>
+      <div class="product_content_container">
+        <span class="count"
+          >카테고리에 <span style="color: #ef4023">10</span>개의 상품이 등록되어
+          있습니다.</span
+        >
+        <div class="product_select">
+          <select name="orderby" onchange="this.form.submit();">
+            <option value="">상품정렬방식</option>
+            <option value="">조회수 순</option>
+            <option value="">최근등록순 순</option>
+            <option value="">최저가격 순</option>
+            <option value="">최고가격 순</option>
+          </select>
+        </div>
+      </div>
+      <div class="product_cards_container">
+        <!--------- card1 -------------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210033_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">UV 칫솔살균기 리틀어피치</h4>
+            <div>
+              <img
+                src="/assets/imgs/sub02/icon_rec_purple.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700"> 23,750 </strong>원</span
+              >
+              <span class="product_cost">
+                <strong style="font-weight: 700">25,000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+        <!---------- card2--- ----------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210022_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">율율 깨발랄 소프트젤리케이스</h4>
+
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">5000</strong> 원</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!------- card3-------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210021_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">잼스티커북-긴사이즈</h4>
+
+            <div class="product_price_list">
+              <span class="product_price">
+                <strong style="font-weight: 700"> 8800 </strong>
+                원
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!---------- card4 ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210020_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">태슬 가죽 필통</h4>
+            <div>
+              <img
+                src="/assets/imgs/sub02/icon_sale.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">12000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!------------- card 5 ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210019_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">
+              스누피 캐릭터 마스코트 볼펜 (6 option)
+            </h4>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">2400</strong>원</span
+              >
+              <span class="product_cost"
+                ><strong style="font-weight: 700">3000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+
+        <!------------- card 6 ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210016_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">Value - 캐시북</h4>
+            <div>
+              <img
+                src="/assets/imgs/sub02/icon_sale.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price">
+                <strong style="font-weight: 700">45000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+        <!------------- card7  ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210015_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">[디즈니] 클립보드</h4>
+            <div class="icon">
+              <img
+                src="/assets/imgs/sub02/icon_new.gif"
+              />&nbsp;
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">6840</strong>원</span
+              >
+              <span class="product_cost">
+                <strong style="font-weight: 700">7,600</strong>원
+              </span>
+            </div>
+          </div>
+        </a>
+        <!------------- card8  ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210014_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">펭수 먼슬리스케줄러</h4>
+            <div>
+              <span class="percent">10%</span>
+              <img
+                src="/assets/imgs/sub02/icon_rec.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/sub02/icon_new.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">4000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+        <!------------- card9  ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210011_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">[Peanuts] 스누피 폼폼파우치</h4>
+            <div>
+              <span class="percent">10%</span>
+              <img
+                src="/assets/imgs/sub02/icon_hit.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/sub02/icon_rec.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">9000</strong>원</span
+              >
+            </div>
+          </div>
+        </a>
+        <!------------- card10  ---------->
+        <a href="/dist/product_detail.html" class="product_card_item">
+          <button class="wish_icon"></button>
+          <div class="product_img">
+            <img
+              src="/assets/imgs/sub02/2004210033_R.jpg"
+              alt=""
+            />
+          </div>
+          <div class="product_card_item_content">
+            <h4 class="product_item_title">Compact bag in bag</h4>
+            <div>
+              <span class="percent">10%</span>
+              <img
+                src="/assets/imgs/sub02/icon_coupon.gif"
+                class="icon"
+              />
+              <img
+                src="/assets/imgs/sub02/icon_rec.gif"
+                class="icon"
+              />
+            </div>
+            <div class="product_price_list">
+              <span class="product_price"
+                ><strong style="font-weight: 700">16830</strong>원</span
+              >
+              <span class="product_cost">
+                <strong style="font-weight: 700">7,600</strong>원
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- pages buttons -->
+    <div class="page_btns">
+      <button class="page_btn">
+        <img
+          src="/assets/imgs/icons/page-first.jpg"
+          alt=""
+        />
+      </button>
+      <button class="page_btn" style="margin: 0 5px">
+        <img
+          src="/assets/imgs/icons/page-prev.jpg"
+          alt=""
+        />
+      </button>
+      <div class="page_no">
+        <a href="#">1</a>
+      </div>
+      <button class="page_btn" style="margin: 0 5px">
+        <img
+          src="/assets/imgs/icons/page-last.jpg"
+          alt=""
+        />
+      </button>
+      <button class="page_btn">
+        <img
+          src="/assets/imgs/icons/page-next.jpg"
+          alt=""
+        />
+      </button>
+    </div>
+    ${require('./include/_footer.html')}
+  </body>
+</html>

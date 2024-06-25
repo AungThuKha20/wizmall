@@ -1,0 +1,987 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------------
+    File definitio: Responsive css on all pages
+    Order: header > main > sub pages > footer
+-------------------------------------------------------------------*/
+
+@media screen and (max-width: 1470.98px) {
+}
+
+@media screen and (max-width: 1300.98px) {
+  .order_return_cont {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+  .shopping_detail_cont {
+    width: 100%;
+    min-width: 1200px;
+  }
+}
+@media screen and (max-width: 1000.98px) {
+  /* for footer */
+
+  .footer .foot_info > div {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  /* footer end */
+  .form_table .td_label {
+    width: 20%;
+  }
+  .form_table .td_label_7 {
+    width: 20%;
+  }
+  .form_table .td_content .Psw_box {
+    width: 30%;
+  }
+  .form_table .td_content2 .postalCode_box {
+    width: 60%;
+  }
+  /* .form_table .td_content2 .postalCode_box2 {
+    width: 30%;
+  } */
+  .point_cont .table_cont .th_label2 {
+    width: 25%;
+  }
+  .store_company_terms .form_table .td_label{
+    width: 20%;
+  }
+  .store_company_terms .form_table .td_content .sub_span_container{
+    flex-wrap: wrap;
+  }
+  .store_company_terms .form_table .td_content .sub_span_container input[type=text]{
+    width: 200px;
+  }
+  .store_company_terms .form_table .td_content .sub_span_container input[type=password]{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 200px;
+  }
+  .store_company_terms .form_table .td_content input[type=password]{
+    width: 200px;
+  }
+  .store_company_terms .form_table .td_content .sub_span_container .sub_span{
+    width: 100%;
+   margin-left: 16px;
+   }
+}
+@media screen and (max-width: 767.98px) {
+  .button_list_conts button {
+    width: 120px;
+    height: 55px;
+    font-size: 13px;
+  }
+  .form_table .td_label {
+    width: 20%;
+    font-size: 14px;
+  }
+  .form_table .td_label2 {
+    font-size: 14px;
+  }
+  .form_table .td_label_7 {
+    width: 20%;
+    font-size: 14px;
+  }
+  .form_table .td_content .Psw_box {
+    width: 24%;
+  }
+  .form_table .td_content2 .postalCode_box {
+    width: 60%;
+  }
+  /* .form_table .td_content2 .postalCode_box2 {
+    width: 24%;
+  } */
+  .form_table .label_box {
+    font-size: 14px;
+  }
+  .form_table .td_content2 button {
+    font-size: 14px;
+  }
+  .form_table .sub_span{
+    font-size: 14px;
+    letter-spacing: -0.075rem;
+  }
+  .form_table .td_content .checkbox_cont label {
+    font-size: 14px;
+  }
+  .order_cont {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+  .order_cont .table_cont {
+    width: 100%;
+    min-width: 900px;
+  }
+  .order_cont .table_cont th{
+    font-size: 14px;
+  }
+  .order_cont .table_cont .td_label2{
+    font-size: 14px;
+  }
+  .order_detail_cont {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+  .order_detail_cont .table_cont {
+    width: 100%;
+    min-width: 900px;
+  }
+  .order_detail_cont .table_cont th{
+    font-size: 14px;
+  }
+  .order_detail_cont .table_cont td{
+    font-size: 14px;
+  }
+  .order_detail_cont2 .table_cont td{
+    font-size: 14px;
+  }
+  .my_order_detail .order_title{
+    font-size: 18px;
+  }
+  .order_cancel_cont {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+  .order_cancel_cont .table_cont {
+    width: 100%;
+    min-width: 900px;
+  }
+  .detail_cont .table_cont th,
+  .detail_cont .table_cont td {
+    font-size: 14px;
+  }
+  .detail_cont .table_cont .th_label {
+    width: 25%;
+  }
+  .qna_cont .table_cont th,
+  .qna_cont .table_cont td {
+    font-size: 14px;
+  }
+  .qna_cont .table_cont .th_label {
+    width: 25%;
+  }
+  .favorite_cont {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+  .favorite_cont .table_cont {
+    width: 100%;
+    min-width: 750px;
+  }
+  .point_cont {
+    overflow-y: auto;
+    overflow-x: scroll;
+  }
+  .point_cont .table_cont {
+    width: 100%;
+    min-width: 900px;
+  }
+  .mypage_withdrawal .text_conts{
+    font-size: 14px;
+  }
+  .mypage_withdrawal .text_conts .text{
+    font-size: 14px;
+  }
+  .form_table .td_content .checkbox_cont label {
+    font-size: 14px;
+  }
+  .my_qna_create .table_cont th,
+  .my_qna_create .table_cont td{
+    font-size: 14px;
+  }
+  .address_cont .table_cont{
+    margin: 20px 0 0;
+  }
+  .address_cont .table_cont th,
+  .address_cont .table_cont td{
+    font-size: 14px;
+  }
+  .address_cont  .list_btn_container{
+    display: flex;
+    align-items: flex-end;
+  }
+  .address_cont .button_list_conts2 .list_btn_container .for_list_btn_hide{
+    display: none;
+  }
+  .address_cont .form_table{
+    margin: 20px 0 0;
+  }
+  .favorite_cont .table_cont th,
+  .favorite_cont .table_cont td{
+    font-size: 14px;
+  }
+  .point_cont .table_cont th,
+  .point_cont .table_cont td{
+    font-size: 14px;
+  }
+  .coupon_cont .table_cont th,
+  .coupon_cont .table_cont td{
+    font-size: 14px;
+  }
+  .center_company{
+    min-height: 400px;
+  }
+  .center_company p{
+    font-size: 14px;
+  }
+  .page_area .mall_info_text{
+    font-size: 14px;
+  }
+  .mall_info .button_list_conts .go_mall{
+    width: 150px;
+    font-size: 14px;
+ }
+ .my_page .list_menu_container {
+  display: none;
+}
+  .list_menu_container .list_menu li a {
+    font-size: 14px;
+  }
+  .join_arg1_cont label{
+    font-size: 14px;
+  }
+  .mall_join .button_list_conts .mall_join_btn_cont{
+    display: block !important;
+  }
+  .store_company_terms .form_table{
+    border-top: none;
+  }
+  .store_company_terms .form_table,
+  .store_company_terms .form_table tr,
+  .store_company_terms .form_table td,
+  .store_company_terms .form_table tbody,
+  .store_company_terms .form_table td p .form_table div,
+  .store_company_terms .form_table .form_table {
+    width: 100% !important;
+    float: left;
+    clear: both;
+    display: block;
+    text-align: start;
+  }
+  .store_company_terms .form_table td {
+    border-bottom: none;
+  }
+  .store_company_terms .form_table .td_label{
+    background-color: #fff;
+    padding: 0;
+    height: 30px;
+  }
+  .store_company_terms .form_table .td_label2{
+    background-color: #fff;
+    padding: 0;
+    height: fit-content;
+  }
+  .store_company_terms .form_table .tr_responsive {
+    height: fit-content;
+    margin: 10px 0;
+  }
+  .store_company_terms .form_table .td_content .sub_span_container input[type=text]{
+    width: 70%;
+    margin: 0;
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content .sub_span_container input[type=password]{
+    margin: 0;
+    width: 70%;
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content input[type=password]{
+    width: 70%;
+    margin: 0;
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content input[type=text]{
+    width: 70%;
+    margin: 0;
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content .sub_span_container .sub_span{
+    margin: 0;
+   }
+   .store_company_terms .form_table .td_content3 .td_content_sub{
+    margin: 0;
+  }
+  .store_company_terms .form_table .td_content3 .td_content_sub input[type=text]{
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content4 .td_content_sub input[type=text]{
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content5 .td_content_sub input[type=text]{
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content4 .td_content_sub{
+    margin: 0;
+  }
+  .store_company_terms .form_table .td_content5 input[type=text]{
+    margin: 0;
+    width: 70%;
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content_sub3{
+    margin: 0;
+  }
+  .store_company_terms .form_table .td_content_sub3 input[type=text]{
+    width: 55%;
+    margin: 0;
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content2 .postalCode_box2_cont input[type=text]{
+    background-color: #fff;
+  }
+  .store_company_terms .form_table .td_content_sub3 span{
+    margin: 0;
+  }
+  .store_company_terms .form_table .td_content2 .postalCode_box{
+    margin-left: 0px;
+  }
+  .store_company_terms .form_table .td_content2 .postalCode_box2{
+    margin-left: 0px;
+  }
+  .store_company_terms .form_table .td_content .sub_container{
+    margin-left: 0px;
+    flex-wrap: wrap;
+  }
+  .store_company_terms .form_table .td_content .sub_container .sub_span{
+    width: 100%;
+  }
+  .form_table .td_content2 .postalCode_box2{
+    width: 120px;
+  }
+  .form_table .td_content2 .postalCode_box2_cont button{
+    width: 120px;
+  }
+  .table1_container .form_table , .table2_container .form_table{
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  /* footer start */
+  .footer {
+    background-color: white;
+    margin: 0px 0 30px 0;
+    padding: 0px;
+    position: relative;
+  }
+  .footer .foot_menu {
+    display: none;
+  }
+  .footer .footer_inn {
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .foot_info {
+    margin: 15px 0;
+    padding: 0;
+    line-height: 15px;
+    font-size: 14px;
+  }
+  .footer .foot_info div {
+    justify-content: center;
+  }
+  .footer .foot_info_sub {
+    margin-top: 10px;
+  }
+  .footer .foot_right {
+    display: none;
+  }
+  .footer .foot_right_hidden {
+    display: block;
+    margin-top: 30px;
+  }
+  .footer .foot_left {
+    margin: 0px;
+  }
+  .footer .foot_left_hidden {
+    display: block;
+  }
+  .footer .foot_left_hidden .foot_menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer .foot_cr {
+    font-size: 14px;
+  }
+  /* footer end */
+  .header_mobile_hidden{
+    display: none;
+  }
+  .header_pc_hidden{
+    display: block;
+    font-size: 18px;
+    margin: 0;
+  }
+  .my_page .title_container{
+    display: none;
+  }
+  .form_table{
+    border-top: none;
+  }
+  .form_table,
+  .form_table tr,
+  .form_table td,
+  .form_table tbody,
+  .form_table td p .form_table div,
+  .form_table .form_table {
+    width: 100% !important;
+    clear: both;
+    display: block;
+    text-align: start;
+  }
+  .form_table td {
+    border-bottom: none;
+  }
+  .form_table .td_label_7 {
+    width: 150px;
+    background-color: white;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline-block;
+    height: 30px;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1.3;
+  }
+  .form_table .td_label {
+    background-color: white;
+    margin-left: 0;
+    padding-left: 0;
+    height: 30px;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1.3;
+  }
+  .form_table .text_box {
+    width: 50%;
+  }
+  .form_table .td_label2 {
+    background-color: white;
+    margin-left: 0;
+    padding-left: 0;
+    height: 30px;
+    font-size: 13px;
+  }
+  .form_table .td_content .Psw_box {
+    width: 100%;
+    background-color: white;
+    margin-left: 0;
+  }
+  .form_table .sub_span {
+    width: 100%;
+    font-size: 13px;
+    letter-spacing: -0.045rem;
+    color: #000;
+  }
+  .form_table .td_content2 .postalCode_box {
+    width: 100%;
+    background-color: white;
+    margin-left: 0;
+  }
+  .form_table .td_content2 .postalCode_box2 {
+    /* width: 30%; */
+    background-color: white;
+    margin: 3px 0px 3px 0px;
+    width: 120px;
+  }
+  .form_table .sub_span_container .label_box {
+    font-size: 13px;
+  }
+  .form_table .td_content2 .postalCode_box2_cont button{
+    width: 120px;
+    font-size: 13px;
+  }
+  .form_table .td_content_sub {
+    margin: 0px;
+  }
+  .form_table .td_content3 input[type="text"] {
+    background-color: white;
+  }
+  .form_table .td_content4 input[type="text"] {
+    background-color: white;
+  }
+  .form_table .td_content5 input[type="text"] {
+    background-color: white;
+    margin: 0;
+    width: 100%;
+  }
+  .form_table .td_content_sub2 {
+    margin: 0px;
+  }
+  .tr_responsive {
+    height: fit-content;
+    margin: 10px 0;
+  }
+  .button_list_conts {
+    margin: 0 12px 20px;
+  }
+  .my_page .button_list_conts button{
+    display: none;
+  }
+  .hidden_btn_cont .hidden_btn {
+    display: block;
+  }
+  .form_table .label_box {
+    font-size: 15px;
+    color: #000;
+  }
+  .form_table .td_content_sub2 .sub_span_red {
+    display: none;
+  }
+  .form_table .td_content2 button {
+    font-size: 12px;
+  }
+  .form_table .td_content .checkbox_cont {
+    margin: 0;
+  }
+  .form_table .td_content .checkbox_cont label {
+    font-size: 13px;
+    color: #000;
+  }
+  .form_table .td_content .input_text {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .form_table textarea {
+    width: 491px;
+  }
+  .order_detail_cont2 .td_label6_sub {
+    width: 30%;
+  }
+  .my_qna_create .table_cont .th_label {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: none;
+    padding: 0px !important;
+  }
+  .my_qna_create .table_cont{
+    border-top: none;
+  }
+  .my_qna_create .table_cont,
+  .my_qna_create .table_cont tr,
+  .my_qna_create .table_cont td,
+  .my_qna_create .table_cont tbody,
+  .my_qna_create .table_cont td p .my_qna_create .table_cont div,
+  .my_qna_create .table_cont .my_qna_create .table_cont {
+    width: 100% !important;
+    float: left;
+    clear: both;
+    display: block;
+    text-align: start;
+  }
+  .my_qna_create .table_cont td {
+    border-bottom: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .my_qna_create .btn_cont{
+    display: none;
+  }
+  .address_cont .table_cont .th_label {
+    width: 20%;
+  }
+  .address_cont .table_cont th,
+  .address_cont .table_cont td{
+    font-size: 13px;
+  }
+  .my_point .reserve_cont {
+    flex-wrap: wrap;
+    padding: 30px 10px;
+  }
+  .my_point .point {
+    display: none;
+  }
+  .my_point .title {
+    font-size: 18px;
+  }
+  .my_point .reserve_list .price {
+    font-size: 16px;
+  }
+  .my_point .reserve_list .price strong {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .form_table .notice_cont {
+    padding-top: 8px;
+  }
+  .search_cont{
+    margin: 0;
+  }
+  .qna_footer{
+    margin: 0 0 10px 0;
+}
+.qna_footer .page_btns{
+  margin: 30px 0 30px;
+}
+.button_list_conts2 {
+  margin: 10px 0px 70px;
+}
+.my_order_detail {
+  margin-top: 20px;
+}
+.my_order_detail .button_list_conts{
+  margin: 10px 0px 20px 0px;
+}
+.my_order_detail .button_list_conts button {
+  display: block;
+  width: 100px;
+  height: 40px;
+  font-size: 13px;
+  line-height: 40px;
+}
+.my_order_detail .button_list_conts .list_btn{
+  margin: 5px 0;
+}
+.mypage_withdrawal .title_container .title{
+  font-size: 18px;
+}
+.mypage_withdrawal .text_conts{
+  font-size: 13px;
+}
+.mypage_withdrawal .text_conts .text{
+  font-size: 13px;
+}
+.order_cont .table_cont th{
+  font-size: 13px;
+}
+.order_cont .table_cont .td_label2{
+  font-size: 13px;
+}
+.order_detail_cont .table_cont th{
+  font-size: 13px;
+}
+.order_detail_cont .table_cont td{
+  font-size: 13px;
+}
+.order_detail_cont2 .table_cont td{
+  font-size: 13px;
+}
+.qna_cont .table_cont{
+  margin: 20px 0 0;
+}
+.qna_cont .table_cont th,
+  .qna_cont .table_cont td {
+    font-size: 13px;
+  }
+  .detail_cont .table_cont{
+    margin: 20px 0 0;
+  }
+  .detail_cont .table_cont th,
+  .detail_cont .table_cont td {
+    font-size: 13px;
+  }
+  .my_qna_create .table_cont th,
+  .my_qna_create .table_cont td{
+    font-size: 13px;
+  }
+  .my_favorite .page_btns{
+    display: none;
+  }
+  .favorite_cont .table_cont{
+    margin: 20px 0 0;
+  }
+  .favorite_cont .table_cont th,
+  .favorite_cont .table_cont td{
+    font-size: 13px;
+  }
+  .reserve_cont{
+    margin: 20px 0px 0px 0px;
+  }
+  .point_cont .table_cont th,
+  .point_cont .table_cont td{
+    font-size: 13px;
+  }
+  .coupon_cont .table_cont{
+    margin: 20px 0 0;
+  }
+  .coupon_cont .table_cont th,
+  .coupon_cont .table_cont td{
+    font-size: 13px;
+  }
+  .center_company{
+    min-height: 0px;
+    padding: 20px 11.25px 30px;
+  }
+  .center_company p{
+    font-size: 13px;
+  }
+  .center_company_cont .list_menu_container {
+    display: none;
+  }
+  .center_company_cont .title_container{
+    display: none;
+  }
+  .center_company .center_company_header_hidden{
+    display: block;
+  }
+  .center_guide_cont .list_menu_container {
+    display: none;
+  }
+  .center_guide_cont .title_container{
+    display: none;
+  }
+  .center_privacy_cont .list_menu_container {
+    display: none;
+  }
+  .center_privacy_cont .title_container{
+    display: none;
+  }
+  .mall_info .list_menu_container {
+    display: none;
+  }
+  .mall_info .title_container{
+    display: none;
+  }
+  .mall_info{
+    margin-bottom: 30px;
+  }
+  .mall_join .list_menu_container {
+    display: none;
+  }
+  .mall_join .title_container{
+    display: none;
+  }
+  .store_company_terms .title_container{
+    display: none;
+  }
+  .page_area .mall_info_text{
+    font-size: 13px;
+  }
+  .mall_info .button_list_conts .go_mall{
+    width: 130px;
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+}
+.join_arg1_cont label{
+  font-size: 13px;
+}
+.mall_info .button_list_conts .go_mall{
+  display: none;
+}
+.button_list_conts_hidden{
+  display: block;
+}
+.store_company_terms .button_list_conts{
+  display: none;
+}
+.my_page_container{
+  width: 100%;
+  padding: 0;
+}
+.my_page_container .form_table_container{
+  padding: 16px 12px;
+}
+.my_page_container .text_container{
+  padding: 16px 12px 0px 12px;
+}
+.my_page_container .table_cont_container{
+  padding: 16px 12px;
+}
+.my_page .gry_bar {
+  width: 100%;
+  height: 12px;
+  border-top: 1px solid #e2e2e2;
+  background: #f8f8f8;
+  padding: 0;
+  margin: 0;
+  display: block !important;
+}
+.my_page_cont .button_list_conts{
+  margin: 0 12px 20px;
+}
+.mypage_withdrawal .button_list_conts {
+  margin-bottom: 20px;
+}
+.mypage_withdrawal .hidden_btn_cont{
+  margin-top: 0px;
+}
+.mypage_withdrawal .form_table_container{
+  padding: 0px 12px 16px 12px;
+}
+.order_pay .button_list_conts{
+  display: none;
+}
+.order_complete .button_list_conts{
+  display: none;
+}
+.mall_join .button_list_conts{
+  margin-bottom: 30px;
+}
+.mall_join .button_list_conts .link_btn_container a{
+  width: 120px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 15px;
+}
+.my_qna .qna_button .right a{
+  margin: 0px;
+}
+.qna_button .right a{
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+}
+.text_hidden{
+  display: block;
+}
+.my_page .pd_found_gp{
+  display: none;
+}
+.star_red_hidden{
+  color: #ff3131;
+}
+.radio_btn_container{
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+.form_table .td_content_sub2 .sub_span_container {
+  display: flex;
+  gap: 0px;
+}
+.member_join_title{
+  margin-top: 20px;
+}
+.store_company_terms .hidden_btn_cont{
+  margin-bottom: 20px;
+}
+.my_qna_create .hidden_btn_cont{
+  margin-bottom: 20px;
+}
+.my_address_add .hidden_btn_cont{
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+.my_address_add .form_table_container{
+  padding: 0px 12px;
+}
+.order_pay .hidden_btn_cont{
+ margin: 20px 0px;
+}
+.order_complete .hidden_btn_cont{
+  margin: 20px 0px;
+ }
+}
+@media screen and (max-width: 483px) {
+  /* footer start */
+  .footer .foot_info {
+    margin: 20px 0;
+    line-height: 10px;
+    font-size: 12px;
+  }
+  .footer .foot_cr {
+    font-size: 12px;
+  }
+  .footer .foot_left_hidden .foot_menu a {
+    font-size: 13px;
+  }
+  .footer .foot_right_hidden {
+    width: 150px;
+  }
+  /* footer end */
+
+  .form_table .td_content3 input[type="text"] {
+    width: 90px;
+  }
+  .form_table .td_content4 input[type="text"] {
+    width: 90px;
+  }
+  .form_table .td_content_sub2 .sub_span_container {
+    flex-wrap: wrap;
+  }
+  .form_table .sub_span_container .sub_span_cont {
+    font-size: 13px;
+    width: 100%;
+  }
+  .form_table .td_content_sub2 .label_box {
+    font-size: 13px;
+  }
+  .form_table .td_content_sub2 input[type="radio"] {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    margin: 3px 0;
+  }
+  .form_table .sub_span_red {
+    font-size: 12px;
+  }
+  .button_list_conts button {
+    width: 100px;
+    font-size: 15px;
+  }
+  .order_detail_cont2 .td_label6_sub {
+    width: 40%;
+  }
+  .search_cont input {
+    width: 150px;
+    font-size: 12px;
+  }
+  .search_cont button {
+    width: 50px;
+    font-size: 12px;
+  }
+  .search_cont .select {
+    font-size: 12px;
+  }
+  .right a {
+    font-size: 12px;
+  }
+  .address_cont .table_cont .list_btn_container .list_btn {
+    font-size: 10px;
+  }
+  .my_point .reserve_cont {
+    flex-wrap: wrap;
+    padding: 20px 10px;
+  }
+  .my_point .title {
+    font-size: 16px;
+  }
+  .my_point .reserve_list .price {
+    font-size: 14px;
+  }
+  .my_point .reserve_list .price strong {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .my_point .reserve_list li:first-child {
+    padding-right: 30px;
+  }
+  .my_point .reserve_list li {
+    margin: 0 10px;
+  }
+  .my_coupon .coupon_cont .table_cont .th_label2 {
+    font-size: 13px;
+  }
+  .coupon_cont .table_cont .td_label2 {
+    font-size: 13px;
+  }
+  .button_list_conts2 {
+    margin: 10px 0px 70px;
+  }
+  .mall_join .button_list_conts .link_btn_container a{
+    width: 120px;
+  }
+  .form_table .td_content2 .postalCode_box2{
+    width: 100px;
+  }
+  .form_table .td_content2 .postalCode_box2_cont button{
+    width: 100px;
+  }
+  .mall_join .button_list_conts .link_btn_container a{
+    width: 100px;
+    height: 30px;
+    line-height: 28px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container">
+      <div class="my_page my_order_cancel">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 주문 · 배송조회</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li class="active">
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li>
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="my_page my_order_cancel order_cancel_cont">
+          <table class="order_cancel_cont table_cont">
+            <thead>
+              <tr>
+                <th class="th_label2" style="width: 7%">이미지</th>
+                <th class="th_label2" style="text-align: center">
+                  구매상품정보
+                </th>
+                <th class="th_label2" style="width: 10%">제품가격</th>
+                <th class="th_label2" style="width: 10%">적립금</th>
+                <th class="th_label2" style="width: 10%">구매수량</th>
+                <th class="th_label2" style="width: 15%">배송조회</th>
+                <th class="th_label2" style="width: 10%">상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td_label4">
+                  <a href=""
+                    ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
+                  /></a>
+                </td>
+                <td class="td_label4_sub">
+                  <p>
+                    <a href=""
+                      >[디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)</a
+                    >
+                  </p>
+                </td>
+                <td class="td_label4">22,000원</td>
+                <td class="td_label4">1,100원</td>
+                <td class="td_label4">1</td>
+                <td class="td_label4">
+                  <a href="">현대택배(1111111)</a>
+                  <br />발송일자 : 2024-06-03
+                </td>
+                <td class="td_label4">반품요청</td>
+              </tr>
+              <tr>
+                <td colspan="7" class="td_label5">
+                  <p>판매자 : 입점업체2 (000-0000-0000)</p>
+                  <span class="span_container">
+                    <span>배송비 : 50,000원 이상구매시 무료</span>
+                    <span class="order_prd_price"
+                      >상품가격 22,000원 + 배송비 3,000원</span
+                    >
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="7"
+                  class="td_label4"
+                  style="
+                    text-align: right;
+                    background-color: #fafafa;
+                    padding-right: 10px;
+                  "
+                >
+                  총결제금액 : 상품가격 22,000원 + 배송비 3,000원 =
+                  <span class="order_prd_price">25,000원</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="order_cancel_cont text_area">
+          <h3 class="order_title">취소사유</h3>
+          <textarea name="textarea" rows="20" class="" style="height: 190px">
+          </textarea>
+        </div>
+        <div class="button_list_conts">
+          <div></div>
+          <div>
+            <button type="button" class="submit_btn">주문 취소</button>
+            <button type="button" class="cancel_btn">프린트 하기</button>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

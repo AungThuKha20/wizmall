@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="gry_bar1"></div>
+    <div class="container notice">
+      <div class="title_container">
+        <h2 class="title">고객센터</h2>
+        <div class="menu">
+          <a href="#"
+            ><img
+              src="/assets/imgs/icons/home_ico.png"
+              class="home_icon"
+              alt=""
+          /></a>
+          <span>고객센터 > 공지사항</span>
+        </div>
+      </div>
+      <div class="list_menu_container community_list_menu">
+        <ul class="list_menu">
+          <li class="active">
+            <a href="/dist/community_notice.html">공지사항</a>
+          </li>
+          <li>
+            <a href="/dist/community_faq.html">자주하는 질문</a>
+          </li>
+          <li>
+            <a href="/dist/community_qna.html">상품문의</a>
+          </li>
+          <li>
+            <a href="/dist/community_review.html">상품후기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="table_container">
+        <table class="notice_body_table" width="100%">
+          <tbody>
+            <tr>
+              <th height="50" width="8%">번호</th>
+              <th>제목</th>
+              <th width="12%">작성자</th>
+              <th width="12%">작성일</th>
+              <th width="8%">조회</th>
+            </tr>
+            <tr>
+              <td height="35" style="text-align: center">3</td>
+              <td style="text-align: left" class="truncate">
+                <a href="community_notice_view.html">
+                  쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.</a
+                >
+              </td>
+              <td style="text-align: center">위즈몰</td>
+              <td class="date">2023-04-24</td>
+              <td style="text-align: center">79</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">2</td>
+              <td style="text-align: left" class="truncate">
+                <a href="/dist/community_notice_view.html">
+                  쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.</a
+                >
+              </td>
+              <td style="text-align: center">위즈몰</td>
+              <td class="date">2023-04-24</td>
+              <td style="text-align: center">46</td>
+            </tr>
+            <tr>
+              <td height="35" style="text-align: center">1</td>
+              <td style="text-align: left" class="truncate">
+                <a href="/dist/community_notice_view.html">
+                  쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.</a
+                >
+              </td>
+              <td style="text-align: center">위즈몰</td>
+              <td class="date">2023-04-24</td>
+              <td style="text-align: center">43</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- pages buttons -->
+      <div class="page_btns">
+        <button class="page_btn">
+          <img
+            src="/assets/imgs/icons/page-first.jpg"
+            alt=""
+          />
+        </button>
+        <button class="page_btn" style="margin: 0 5px">
+          <img
+            src="/assets/imgs/icons/page-prev.jpg"
+            alt=""
+          />
+        </button>
+        <div class="page_no">
+          <a href="#">1</a>
+        </div>
+        <button class="page_btn" style="margin: 0 5px">
+          <img
+            src="/assets/imgs/icons/page-last.jpg"
+            alt=""
+          />
+        </button>
+        <button class="page_btn">
+          <img
+            src="/assets/imgs/icons/page-next.jpg"
+            alt=""
+          />
+        </button>
+      </div>
+      <!-- footer search -->
+      <div class="qna_footer">
+        <div class="search_cont">
+          <form>
+            <input type="hidden" name="code" />
+            <input type="hidden" name="category" />
+            <input type="hidden" name="mallid" />
+            <select name="searchOption" class="select">
+              <option value="subject">제 목</option>
+              <option value="content">내 용</option>
+              <option value="subcon">제목 + 내용</option>
+              <option value="name">작성자</option>
+              <option value="memid">아이디</option>
+            </select>
+            <input name="searchkey" type="text" class="search_input" />
+            <button type="submit">검색</button>
+          </form>
+        </div>
+      </div>
+      <!-- community board -->
+      <div class="community_board_btn clearfix">
+        <div class="right">
+          <a href="#">리스트</a>
+          <a href="#" class="btn">글쓰기</a>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container">
+      <div class="my_page">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 주문 · 배송조회</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li class="active">
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li>
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="text_hidden">
+          ※ 상세 배송정보는 PC의 주문내역에서 확인가능합니다.
+        </div>
+        <div class="my_page my_order order_cont">
+          <table class="order_cont table_cont">
+            <thead>
+              <tr>
+                <th>주문일자</th>
+                <th>주문번호</th>
+                <th>결제금액</th>
+                <th>결제방법</th>
+                <th>배송상태</th>
+                <th>영수증</th>
+                <th>자세히보기</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="height: 40px">
+                <td class="td_label2" data-th="주문일자">2023-12-19</td>
+                <td class="td_label2" data-th="주문번호">231219163703141</td>
+                <td class="td_label2" data-th="결제금액">25,000원</td>
+                <td class="td_label2" data-th="결제방법">무통장입금</td>
+                <td class="td_label2" data-th="배송상태">반품요청</td>
+                <td class="td_label2" data-th="영수증">미신청</td>
+                <td class="td_label2" data-th="자세히보기">
+                  <a href="mypage_my_order_detail.html" class="link_btn">보기</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- pages buttons -->
+        <div class="page_btns">
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-first.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-prev.jpg"
+              alt=""
+            />
+          </button>
+          <div class="page_no">
+            <a href="#">1</a>
+          </div>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-last.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-next.jpg"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

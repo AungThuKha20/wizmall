@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container my_page_container">
+      <div class="my_page my_address_add">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 배송지관리</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li class="active">
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li>
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="my_page my_address_add address_cont form_table_container">
+          <table class="form_table">
+            <tbody>
+              <tr>
+                <td class="my_page td_label">배송지명 *</td>
+                <td class="my_page td_content">
+                  <input type="password" id="psw" name="psw" class="Psw_box" />
+                </td>
+              </tr>
+              <tr>
+                <td class="my_page td_label">수취인명 *</td>
+                <td class="my_page td_content">
+                  <input
+                    type="password"
+                    id="Confirmpsw"
+                    name="Confirmpsw"
+                    class="Psw_box"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="my_page td_label">전화번호</td>
+                <td class="my_page td_content3">
+                  <div class="td_content_sub">
+                    <input type="text" id="tphone1" name="tphone1" /> -
+                    <input type="text" id="tphone2" name="tphone2" /> -
+                    <input type="text" id="tphone3" name="tphone3" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="my_page td_label">휴대폰 번호 *</td>
+                <td class="my_page td_content4">
+                  <div class="td_content_sub">
+                    <input type="text" id="hphone1" name="hphone1" /> -
+                    <input type="text" id="hphone2" name="hphone2" /> -
+                    <input type="text" id="hphone3" name="hphone3" />
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="my_page td_label2" style="color: #555">주소 *</td>
+                <td colspan="9" class="td_content2">
+                  <div class="postalCode_box2_cont">
+                    <input
+                      class="postalCode_box2"
+                      type="text"
+                      id="postalCode1"
+                      name="postalCode1"
+                    />
+                    <button>우편번호 찾기</button><br />
+                  </div>
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode2"
+                    name="postalCode2"
+                  /><br />
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode3"
+                    name="postalCode3"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button_list_conts">
+            <div></div>
+            <div>
+              <button type="submit" class="submit_btn">확인</button>
+              <button type="button" class="cancel_btn">취소</button>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div class="hidden_btn_cont">
+          <button type="submit" class="submit_btn hidden_btn">수정</button>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

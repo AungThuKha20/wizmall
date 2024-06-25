@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container">
+      <div class="my_page my_coupon">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 내 쿠폰함</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li class="active">
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="my_page my_coupon coupon_cont">
+          <table class="coupon_cont table_cont">
+            <thead>
+              <tr>
+                <th class="th_label2" style="width: 20%">기간</th>
+                <th class="th_label2" style="width: 30%">쿠폰명</th>
+                <th class="th_label2" style="width: 18%">할인액</th>
+                <th class="th_label2" style="width: 18%">사용여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  colspan="5"
+                  class="coupon_cont td_label2"
+                  style="height: 47px; color: #333"
+                >
+                  쿠폰이 없습니다.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" style="text-align: center; height: 50px; background-color: #fff; border: none;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

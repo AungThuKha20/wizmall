@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+
+    <div class="container shopping_cart">
+      <div class="shopping_cart_step">
+        <ul class="shopping_card_step_item">
+          <li>
+            <span class="icon1 on"></span>
+            <small> STEP 01</small><br />
+            <strong class="on_color">장바구니 </strong>
+          </li>
+          <li>
+            <i></i>
+            <span class="icon2"></span>
+            <small>STEP 02</small><br />
+            <strong>주문하기</strong>
+          </li>
+          <li>
+            <i></i>
+            <span class="icon3"></span>
+            <small>STEP 02</small><br />
+            <strong>주문하기</strong>
+          </li>
+          <li>
+            <i></i>
+            <span class="icon4"></span>
+            <small>STEP 02</small><br />
+            <strong>주문하기</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="shopping_table">
+        <table class="shopping_detail_cont table_cont">
+          <tbody>
+            <tr>
+              <th style="min-width: 40px">
+                <input type="checkbox" name="select_tmp" checked="" />
+              </th>
+              <th style="min-width: 70px">이미지</th>
+              <th style="text-align: center; min-width: 514px">구매상품정보</th>
+              <th class="td_label3" style="background-color: #f7f7f7">
+                제품가격
+              </th>
+              <th class="td_label3" style="background-color: #f7f7f7">수 량</th>
+              <th class="td_label3" style="background-color: #f7f7f7">
+                적립금
+              </th>
+              <th class="td_label3" style="background-color: #f7f7f7">기능</th>
+            </tr>
+            <tr>
+              <td colspan="7" height="60" align="center">
+                장바구니가 비어있습니다.
+              </td>
+            </tr>
+            <tr>
+                <td
+                  colspan="7"
+                  class="td_label4"
+                  style="
+                    text-align: right;
+                    background-color: #fafafa;
+                    padding-right: 10px;
+                  "
+                >상품가격 0원 + 배송비0원 = 주문합계
+                  <span class="order_prd_price">0원</span>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div
+        class="order_member_btn"
+        style="text-align: center; margin: 30px 0 70px"
+      >
+        <a href="shopping_order.html" class="on">전체 주문</a>
+        <a href="shopping_order.html" class="on">선택 주문</a>
+
+        <a href="order_delete.html">선택 삭제</a>
+        <a href="order_delete.html">비우기</a>
+        <a href="product_detail.html">쇼핑 계속하기</a>
+        <a href="#">견적서 출력</a>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div class="container brand_shop">
+      <div class="product_search_list"></div>
+      <ul class="product_search_list clearfix">
+        <li>
+          <button type="button" class="wish_btn">관심상품 등록</button>
+          <a href="prd_view.php?prdcode=2004210039&amp;catcode=&amp;page=1">
+            <div class="img_box" style="margin-bottom: 20px">
+              <img
+                src="/assets/imgs/icons/2004210039_R.jpg"
+                width=""
+                height=""
+                alt="제품이미지"
+              />
+            </div>
+            <div class="product_card_item_content">
+              <h4 class="product_item_title">
+                TS 뉴프리미엄 TS샴품 500g X 2P + 100g
+              </h4>
+              <div class="icon_list">
+                <img
+                  src="/assets/imgs/icons/icon_hit.gif"
+                  alt=""
+                />
+                <imga
+                  src="/assets/imgs/icons/icon_new.gif"
+                  alt=""
+                />
+                <img
+                  src="/assets/imgs/icons/icon_sale.gif"
+                  alt=""
+                />
+              </div>
+              <div class="product_price_list">
+                <span class="product_price">50,000원</span>
+                <span class="product_discount_percent">10%</span>
+                <span class="product_discount_price">45,000</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

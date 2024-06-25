@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+
+    <div class="mypage_navlinks">
+      <div class="my_page_gp">
+        <div class="mypage_navlinks_gp">
+          <a href="mypage.html"
+            >회원정보 <img src="/assets/imgs/icons/next.png" alt=""
+          /></a>
+        </div>
+        <div class="mypage_navlinks_gp">
+          <a href="mypage_my_order.html"
+            >주문.배송조회(1) <img src="/assets/imgs/icons/next.png" alt=""
+          /></a>
+        </div>
+        <div class="mypage_navlinks_gp">
+          <a href="mypage_qna.html"
+            >1:1문의 <img src="/assets/imgs/icons/next.png" alt=""
+          /></a>
+        </div>
+        <div class="mypage_navlinks_gp">
+          <a href="mypage_address.html"
+            >배송지관리 <img src="/assets/imgs/icons/next.png" alt=""
+          /></a>
+        </div>
+        <div class="mypage_navlinks_gp">
+          <a href="mypage_favorite.html"
+            >관심상품 <img src="/assets/imgs/icons/next.png" alt=""
+          /></a>
+        </div>
+        <div class="mypage_navlinks_gp">
+          <a href="mypage_point.html"
+            >내 적립금 <img src="/assets/imgs/icons/next.png" alt=""
+          /></a>
+        </div>
+        <div class="mypage_navlinks_gp">
+          <a href="mypage_coupon.html"
+            >내 쿠폰함 <img src="/assets/imgs/icons/next.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    ${require('./include/_footer.html')}
+  </body>
+</html>

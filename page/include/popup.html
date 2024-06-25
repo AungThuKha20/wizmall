@@ -1,0 +1,28 @@
+<div class="popup">
+  <div id="popupImage">
+    <div class="image_box">
+      <img
+        src="/assets/imgs/icons/popup.jpg"
+        title="popup.jpg"
+        class="popup_image"
+      />
+    </div>
+
+    <div class="check_box_lists">
+      <div>
+        <input type="checkbox" onclick="popupClose();" />
+        <span style="color: white; font-size: 16px">오늘하루 열지않음</span>
+      </div>
+      <div>
+        <input type="checkbox" onclick="popupClose();" />
+        <span style="color: white; font-size: 16px">닫기</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function popupClose() {
+      document.getElementById("popupImage").style.display = "none";
+    }
+  </script>
+</div>

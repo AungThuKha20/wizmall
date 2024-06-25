@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container my_page_container">
+      <div class="my_page my_page_cont">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 회원정보</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li class="active">
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li>
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="form_table_container">
+          <h2 class="my_page header header_mobile_hidden">기본정보 입력</h2>
+          <h2 class="my_page header_pc_hidden">회원 정보 수정</h2>
+          <table class="form_table">
+            <tbody>
+              <tr>
+                <td class="my_page td_label_7">아이디 <span class="star_red_hidden">*</span></td>
+                <td colspan="9" class="text_box"></td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">비밀번호 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content">
+                  <input type="password" id="psw" name="psw" class="Psw_box" />
+                  <span class="td_content sub_span"
+                    >(영문,숫자,특수문자를 혼합하여 6자리 ~ 12자리입력.)</span
+                  >
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">비밀번호 확인 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content">
+                  <input
+                    type="password"
+                    id="Confirmpsw"
+                    name="Confirmpsw"
+                    class="Psw_box"
+                  />
+                  <span class="td_content sub_span"
+                    >(비밀번호 확인을 위해 다시 한 번 입력해 주시기
+                    바랍니다.)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td class="my_page td_label">이름 <span class="star_red_hidden">*</span></td>
+                <td colspan="9"></td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label2">주소 <span class="star_red_hidden">*</span></td>
+                <td colspan="9" class="td_content2">
+                  <div class="postalCode_box2_cont">
+                    <div>
+                      <input
+                        class="postalCode_box2"
+                        type="text"
+                        id="postalCode1"
+                        name="postalCode1"
+                      />
+                    </div>
+                    <div>
+                      <button>우편번호 찾기</button>
+                    </div>
+                  </div>
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode2"
+                    name="postalCode2"
+                  /><br />
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode3"
+                    name="postalCode3"
+                  />
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">전화번호</td>
+                <td class="my_page td_content3">
+                  <div class="td_content_sub">
+                    <input type="text" id="tphone1" name="tphone1" /> -
+                    <input type="text" id="tphone2" name="tphone2" /> -
+                    <input type="text" id="tphone3" name="tphone3" />
+                  </div>
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">휴대폰 번호 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content4">
+                  <div class="td_content_sub">
+                    <input type="text" id="hphone1" name="hphone1" /> -
+                    <input type="text" id="hphone2" name="hphone2" /> -
+                    <input type="text" id="hphone3" name="hphone3" />
+                  </div>
+                  <div class="td_content_sub2">
+                    <div class="sub_span_container">
+                      <div class="sub_span_cont">
+                        <span class="td_content sub_span"
+                          >문자 정보 서비스를 받으시겠습니까?</span
+                        >
+                      </div>
+                      <div class="radio_btn_container">
+                        <input
+                          type="radio"
+                          checked
+                          id="inbox"
+                          name="radioBtn1"
+                          value="inbox"
+                        />
+                        <label for="inbox" class="label_box">수신함</label>
+                        <input
+                          type="radio"
+                          id="receive"
+                          name="radioBtn1"
+                          value="receive"
+                        />
+                        <label for="receive" class="label_box"
+                          >수신하지 않음</label
+                        >
+                      </div>
+                      <br />
+                    </div>
+                    <div>
+                      <span class="td_content sub_span_red"
+                        >* 주문확인,배송 진행상황,알리미 등록,이벤트 공지 서비스
+                        제공 해 드립니다.</span
+                      >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">이메일 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content5">
+                  <input type="text" id="email" name="email" /><br />
+                  <div class="td_content_sub2">
+                    <div class="sub_span_container">
+                      <div class="sub_span_cont">
+                        <span class="td_content sub_span"
+                          >이메일 서비스를 받으시겠습니까?</span
+                        >
+                      </div>
+                      <div class="radio_btn_container">
+                        <input
+                          type="radio"
+                          checked
+                          id="yes"
+                          name="radioBtn2"
+                          value="yes"
+                        />
+                        <label for="yes" class="label_box">예</label>
+                        <input type="radio" id="no" name="radioBtn2" value="no" />
+                        <label for="no" class="label_box">아니오</label>
+                      </div>
+                      <br />
+                    </div>
+                    <div>
+                      <span class="td_content sub_span_red"
+                        >* 주문,결제,이벤트 정보제공, 단 유효하지 않은 이메일은
+                        서비스 불가</span
+                      >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gry_bar"></div>
+        <div class="gry_bar"></div>
+        <div class="hidden_btn_cont">
+          <button type="submit" class="submit_btn hidden_btn">수정</button>
+        </div>
+        <div class="button_list_conts">
+          <div>
+            <a href="/dist/mypage_withdrawal.html" class="list_btn">회원탈퇴</a>
+          </div>
+          <div>
+            <button type="submit" class="submit_btn">확인</button>
+            <button type="button" class="cancel_btn">취소</button>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    ${require('./include/_footer.html')}
+  </body>
+</html>

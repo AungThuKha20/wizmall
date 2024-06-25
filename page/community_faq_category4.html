@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="container faq">
+      <div class="my_page list_menu_container community_list_menu">
+        <ul class="list_menu">
+          <li>
+            <a href="/dist/community_notice.html">공지사항</a>
+          </li>
+          <li class="active">
+            <a href="/dist/community_faq.html">자주하는 질문</a>
+          </li>
+          <li>
+            <a href="/dist/community_qna.html">상품문의</a>
+          </li>
+          <li>
+            <a href="/dist/community_review.html">상품후기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="category_list clearfix">
+        <a href="/dist/community_faq_category.html" target="_blank"
+          >주문/결제</a
+        >
+        |
+        <a href="/dist/community_faq_category2.html" target="_blank"
+          >배송관련</a
+        >
+        |
+        <a href="/dist/community_faq_category3.html" target="_blank"
+          >반품/교환</a
+        >
+        |
+        <a href="/dist/community_faq_category4.html" target="_blank"
+          >취소/환불</a
+        >
+        |
+        <a href="/dist/community_faq_category4.html" target="_blank"
+          >기타관련</a
+        >
+        |
+        <a href="/dist/community_faq_category4.html" target="_blank"
+          >회원정보</a
+        >
+      </div>
+      <!-- footer search -->
+      <div class="qna_footer">
+        <div class="search_cont">
+          <form>
+            <input type="hidden" name="code" />
+            <input type="hidden" name="category" />
+            <input type="hidden" name="mallid" />
+            <select name="searchOption" class="select">
+              <option value="subject">제 목</option>
+              <option value="content">내 용</option>
+              <option value="subcon">제목 + 내용</option>
+              <option value="name">작성자</option>
+              <option value="memid">아이디</option>
+            </select>
+            <input name="searchkey" type="text" class="search_input" />
+            <button type="submit">검색</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

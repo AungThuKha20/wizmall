@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    
+
+      //not smooth for window
+      document.addEventListener("DOMContentLoaded", (event) => {
+        if (document.querySelector(".product_detail")) {
+          document.documentElement.style.scrollBehavior = "auto";
+          document.body.style.scrollBehavior = "auto";
+        }
+      });
+  
+     document.addEventListener("DOMContentLoaded", function () {  
+          //product_detail_select
+    const colorSelect = document.getElementById("colorSelect");
+    const sizeSelect = document.getElementById("sizeSelect");
+    const pdQtyGp = document.querySelector(".pd_qty_gp");
+    const closeButton = document.getElementById("closeButton");
+    
+    function checkAndToggleClass() {
+      if (colorSelect.value && sizeSelect.value) {
+        pdQtyGp.classList.add("pd_qty_active");
+      } else {
+        pdQtyGp.classList.remove("pd_qty_active");
+      }
+    }
+    
+    function removeActiveClass() {
+      pdQtyGp.classList.remove("pd_qty_active");
+      
+      colorSelect.selectedIndex = 0;
+      sizeSelect.selectedIndex = 0;
+      closeModal();
+    }
+    function closeModal() {
+      const modal = document.getElementById("modal"); 
+      modal.style.display = "none";
+    }
+    colorSelect.addEventListener("change", checkAndToggleClass);
+    sizeSelect.addEventListener("change", checkAndToggleClass);
+    closeButton.addEventListener("click", removeActiveClass);
+      });
+    </script>
+  </head>
+
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_quick_menu.html')}
+    ${require('./include/_subMenuCate.html')}
+
+    <div class="container product_detail">
+      <div class="pd_detail">
+        <div class="pd_img">
+          <div class="swiper mydetail_Swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="/assets/imgs/icons/plus_files/2004210001_R.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/assets/imgs/sub02/2004210016_R.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/assets/imgs/sub02/2004210021_R.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper mydetail_Swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="/assets/imgs/icons/plus_files/2004210001_R.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                src="/assets/imgs/sub02/2004210016_R.jpg"
+                alt=""
+              />
+              </div>
+              <div class="swiper-slide">
+                <img
+                src="/assets/imgs/sub02/2004210021_R.jpg"
+                alt=""
+              />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pd_content">
+          <h1 class="pd_content_header">
+            다이슨 슈퍼소닉 헤어드라이어 <span>hd03</span> (아이언핑크/화이트)
+          </h1>
+          <div class="pd_content_flex">
+            <div class="detail_price_div">
+              <h4>
+                405,000<span>원</span> <span><strong>556,000</strong>원</span>
+              </h4>
+            </div>
+            <div class="social_links">
+              <a href=""></a><a href=""></a><a href=""></a>
+            </div>
+          </div>
+          <a onclick="">
+            <table>
+              <thead>
+                <tr class="pc_hidden">
+                  <th class="detail_1st_th">판매가</th>
+                  <th colspan="2">405,000원</th>
+                </tr>
+                <tr>
+                  <th class="detail_1st_th">적립금</th>
+                  <th colspan="2">20,250원</th>
+                </tr>
+              </thead>
+              <div>
+                <tbody>
+                  <tr>
+                    <td class="detail_1st_th padding_top">제품상태</td>
+                    <td class="padding_top" colspan="2">
+                      <img
+                        src="/assets/imgs/icons/plus_files/icon_best.gif"
+                        alt=""
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="detail_1st_th">제조사</td>
+                    <td colspan="2">DYSON</td>
+                  </tr>
+                  <tr>
+                    <td class="detail_1st_th">원산지</td>
+                    <td colspan="2">말레이시아</td>
+                  </tr>
+                  <tr style="height: 51px">
+                    <td class="detail_1st_th">원산지</td>
+                    <td colspan="2" class="detail_td_flex">
+                      <div>입점업체2</div>
+                      <div class="mobile_hidden">
+                        <a>문의하기</a>
+                        <h6>|</h6>
+                        <a href="/dist/store_company.html">판매자 상품 더보기</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </div>
+              <tfoot>
+                <tr>
+                  <td class="detail_select_gp" colspan="3">
+                    <div style="margin-bottom: 4px" class="custom-select">
+                      <select id="colorSelect">
+                        <option value="">색상</option>
+                        <option value="option1">흰색 : 100원 추가</option>
+                        <option value="option2">검정 : 100원 추가</option>
+                        <option value="option3">노랑 : 100원 추가</option>
+                        <option value="option4">파랑 : 100원 추가</option>
+                        <option value="option">빨강 : 100원 추가</option>
+                      </select>
+                    </div>
+                    <div style="margin-bottom: 16px" class="custom-select">
+                      <select id="sizeSelect">
+                        <option value="">사이즈</option>
+                        <option value="option1">230 : 200원 추가</option>
+                        <option value="option2">235 : 200원 추가</option>
+                        <option value="option3">240 : 200원 추가</option>
+                        <option value="option4">245 : 200원 추가</option>
+                        <option value="option5">250 : 200원 추가</option>
+                        <option value="option6">255 : 200원 추가</option>
+                        <option value="option7">260 : 200원 추가</option>
+                      </select>
+                    </div>
+                    <div class="pd_qty_gp">
+                      <div class="qty_close_gp">
+                        <h6>흰색,<span>230</span></h6>
+                        <button id="closeButton">
+                          <img src="/assets/imgs/icons/close.png" alt="" />
+                        </button>
+                      </div>
+                      <div class="qty_btn_gp">
+                        <div class="qty_btn">
+                          <button>-</button>
+                          <span>1</span>
+                          <button>+</button>
+                        </div>
+                        <h5><span>13,200</span>원</h5>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </a>
+          <div class="detail_btn_gp">
+            <a href="">
+              <div class="detail_ttl_gp">
+                <h4>총 상품금액</h4>
+                <h3><strong>13,200</strong>원</h3>
+              </div>
+            </a>
+            <div class="detail_btn">
+              <a></a>
+              <a>장바구니</a>
+              <a>구매하기</a>
+            </div>
+            <div class="N_pay_gp">
+              <div class="naver_gp">
+                <div class="naver_txt">
+                  <img src="/assets/imgs/sub3_img/x.png" alt="" />
+                </div>
+                <div class="naver_btn_gp">
+                  <a class="naver_pay_btn" href=""
+                    ><img
+                      src="/assets/imgs/sub3_img/npay_sp_payment.png"
+                      alt=""
+                  /></a>
+                  <a class="naver_zzim" href=""
+                    ><img src="/assets/imgs/sub3_img/npay_sp_zzim.png" alt=""
+                  /></a>
+                  <a class="naver_talk" href=""
+                    ><img src="/assets/imgs/sub3_img/npay_sp_talk.png" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="detail_txt_slide">
+                <div class="below_txt">
+                  <h1>
+                    <span>현장결제</span>결제할 때 마다, 월 50번 포인트 뽑...
+                  </h1>
+                  <h1 class="hidden_text">
+                    <span>머니결제혜택</span>최대 3%적립 + 소득공제
+                  </h1>
+                </div>
+                <button id="pre_txt">
+                  <img src="/assets/imgs/icons/left.png" alt="" />
+                </button>
+                <button id="next_txt">
+                  <img src="/assets/imgs/icons/next.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="prd_detail_area" class="my_page list_menu_container">
+        <ul class="list_menu">
+          <li class="active">
+            <a href="#prd_detail_area">상세정보</a>
+          </li>
+          <li>
+            <a href="#guide_list">구매가이드</a>
+          </li>
+          <li>
+            <a href="#accordion_table">상품 Q&A</a>
+          </li>
+          <li>
+            <a href="#accordion_table2">상품 후기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="prd_detail_area">
+        <div id="prd_detail" class="prd_detail">
+          <img
+            src="/assets/imgs/sub3_img/20200421140456556188865.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="guide_list" class="my_page list_menu_container">
+        <ul class="list_menu">
+          <li>
+            <a href="#prd_detail_area">상세정보</a>
+          </li>
+          <li class="active">
+            <a href="#guide_list">구매가이드</a>
+          </li>
+          <li>
+            <a href="#accordion_table">상품 Q&A</a>
+          </li>
+          <li>
+            <a href="#accordion_table2">상품 후기</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="guide_list">
+        <li>테스트 업체 구매가이드</li>
+        <li>테스트 업체 구매가이드</li>
+        <li>테스트 업체 구매가이드</li>
+        <li>테스트 업체 구매가이드</li>
+      </ul>
+      <div id="accordion_table" class="my_page list_menu_container">
+        <ul class="list_menu">
+          <li>
+            <a href="#prd_detail_area">상세정보</a>
+          </li>
+          <li>
+            <a href="#guide_list">구매가이드</a>
+          </li>
+          <li class="active">
+            <a href="#accordion_table">상품 Q&A</a>
+          </li>
+          <li>
+            <a href="#accordion_table2">상품 후기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="accordion_table_gp">
+        <div class="accordion_table">
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>작성일</th>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <a class="prd_detail_accordion_btn" href=""
+                  >모바일 제품문의 드립니다.</a
+                >
+              </td>
+              <td>테스트</td>
+              <td>2023.04.27</td>
+            </tr>
+            <tr class="pd_accordion_items">
+              <td colspan="5" class="padding" style="text-align: start">
+                <img
+                  src="/assets/imgs/icons/plus_files/2004210001_R.jpg"
+                  alt=""
+                />
+                <ul>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <a class="prd_detail_accordion_btn" href="">
+                  <img
+                    src="/assets/imgs/icons/plus_files/icon_new.gif"
+                    alt=""
+                  />
+                  모바일 제품문의 드립니다.</a
+                >
+              </td>
+              <td>입점업체</td>
+              <td>2023.04.27</td>
+            </tr>
+            <tr class="pd_accordion_items">
+              <td colspan="5" class="padding" style="text-align: start">
+                <ul>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <a class="prd_detail_accordion_btn" href="">
+                  제품 질문 있습니다.</a
+                >
+              </td>
+              <td>테스트</td>
+              <td>2023.04.27</td>
+            </tr>
+            <tr class="pd_accordion_items">
+              <td colspan="5" class="padding" style="text-align: start">
+                <img
+                  src="/assets/imgs/icons/plus_files/2004210001_R.jpg"
+                  alt=""
+                />
+                <ul>
+                  <li>상품후기 남깁니다</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- pages buttons -->
+        <div class="page_btns">
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-first.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-prev.jpg"
+              alt=""
+            />
+          </button>
+          <div class="page_no">
+            <a href="#">1</a>
+          </div>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-last.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-next.jpg"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="qna_btn">
+          <a href="">작성하기</a>
+          <a href="">전체보기</a>
+        </div>
+      </div>
+      <div id="accordion_table2" class="my_page list_menu_container">
+        <ul class="list_menu">
+          <li>
+            <a href="#prd_detail_area">상세정보</a>
+          </li>
+          <li>
+            <a href="#guide_list">구매가이드</a>
+          </li>
+          <li>
+            <a href="#accordion_table">상품 Q&A</a>
+          </li>
+          <li class="active">
+            <a href="#accordion_table2">상품 후기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="accordion_table_gp">
+        <div class="accordion_table2">
+          <table>
+            <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>평점</th>
+              <th>작성자</th>
+              <th>작성일</th>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <a class="prd_detail_accordion_btn" href=""
+                  >상품후기 남깁니다.</a
+                >
+              </td>
+              <td>
+                <img
+                  src="/assets/imgs/icons/icon_star_5.png"
+                  alt=""
+                />
+              </td>
+              <td>테스트</td>
+              <td>2023.04.27</td>
+            </tr>
+            <tr class="pd_accordion_items">
+              <td colspan="5" class="padding" style="text-align: start">
+                <img
+                  src="/assets/imgs/sub3_img/M2304271216332_1.jpg"
+                  alt=""
+                />
+                <ul>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <a class="prd_detail_accordion_btn" href="">
+                  <img
+                    src="/assets/imgs/sub3_img/icon_re.gif"
+                    alt=""
+                  />
+                  상품후기 남깁니다.</a
+                >
+              </td>
+              <td></td>
+              <td>입점업체</td>
+              <td>2023.04.27</td>
+            </tr>
+            <tr class="pd_accordion_items">
+              <td colspan="5" class="padding" style="text-align: start">
+                <ul>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <a class="prd_detail_accordion_btn" href="">
+                  <img
+                    src="/assets/imgs/sub3_img/icon_re.gif"
+                    alt=""
+                  />
+                  상품후기 남깁니다.</a
+                >
+              </td>
+              <td></td>
+              <td>테스트</td>
+              <td>2023.04.27</td>
+            </tr>
+            <tr class="pd_accordion_items">
+              <td colspan="5" class="padding" style="text-align: start">
+                <ul>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                  <li>상품후기 남깁니다</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- pages buttons -->
+        <div class="page_btns">
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-first.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-prev.jpg"
+              alt=""
+            />
+          </button>
+          <div class="page_no">
+            <a href="#">1</a>
+          </div>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-last.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-next.jpg"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="qna_btn">
+          <a href="">작성하기</a>
+          <a href="">전체보기</a>
+        </div>
+      </div>
+    </div>
+    ${require('./include/_footer.html')}
+  </body>
+</html>

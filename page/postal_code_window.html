@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <div class="window_container">
+      <div class="window_box" id="post_code_popup">
+        <div class="search_form">
+          <button type="button" class="btn_search">
+            <span class="img_post">검색</span>
+          </button>
+          <input
+            type="text"
+            placeholder="예) 판교역로 166, 분당 주공, 백현동 532"
+          />
+        </div>
+        <div class="popup_body">
+          <div class="info_body">
+            <h2 class="tit_tip">tip</h2>
+            <p class="desc_tip">
+              아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.
+            </p>
+            <p class="desc_tip">도로명 + 건물번호</p>
+            <span class="txt_example"
+              >예) 판교역로 166,&nbsp;&nbsp;제주 첨단로 242</span
+            >
+            <p class="desc_tip2">지역명(동/리) + 번지</p>
+            <span class="txt_example"
+              >예) 백현동 532,&nbsp;&nbsp;제주 영평동 2181</span
+            >
+            <p class="desc_tip2">지역명(동/리) + 건물명(아파트명)</p>
+            <span class="txt_example"
+              >예) 분당 주공,&nbsp;&nbsp;연수동 주공3차</span
+            >
+            <p class="desc_tip2">사서함명 + 번호</p>
+            <span class="txt_example">예) 분당우체국사서함 1~100</span>
+          </div>
+        </div>
+        <div class="popup_foot show">
+          <span class="inner_footer">
+            <span class="txt_by">Powered by </span
+            ><strong class="img_pos 백현동 532 tipt tit_kakao">kakao</strong>
+            <span class="txt_bar"></span>
+            <a
+              href="//postcode.map.daum.net/guide"
+              class="link_infomation"
+              target="_blank"
+              >우편번호 서비스 안내</a
+            >
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/window.js"></script>
+  </body>
+</html>

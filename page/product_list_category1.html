@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="gry_bar1"></div>
+    <div class="container product_list">
+      <h2 class="product_list_title">하위분류 1</h2>
+      <div class="list_menu_container product_list_menu">
+        <ul class="list_menu">
+          <li>
+            <a href="/dist/product_list_category1.html"> 하위분류 11</a>
+          </li>
+          <li>
+            <a href="/dist/product_list_category1.html"> 하위분류 2</a>
+          </li>
+          <li>
+            <a href="/dist/product_list_category1.html">하위분류 3</a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+          <li>
+            <a href=""></a>
+          </li>
+        </ul>
+      </div>
+      <div class="product_content_container">
+        <span class="count"
+          >카테고리에<span style="color: #ef4023">0</span>개의 상품이 등록되어
+          있습니다.</span
+        >
+        <div class="product_select">
+          <select name="orderby" onchange="this.form.submit();">
+            <option value="">상품정렬방식</option>
+            <option value="">조회수 순</option>
+            <option value="">최근등록순 순</option>
+            <option value="">최저가격 순</option>
+            <option value="">최고가격 순</option>
+          </select>
+        </div>
+      </div>
+      <ul class="product_category1 clearfix">
+        <p class="no_prd">해당 카테고리에 등록된 상품이 없습니다.</p>
+      </ul>
+    </div>
+    ${require('./include/_footer.html')}
+  </body>
+</html>

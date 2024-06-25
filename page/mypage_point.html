@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container">
+      <div class="my_page my_point">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 내 적립금</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li class="active">
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li>
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="my_page my_point reserve_cont">
+          <h2 class="point">P</h2>
+          <ul class="reserve_list">
+            <li>
+              <span class="title">사용가능 적립금</span>
+              <span class="price"><strong>1,100</strong>원</span>
+            </li>
+            <li>
+              <span class="title">적립 예정금</span>
+              <span class="price"><strong>0</strong>원</span>
+            </li>
+          </ul>
+        </div>
+        <div class="my_page my_point point_cont">
+          <table class="point_cont table_cont">
+            <thead>
+              <tr>
+                <th class="th_label2" style="width: 20%">적립일자</th>
+                <th class="th_label2">적립내역</th>
+                <th class="th_label2" style="width: 18%">주문번호</th>
+                <th class="th_label2" style="width: 18%">금액</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td_label3" style="font-size: 14px">
+                  2024-06-03 17:34:07
+                </td>
+                <td class="td_label3" style="text-align: left; font-size: 14px">
+                  상품구입시 적립됨
+                </td>
+                <td class="td_label3" style="font-size: 14px">
+                  231219163703141
+                </td>
+                <td class="td_label3" style="font-size: 14px">1,100원</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="page_btns">
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-first.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-prev.jpg"
+              alt=""
+            />
+          </button>
+          <div class="page_no">
+            <a href="#">1</a>
+          </div>
+          <button class="page_btn" style="margin: 0 5px">
+            <img
+              src="/assets/imgs/icons/page-last.jpg"
+              alt=""
+            />
+          </button>
+          <button class="page_btn">
+            <img
+              src="/assets/imgs/icons/page-next.jpg"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

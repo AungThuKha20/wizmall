@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container">
+      <div class="center_company_cont">
+        <div class="title_container">
+          <h2 class="title">회사소개</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">회사소개</span>
+          </div>
+        </div>
+        <div class="center_company_cont list_menu_container">
+          <ul class="list_menu">
+            <li class="active">
+              <a href="center_company.html">회사소개</a>
+            </li>
+            <li>
+              <a href="center_guide.html">이용안내</a>
+            </li>
+            <li>
+              <a href="center_privacy.html">개인정보처리방침</a>
+            </li>
+            <li>
+              <a href="member_mall_info.html">입점안내</a>
+            </li>
+          </ul>
+        </div>
+        <div class="center_company">
+          <h2 class="center_company_header_hidden">회사소개</h2>
+          <p>
+            회사소개 내용은 관리자페이지에서 에디터를 이용해 직접 작성이
+            가능합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    ${require('./include/_footer.html')}
+  </body>
+</html>

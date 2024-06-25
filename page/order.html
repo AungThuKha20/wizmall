@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Mall</title>
+
+    <!-- AOS animation library -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="container shopping_cart">
+      <div class="shopping_cart_step">
+        <ul class="shopping_card_step_item">
+          <li>
+            <span class="icon1"></span>
+            <small> STEP 01</small><br />
+            <strong >장바구니 </strong>
+          </li>
+          <li>
+            <i></i>
+            <span class="icon2 on"></span>
+            <small class="on_color">STEP 02</small><br />
+            <strong  class="on_color">주문하기</strong>
+          </li>
+          <li>
+            <i></i>
+            <span class="icon3"></span>
+            <small>STEP 03</small><br />
+            <strong>주문하기</strong>
+          </li>
+          <li>
+            <i></i>
+            <span class="icon4"></span>
+            <small>STEP 04</small><br />
+            <strong>주문하기</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="shopping_table">
+        <table class="shopping_detail_cont table_cont">
+          <tbody>
+            <tr>
+              <th style="min-width: 70px">이미지</th>
+              <th style="text-align: center; min-width: 514px">구매상품정보</th>
+              <th class="td_label3" style="background-color: #f7f7f7">
+                제품가격
+              </th>
+              <th class="td_label3" style="background-color: #f7f7f7">수 량</th>
+              <th class="td_label3" style="background-color: #f7f7f7">
+                적립금
+              </th>
+            </tr>
+            <tr>
+              <td class="td_label4">
+                <a href=""
+                  ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
+                /></a>
+              </td>
+              <td align="left" class="td_label4_sub">
+                <p align="left">
+                  <a href=""
+                    >[디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)</a
+                  >
+                </p>
+              </td>
+              <td class="td_label4">22,000원</td>
+              <td align="center">1</td>
+              <td class="td_label4">1,100원</td>
+            </tr>
+            <tr>
+              <td colspan="7" class="td_label5">
+                <p>판매자 : 입점업체2 (000-0000-0000)</p>
+                <span class="span_container">
+                  <span>배송비 : 50,000원 이상구매시 무료</span>
+                  <span class="order_prd_price"
+                    >상품가격 22,000원 + 배송비 3,000원</span
+                  >
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td
+                colspan="7"
+                class="td_label4"
+                style="
+                  text-align: right;
+                  background-color: #fafafa;
+                  padding-right: 10px;
+                "
+              >
+                총결제금액 : 상품가격 22,000원 + 배송비 3,000원 =
+                <span class="order_prd_price">25,000원</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="my_page shopping_order">
+        <h2 class="shopping_order header">주문자 정보</h2>
+        <table class="shopping_order_table form_table">
+          <tbody>
+            <tr>
+              <td class="my_page td_label">주문하시는 분</td>
+              <td width="84%" class="val">
+                <input
+                  type="text"
+                  name="send_name"
+                  value=""
+                  size="25"
+                  class="input_name"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label">전화번호</td>
+              <td class="val">
+                <input
+                  type="text"
+                  name="send_tphone"
+                  value=""
+                  size="3"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone2"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone3"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label">휴대전화번호</td>
+              <td class="val">
+                <input
+                  type="text"
+                  name="send_tphone"
+                  value=""
+                  size="3"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone2"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone3"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label">이메일</td>
+              <td class="val">
+                <input
+                  type="text"
+                  name="send_email"
+                  value=""
+                  size="30"
+                  class="input_email"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label2">주소</td>
+              <td colspan="9" class="td_content2">
+                <input class="input_send" name="send_post" type="text" />
+                <button class="post_button" id="postBtn">우편번호 찾기</button
+                ><br />
+                <input
+                  type="text"
+                  name="send_address"
+                  value=""
+                  size="70"
+                  class="input"
+                /><br />
+                <input
+                  type="text"
+                  name="send_address2"
+                  value=""
+                  size="70"
+                  class="input"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="delivery_address_title">
+          <h2 class="order_ttl">배송지 정보</h2>
+          <div class="delivery_address_chk_box">
+            <input
+              type="checkbox"
+              name="same_check"
+              onclick="sameCheck(this.form);"
+              id="same_chk"
+            />
+            <label for="same_chk">주문자 정보와 동일합니다.</label>
+          </div>
+        </div>
+
+        <table class="shopping_order_table form_table shop_order_table">
+          <tbody>
+            <tr>
+              <td class="my_page td_label">주문하시는 분</td>
+              <td width="84%" class="val td_content2">
+                <input
+                  type="text"
+                  name="send_name"
+                  value=""
+                  size="25"
+                  class="input_text input_send"
+                />
+                <button class="post_button" id="deliveryBtn">
+                  배송지 목록
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label">전화번호</td>
+              <td class="val">
+                <input
+                  type="text"
+                  name="send_tphone"
+                  value=""
+                  size="3"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone2"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone3"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label">휴대전화번호</td>
+              <td class="val">
+                <input
+                  type="text"
+                  name="send_tphone"
+                  value=""
+                  size="3"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone2"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+                -
+                <input
+                  type="text"
+                  name="send_tphone3"
+                  value=""
+                  size="4"
+                  class="input"
+                />
+              </td>
+            </tr>
+            <tr class="shop_td_row">
+              <td class="my_page td_label2">주소</td>
+              <td colspan="9" class="td_content2">
+                <input class="input_send" name="send_post" type="text" />
+                <button class="post_button" id="postBtn2">우편번호 찾기</button
+                ><br />
+                <input
+                  type="text"
+                  name="send_address"
+                  value=""
+                  size="70"
+                  class="input"
+                /><br />
+                <input
+                  type="text"
+                  name="send_address2"
+                  value=""
+                  size="70"
+                  class="input"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label2">요청사항</td>
+              <td colspan="9" class="td_content2">
+                <textarea
+                  name="demand"
+                  cols="80"
+                  rows="4"
+                  class="input"
+                ></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div></div>
+        <table class="form_table shopping_order_table shop_order_table2">
+          <tbody>
+            <tr>
+              <td class="my_page td_label">쿠폰사용</td>
+              <td class="val td_content2">
+                <input type="hidden" name="coupon_tmp" />
+                <input
+                  type="text"
+                  name="coupon_use"
+                  style="text-align: right"
+                  size="15"
+                  class="input_text input_coupon"
+                  readonly=""
+                />&nbsp;원
+                <button class="post_btn" id="couponBtn">쿠폰조회 및 적용</button
+                ><br />
+              </td>
+            </tr>
+
+            <tr>
+              <td class="my_page td_label">적립금사용</td>
+              <td class="val">
+                <input
+                  type="text"
+                  name="coupon_use"
+                  style="text-align: right"
+                  size="15"
+                  class="input_text"
+                  readonly=""
+                />&nbsp;원 (보유적립금 : 1,100원)
+                <p class="reserve_ttl">
+                  ※ 적립금은 10,000원부터 50,000원까지 사용이 가능합니다.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label">결제방법</td>
+              <td width="84%" class="val">
+                <input
+                  type="radio"
+                  name="pay_method"
+                  value=""
+                  style="display: none"
+                />
+                <label class="radio_label" style="margin-right: 10px"
+                  ><input
+                    type="radio"
+                    name="pay_method"
+                    value="PB"
+                    id="PB"
+                    checked=""
+                  />
+                  무통장입금</label
+                ><label class="radio_label" style="margin-right: 10px"
+                  ><input type="radio" name="pay_method" value="PC" id="PC" />
+                  신용카드</label
+                ><label class="radio_label" style="margin-right: 10px"
+                  ><input type="radio" name="pay_method" value="PN" id="PN" />
+                  계좌이체 (에스크로)</label
+                ><label class="radio_label" style="margin-right: 10px"
+                  ><input type="radio" name="pay_method" value="PV" id="PV" />
+                  가상계좌 (에스크로)</label
+                ><label class="radio_label" style="margin-right: 10px"
+                  ><input type="radio" name="pay_method" value="PH" id="PH" />
+                  휴대폰</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="my_page td_label">세금계산서</td>
+              <td width="84%" class="val tax_td">
+                <input
+                  type="radio"
+                  name="pay_method"
+                  value=""
+                  id=""
+                  style="display: none"
+                />
+                <label class="radio_label" style="margin-right: 10px"
+                  ><input
+                    type="radio"
+                    name="pay_method"
+                    value="PB"
+                    id="PB"
+                    checked=""
+                    onclick="hideShow(0)"
+                  />
+                  발행안함</label
+                ><label class="radio_label" style="margin-right: 10px"
+                  ><input
+                    type="radio"
+                    name="pay_method"
+                    value="PC"
+                    id="PC"
+                    onclick="hideShow(1)"
+                  />
+                  세금계산서 신청</label
+                ><label class="radio_label" style="margin-right: 10px"
+                  ><input
+                    type="radio"
+                    name="pay_method"
+                    value="PN"
+                    id="PN"
+                    onclick="hideShow(2)"
+                  />
+                  현금영수증 신청</label
+                >
+                <div class="shopping_table">
+                  <table id="tax01" class="tax_table">
+                    <tbody class="tax_body">
+                      <tr style="border-top: 1px solid var(--bs-black)">
+                        <td class="shopping_order_td" bgcolor="#F9F9F9">
+                          &nbsp; 사업자 번호
+                        </td>
+                        <td colspan="3" bgcolor="#FFFFFF">
+                          <input
+                            type="text"
+                            name="com_num"
+                            value=""
+                            class="tax_input"
+                            size="20"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          width="20%"
+                          bgcolor="#F9F9F9"
+                          class="td_input shopping_order_td"
+                        >
+                          &nbsp; 상 호
+                        </td>
+                        <td width="30%" bgcolor="#FFFFFF" class="input_box">
+                          <input
+                            type="text"
+                            name="com_name"
+                            value=""
+                            class="tax_input"
+                          />
+                        </td>
+                        <td
+                          width="20%"
+                          bgcolor="#F9F9F9"
+                          class="td_input td_input1"
+                        >
+                          &nbsp; 대표자
+                        </td>
+                        <td width="30%" bgcolor="#FFFFFF" class="td_input1">
+                          <input
+                            type="text"
+                            name="com_owner"
+                            value=""
+                            class="tax_input"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#F9F9F9" class="shopping_order_td">
+                          &nbsp; 사업장 소재지
+                        </td>
+                        <td colspan="3" bgcolor="#FFFFFF" class="input_box">
+                          <input
+                            type="text"
+                            name="com_address"
+                            value=""
+                            class="tax_input tax_input1"
+                            size="50"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#F9F9F9" class="shopping_order_td">
+                          &nbsp; 업 태
+                        </td>
+                        <td bgcolor="#FFFFFF">
+                          <input
+                            type="text"
+                            name="com_kind"
+                            value=""
+                            class="tax_input tax_input2"
+                          />
+                        </td>
+                        <td bgcolor="#F9F9F9" class="td_input1">
+                          &nbsp; 종 목
+                        </td>
+                        <td bgcolor="#FFFFFF" class="td_input1">
+                          <input
+                            type="text"
+                            name="com_class"
+                            value=""
+                            class="tax_input"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#F9F9F9" class="shopping_order_td">
+                          &nbsp; 전화번호
+                        </td>
+                        <td bgcolor="#FFFFFF">
+                          <input
+                            type="text"
+                            name="com_tel"
+                            value=""
+                            class="input input_box1"
+                          />
+                        </td>
+                        <td bgcolor="#F9F9F9" class="td_input1">
+                          &nbsp; 이메일
+                        </td>
+                        <td bgcolor="#FFFFFF" class="td_input1">
+                          <input
+                            type="text"
+                            name="com_email"
+                            value=""
+                            class="tax_input"
+                          />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <table id="tax02" class="tax_table1">
+                  <tbody class="tax_body1">
+                    <tr style="border-top: 1px solid var(--bs-black)">
+                      <td width="20%" bgcolor="#F9F9F9" class="radio_content">
+                        &nbsp; 발급사유
+                      </td>
+                      <td width="80%" bgcolor="#FFFFFF" class="">
+                        <label style="margin-right: 10px"
+                          ><input
+                            type="radio"
+                            name="cash_type"
+                            value="C"
+                            onclick="qclick2('01');"
+                            id="cash_C"
+                          />
+                          사업자 지출증빙용</label
+                        >
+                        <label style="margin-right: 10px"
+                          ><input
+                            type="radio"
+                            name="cash_type"
+                            value="P"
+                            id="cash_P"
+                          />
+                          개인소득 공제용</label
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#F9F9F9" class="radio_content">
+                        &nbsp; 신청정보
+                      </td>
+                      <td bgcolor="#FFFFFF">
+                        <div id="cash_info01"></div>
+                        <div id="cash_info02" style="padding: 3px"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#F9F9F9" class="radio_content">
+                        &nbsp; 신청자명
+                      </td>
+                      <td bgcolor="#FFFFFF" class="radio_content_input">
+                        <input
+                          type="text"
+                          name="cash_name"
+                          value=""
+                          class="input"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="shopping_order_btn button_list_conts">
+        <button type="submit" class="submit_btn btn_item">
+          <a href="/dist/order_pay.html" style="color: white">결제하기</a>
+        </button>
+        <button type="button" class="cancel_btn btn_item">주문취소</button>
+      </div>
+    </div>
+
+    
+    ${require('./include/_footer.html')}
+
+    <script src="/assets/js/window.js"></script>
+  </body>
+</html>
+ 

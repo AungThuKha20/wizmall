@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="gry_bar1"></div>
+    <div class="container notice">
+      <div class="title_container">
+        <h2 class="title">고객센터</h2>
+        <div class="menu">
+          <a href="#"
+            ><img
+              src="/assets/imgs/icons/home_ico.png"
+              class="home_icon"
+              alt=""
+          /></a>
+          <span style="margin-left: 5px">고객센터 > 공지사항</span>
+        </div>
+      </div>
+      <div class="my_page list_menu_container community_list_menu">
+        <ul class="list_menu">
+          <li class="active">
+            <a href="community_notice.html">공지사항</a>
+          </li>
+          <li>
+            <a href="community_faq.html">자주하는 질문</a>
+          </li>
+          <li>
+            <a href="community_qna.html">상품문의</a>
+          </li>
+          <li>
+            <a href="community_review.html">상품후기</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- click link -->
+      <table
+        width="100%"
+        cellpadding="0"
+        cellspacing="0"
+        class="qna_common_table notice_common_table view"
+      >
+        <tbody>
+          <tr>
+            <th align="center"><strong>이름</strong></th>
+            <td align="left" style="text-align: left; padding-left: 10px">
+              위즈몰
+            </td>
+            <th align="center"><strong>이메일</strong></th>
+            <td align="left" style="text-align: left; padding-left: 10px">
+              test@test.com
+            </td>
+          </tr>
+          <tr>
+            <th width="15%" align="center" height="30">
+              <strong>작성일</strong>
+            </th>
+            <td
+              width="35%"
+              align="left"
+              style="text-align: left; padding-left: 10px"
+            >
+              2023-04-24
+            </td>
+            <th width="15%" align="center"><strong>조회수</strong></th>
+            <td
+              width="35%"
+              align="left"
+              style="text-align: left; padding-left: 10px"
+            >
+              44
+            </td>
+          </tr>
+          <tr>
+            <th align="center" height="30"><strong>파일첨부</strong></th>
+            <td
+              colspan="3"
+              align="left"
+              style="text-align: left; padding-left: 10px"
+            ></td>
+          </tr>
+
+          <tr>
+            <th align="center" height="30"><strong>제목</strong></th>
+            <td colspan="3" style="text-align: left; padding-left: 10px">
+              쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+            </td>
+          </tr>
+
+          <tr>
+            <td
+              height="50"
+              colspan="4"
+              style="
+                padding: 20px 0;
+                border-bottom: none;
+                vertical-align: middle;
+              "
+            >
+              쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table
+        width="100%"
+        cellpadding="0"
+        cellspacing="0"
+        class="notice_common_table view"
+      >
+        <tbody>
+          <tr>
+            <th width="15%" align="center" height="30">
+              <strong>이전글</strong>
+            </th>
+            <td
+              width="85%"
+              align="left"
+              colspan="3"
+              style="text-align: left; padding-left: 10px"
+            >
+              <a href="#">상품후기 남깁니다.</a>
+            </td>
+          </tr>
+          <tr>
+            <th align="center" height="30"><strong>다음글</strong></th>
+            <td
+              align="left"
+              colspan="3"
+              style="text-align: left; padding-left: 10px"
+            >
+              <a href="community_qna_view.html">모바일 제품문의 드립니다.</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- pages buttons -->
+      <div class="page_btns">
+        <button class="page_btn">
+          <img
+            src="/assets/imgs/icons/page-first.jpg"
+            alt=""
+          />
+        </button>
+        <button class="page_btn" style="margin: 0 5px">
+          <img
+            src="/assets/imgs/icons/page-prev.jpg"
+            alt=""
+          />
+        </button>
+        <div class="page_no">
+          <a href="#">1</a>
+        </div>
+        <button class="page_btn" style="margin: 0 5px">
+          <img
+            src="/assets/imgs/icons/page-last.jpg"
+            alt=""
+          />
+        </button>
+        <button class="page_btn">
+          <img
+            src="/assets/imgs/icons/page-next.jpg"
+            alt=""
+          />
+        </button>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

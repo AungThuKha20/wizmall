@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="gry_bar1"></div>
+    <div class="container review">
+      <div class="title_container">
+        <h2 class="title">고객센터</h2>
+        <div class="menu">
+          <a href="#"
+            ><img
+              src="/assets/imgs/icons/home_ico.png"
+              class="home_icon"
+              alt=""
+          /></a>
+          <span>고객센터 > 공지사항</span>
+        </div>
+      </div>
+      <div class="my_page list_menu_container community_list_menu">
+        <ul class="list_menu">
+          <li>
+            <a href="/dist/community_notice.html">공지사항</a>
+          </li>
+          <li>
+            <a href="/dist/community_faq.html">자주하는 질문</a>
+          </li>
+          <li>
+            <a href="/dist/community_qna.html">상품문의</a>
+          </li>
+          <li class="active">
+            <a href="/dist/community_review.html">상품후기</a>
+          </li>
+        </ul>
+      </div>
+      <div class="table_container3">
+        <table
+          width="100%"
+          cellpadding="0"
+          cellspacing="0"
+          class="review_body_table"
+        >
+          <tbody>
+            <tr bgcolor="#f9f9f9" style="height: 58px">
+              <th width="8%" height="30">
+                <strong>번호</strong>
+              </th>
+              <th><strong>제목</strong></th>
+              <th width="12%"><strong>작성자</strong></th>
+              <th width="12%"><strong>작성일</strong></th>
+              <th width="8%"><strong>조회</strong></th>
+            </tr>
+
+            <tr>
+              <td height="35">3</td>
+              <td style="text-align: left">
+                <span class="img_box"
+                  ><a href="/dist/community_review_view.html"
+                    ><img
+                      src="/assets/imgs/icons/plus_files/2004210005_R.jpg"
+                      width="50"
+                      height="50" /></a
+                ></span>
+                <div class="ttl">
+                  <div style="font-size: 12px; color: #999; height: 22px">
+                    3단 자동 우산
+                  </div>
+                  <a href="/dist/community_review_view.html">상품후기 남깁니다.</a>
+                  <img
+                    src="/assets/imgs/icons/plus_files/icon_new.gif"
+                    class="qna_icon"
+                  />
+                </div>
+              </td>
+              <td>관리자</td>
+              <td>2024-06-12</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td height="35">2</td>
+              <td style="text-align: left">
+                <span class="img_box"></span>
+                <div class="ttl">
+                  <div style="font-size: 12px; color: #999"></div>
+                  &nbsp;&nbsp;<img
+                    src="/assets/imgs/icons/plus_files/icon_new.gif"
+                    class="qna_icon"
+                    style="line-height: 40px"
+                  /><a href="/dist/community_review_view.html"
+                    >모바일 제품문의 드립니다.</a
+                  >
+                </div>
+              </td>
+              <td>입점업체</td>
+              <td>2023-04-27</td>
+              <td>153</td>
+            </tr>
+            <tr>
+              <td height="35">1</td>
+              <td style="text-align: left">
+                <span class="img_box"></span>
+                <div class="ttl">
+                  <div style="font-size: 12px; color: #999"></div>
+                  &nbsp;&nbsp;<img
+                    src="/assets/imgs/icons/plus_files/icon_new.gif"
+                    class="qna_icon"
+                    style="line-height: 40px"
+                  /><a href="/dist/community_review_view.html"
+                    >모바일 제품문의 드립니다.</a
+                  >
+                </div>
+              </td>
+              <td>입점업체</td>
+              <td>2023-04-27</td>
+              <td>153</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- pages buttons -->
+      <div class="page_btns">
+        <button class="page_btn">
+          <img
+            src="/assets/imgs/icons/page-first.jpg"
+            alt=""
+          />
+        </button>
+        <button class="page_btn" style="margin: 0 5px">
+          <img
+            src="/assets/imgs/icons/page-prev.jpg"
+            alt=""
+          />
+        </button>
+        <div class="page_no">
+          <a href="#">1</a>
+        </div>
+        <button class="page_btn" style="margin: 0 5px">
+          <img
+            src="/assets/imgs/icons/page-last.jpg"
+            alt=""
+          />
+        </button>
+        <button class="page_btn">
+          <img
+            src="/assets/imgs/icons/page-next.jpg"
+            alt=""
+          />
+        </button>
+      </div>
+      <!-- footer search -->
+      <div class="qna_footer">
+        <div class="search_cont">
+          <form>
+            <input type="hidden" name="code" />
+            <input type="hidden" name="category" />
+            <input type="hidden" name="mallid" />
+            <select name="searchOption" class="select">
+              <option value="subject">제 목</option>
+              <option value="content">내 용</option>
+              <option value="subcon">제목 + 내용</option>
+              <option value="name">작성자</option>
+              <option value="memid">아이디</option>
+            </select>
+            <input name="searchkey" type="text" class="search_input" />
+            <button type="submit">검색</button>
+          </form>
+        </div>
+      </div>
+      <!-- community board -->
+      <div class="community_board_btn clearfix">
+        <div class="right">
+          <a href="#">리스트</a>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>
