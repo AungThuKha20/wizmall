@@ -1634,12 +1634,12 @@ a.link_btn {
   font-size: 15px;
   font-weight: 500;
   line-height: 30px;
+  display: none;
   color: #333;
   line-height: 22px;
   text-align: left;
   font-size: 17px;
   margin-bottom: 12px;
-  display: -webkit-box;
   font-size: 1.05rem;
   font-weight: 500;
   line-height: 21px;
