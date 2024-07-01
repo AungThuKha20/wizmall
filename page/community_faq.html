@@ -43,14 +43,15 @@
     <div class="container faq">
       <div class="title_container">
         <h2 class="title">고객센터</h2>
-        <div class="menu">
-          <a href="#"
-            ><img
-              src="	/assets/imgs/icons/home_ico.png"
-              class="home_icon"
-              alt=""
-          /></a>
-          <span>고객센터 > 공지사항</span>
+
+        <div class="section_select">
+          <select name="searchopt" class="select">
+            <option>제 목</option>
+            <option>내 용</option>
+            <option>제목 + 내용</option>
+          </select>
+          <input type="text" class="input" value="" />
+          <button type="submit" class="btns">검색</button>
         </div>
       </div>
       <div class="my_page list_menu_container community_list_menu">
@@ -60,12 +61,6 @@
           </li>
           <li class="active">
             <a href="community_faq.html">자주하는 질문</a>
-          </li>
-          <li>
-            <a href="community_qna.html">상품문의</a>
-          </li>
-          <li>
-            <a href="community_review.html">상품후기</a>
           </li>
         </ul>
       </div>
@@ -197,31 +192,19 @@
       <!-- pages buttons -->
       <div class="page_btns">
         <button class="page_btn">
-          <img
-            src="/assets/imgs/icons/page-first.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-first.jpg" alt="" />
         </button>
         <button class="page_btn" style="margin: 0 5px">
-          <img
-            src="/assets/imgs/icons/page-prev.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
         </button>
         <div class="page_no">
           <a href="#">1</a>
         </div>
         <button class="page_btn" style="margin: 0 5px">
-          <img
-            src="/assets/imgs/icons/page-last.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-last.jpg" alt="" />
         </button>
         <button class="page_btn">
-          <img
-            src="/assets/imgs/icons/page-next.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-next.jpg" alt="" />
         </button>
       </div>
       <!-- footer search -->

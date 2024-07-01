@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -47,6 +47,8 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
+<!-- route js   -->
+<script src="../assets/js/route_path.js"></script>
 
     <script>
       (function (d) {
@@ -95,7 +97,7 @@
       <li class="head_line">line</li>
       <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
       <li class="head_line">line</li>
-      <li><a href="/order" title="고객센터">고객센터</a></li>
+      <li><a href="/dist/community_notice.html" title="고객센터">고객센터</a></li>
     </ul>
   </div>
   <div class="head_middle container">
@@ -193,8 +195,8 @@
     </div>
   </div>
 </header>
-<header class="head pc_hidden">
-  <div class="mb_icon_gp container">
+<header class="head mb_head pc_hidden">
+  <div class="mb_icon_gp container ">
     <div class="mb_hamburger">
       <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
     </div>
@@ -206,11 +208,11 @@
      </div>
      <div style="width: 90%;">
       <div class="mb_side_bar_header">
-        <h3>위즈몰에</h3>
+        <h3>아반몰에</h3>
         <h4>오신 것을 환영합니다.</h4>
       </div>
       <div class="mb_btn_gp">
-        <a>로그인</a>
+        <a href="/dist/login_page.html">로그인</a>
         <a href="/dist/mypage_navLinks.html">화원가입</a>
       </div>
       <div class="mb_cate_gp">
@@ -410,11 +412,100 @@
 </div>
 </header>
 
+    <div class="sub_banner ">
+       <ul class="sub_cate_gp container">
+        <li class="home_icon">
+            <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
+        </li>
+        <li class="li_ico mobile_hidden"></li>
+        <li class="sub_cate_select1 mobile_hidden ">
+            <div class="custom-select">
+                <select>
+                  <option value="option1">전체보기</option>
+                  <option value="option2">여성의류</option>
+                  <option value="option3" selected>남성의류</option>
+                  <option value="option4">패션잡화</option>
+                  <option value="option5">화장품/뷰티</option>
+                  <option value="option6">출산/완구/아동용품</option>
+                  <option value="option7">가구/인테리어/리빙</option>
+                  <option value="option8">취미/스포츠/자동차</option>
+                  <option value="option9">디지털/가전</option>
+                  <option value="option10">도서/상품권</option>
+                </select>
+              </div>
+        </li>
+        <li class="li_ico"></li>
+        <li class="sub_cate_select2 mobile_hidden ">
+            <div class="custom-select">
+                <select>
+                  <option value="option2">전체보기</option>
+                  <option value="option3">하위분류 1</option>
+                  <option value="option4">하위분류 2</option>
+                  <option value="option5">하위분류 3</option>
+                </select>
+              </div>
+        </li>
+        <li class="pc_hidden breadcrumbsEl "></li>
+     </ul>
+</div>
+    <div class="quick_menu mobile_hidden">
+  <ul class="head_shop_menu">
+    <li>
+      <a href="/dist/shopping_cart.html" title="장바구니">
+        <img src="../../assets/imgs/icons/ico_baguni.png" alt="장바구니" />
+        <span>장바구니</span>
+        <i>0</i>
+      </a>
+    </li>
+    <li>
+      <a href="/dist/mypage_favorite.html" title="관심상품">
+        <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
+        <span>관심상품</span>
+      </a>
+    </li>
+    <li>
+      <a href="/dist/mypage.html" title="마이쇼핑">
+        <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
+        <span>마이쇼핑</span>
+      </a>
+    </li>
+  </ul>
+  <div class="brasket_list">
+    <h4>TODAY</h4>
+    <img
+      class="pd_img"
+      src="/assets/imgs/sub3_img/pd.jpeg"
+      alt=""
+    />
+    <div class="quick_menu_btn_gp">
+      <button><img src="/assets/imgs/icons/left.png" alt="" /></button>
+      <button><img src="/assets/imgs/icons/next.png" alt="" /></button>
+    </div>
+  </div>
+  <div class="quick_menu_on_btn">
+    <button id="quick_menu_on_btn"></button>
+  </div>
+</div>
+
     <div class="container brand_shop">
-      <div class="product_search_list"></div>
+      <h3 class="product_list_title">아반소프트</h3>
+      <div class="product_content_container">
+        <span class="count"
+          >카테고리에<span style="color: #ef4023">1</span>개 상품</span
+        >
+        <div class="product_select">
+          <select name="orderby" onchange="this.form.submit();">
+            <option value="">상품정렬방식</option>
+            <option value="">조회수 순</option>
+            <option value="">최근등록순 순</option>
+            <option value="">최저가격 순</option>
+            <option value="">최고가격 순</option>
+          </select>
+        </div>
+      </div>
       <ul class="product_search_list clearfix">
         <li>
-          <button type="button" class="wish_btn">관심상품 등록</button>
+          <button type="button" class="wish_btn"></button>
           <a href="prd_view.php?prdcode=2004210039&amp;catcode=&amp;page=1">
             <div class="img_box" style="margin-bottom: 20px">
               <img
@@ -429,18 +520,9 @@
                 TS 뉴프리미엄 TS샴품 500g X 2P + 100g
               </h4>
               <div class="icon_list">
-                <img
-                  src="/assets/imgs/icons/icon_hit.gif"
-                  alt=""
-                />
-                <imga
-                  src="/assets/imgs/icons/icon_new.gif"
-                  alt=""
-                />
-                <img
-                  src="/assets/imgs/icons/icon_sale.gif"
-                  alt=""
-                />
+                <img src="/assets/imgs/icons/icon_hit.gif" alt="" />
+                <img src="/assets/imgs/icons/icon_new.gif" alt="" />
+                <img src="/assets/imgs/icons/icon_sale.gif" alt="" />
               </div>
               <div class="product_price_list">
                 <span class="product_price">50,000원</span>
@@ -475,14 +557,14 @@
             </ul>
             <div class="foot_info">
                 <div>
-                    <p>위즈몰</p>
+                    <p>데모몰</p>
                     <p>대표자 : <span>대표자</span></p>
-                    <p>주소 : <span>서울 금천구 가산디지털1로 171</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 000</span></p>
                     <p>사업자등록번호 : <span>000-00-000000</span></p>
                 </div>
                 <div class="foot_info_sub">
-                    <p>고객센터 : <span>1544-0713</span></p>
-                    <p>이메일 : <span>help@anywiz.co.kr</span></p>
+                    <p>고객센터 : <span>0000-0000</span></p>
+                    <p>이메일 : <span> help@avan.co.kr</span></p>
                     <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
                 </div>
             </div>

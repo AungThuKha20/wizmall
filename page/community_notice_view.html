@@ -39,17 +39,17 @@
     ${require('./include/_subMenuCate.html')}
     ${require('./include/_quick_menu.html')}
     <div class="gry_bar1"></div>
-    <div class="container notice">
+    <div class="container notice mobile_hidden_m">
       <div class="title_container">
         <h2 class="title">고객센터</h2>
-        <div class="menu">
-          <a href="#"
-            ><img
-              src="/assets/imgs/icons/home_ico.png"
-              class="home_icon"
-              alt=""
-          /></a>
-          <span style="margin-left: 5px">고객센터 > 공지사항</span>
+        <div class="section_select">
+          <select name="searchopt" class="select">
+            <option>제 목</option>
+            <option>내 용</option>
+            <option>제목 + 내용</option>
+          </select>
+          <input type="text" class="input" value="" />
+          <button type="submit" class="btns">검색</button>
         </div>
       </div>
       <div class="my_page list_menu_container community_list_menu">
@@ -59,12 +59,6 @@
           </li>
           <li>
             <a href="community_faq.html">자주하는 질문</a>
-          </li>
-          <li>
-            <a href="community_qna.html">상품문의</a>
-          </li>
-          <li>
-            <a href="community_review.html">상품후기</a>
           </li>
         </ul>
       </div>
@@ -178,32 +172,77 @@
       <!-- pages buttons -->
       <div class="page_btns">
         <button class="page_btn">
-          <img
-            src="/assets/imgs/icons/page-first.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-first.jpg" alt="" />
         </button>
         <button class="page_btn" style="margin: 0 5px">
-          <img
-            src="/assets/imgs/icons/page-prev.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
         </button>
         <div class="page_no">
           <a href="#">1</a>
         </div>
         <button class="page_btn" style="margin: 0 5px">
-          <img
-            src="/assets/imgs/icons/page-last.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-last.jpg" alt="" />
         </button>
         <button class="page_btn">
-          <img
-            src="/assets/imgs/icons/page-next.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-next.jpg" alt="" />
         </button>
+      </div>
+    </div>
+
+    <div class="container notice_m pc_hidden_p">
+      <table width="100%" class="notice_view">
+        <tbody>
+          <tr>
+            <th class="notice_view_th" colspan="2">
+              쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+            </th>
+          </tr>
+
+          <tr>
+            <th class="notice_view_td">작성자 : 위즈몰</th>
+            <th class="notice_view_td" width="90">
+              <span class="date">2023-04-24</span>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td class="notice_cont_text">
+              쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" class="nextpre_post">
+        <tbody>
+          <tr>
+            <th>이전글</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>다음글</th>
+            <td>
+              <a href="#">쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="input_btn">
+        <div class="left">
+          <a href="/dist/community_notice.html">리스트</a>
+        </div>
+        <div class="right">
+          <a href="/dist/notice_write_form.html">글쓰기</a>
+          <a href="/dist/notice_collection_form.html">수정</a>
+          <a href="/dist/notice_delete_form.html">삭제</a>
+          <a href="/dist/notice_reply_form.html">답글</a>
+        </div>
       </div>
     </div>
 

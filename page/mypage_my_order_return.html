@@ -36,7 +36,7 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
@@ -80,29 +80,31 @@
             </li>
           </ul>
         </div>
-        <div class="my_page my_order_return order_return_cont">
-          <table class="shopping_detail_cont table_cont">
-            <tbody>
+        <div class="my_page my_order_cancel order_cancel_cont">
+          <table class="order_cancel_cont table_cont">
+            <thead>
               <tr>
-                <th style="width: 82px">이미지</th>
-                <th style="text-align: center; min-width: 514px">
+                <th class="th_label2" style="width: 7%">이미지</th>
+                <th class="th_label2" style="text-align: center">
                   구매상품정보
                 </th>
-                <th class="">제품가격</th>
-                <th class="">구매수량</th>
-                <th class="">합계</th>
-                <th class="">수 량</th>
-                <th class="">환불금액</th>
+                <th class="th_label2" style="width: 10%;">제품가격</th>
+                <th class="th_label2" style="width: 10%;">구매수량</th>
+                <th class="th_label2" style="width: 10%;">합계</th>
+                <th class="th_label2" style="width: 20%; text-align:left;">수 량</th>
+                <th class="th_label2" style="width: 10%;">환불금액</th>
               </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td class="td_label4">
-                  <a href="#" target="_blank"
+                  <a href=""
                     ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
                   /></a>
                 </td>
                 <td class="td_label4_sub">
                   <p>
-                    <a href="#" target="_blank"
+                    <a href=""
                       >[디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)</a
                     >
                   </p>
@@ -123,7 +125,6 @@
                     />
                     <a class="up" onclick="incrementCount()">+</a>
                   </div>
-                  <!-- //count_box -->
                 </td>
                 <td class="td_label4">22,000원</td>
               </tr>
@@ -154,23 +155,97 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <div class="my_order_return text_area">
-          <h3 class="order_title">반품사유</h3>
-          <textarea name="textarea" rows="20" class="" style="height: 190px">
-          </textarea>
-        </div>
-        <div class="button_list_conts">
-          <div></div>
-          <div>
-            <button type="button" class="submit_btn">주문 취소</button>
-            <button type="button" class="cancel_btn">프린트 하기</button>
+          <div class="my_order_return text_area">
+            <h3 class="order_title">반품사유</h3>
+            <textarea name="textarea" rows="20" class="" style="height: 190px">
+            </textarea>
           </div>
-          <div></div>
         </div>
       </div>
     </div>
-
+    <div class="order_pay_container pc_hidden_p">
+      <div class="order_pay_m">
+        <div class="order_pay_cont1 order_pay_cont2 order_pay_cont">
+          <div class="order_pay_cont1_left">
+            <div class="img_box">
+              <img src="/assets/imgs/sub02/my_order/fun.jpg" alt="" />
+            </div>
+            <div class="order_pay_cont_text">
+              <div class="prd_tit">
+                <a href="#">
+                  [디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)
+                </a>
+              </div>
+              <div class="order_pay_cont_text_list">
+                <div class="order_pay_cont_left_text">
+                  <span>상품가격</span> <br />
+                  <span>적립금</span> <br />
+                  <span class="order_pay_cont_text1">수량</span>
+                  <br />
+                </div>
+                <div class="order_pay_cont_right_text">
+                  <span class="prd_price">22,000원</span> <br />
+                  <span> 1,100원</span><br />
+                  <span class="count_box">
+                    <a class="down" onclick="decrementCount()">-</a>
+                    <input
+                      type="text"
+                      name="amount"
+                      value="1"
+                      onchange="checkAmount(this.form)"
+                      onkeyup="checkAmount(this.form)"
+                      class="input_number"
+                    />
+                    <a class="up" onclick="incrementCount()">+</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="line_hide"></p>
+        <div class="order_pay_info">
+          <div class="order_pay_info_cont_left">
+            <span> 판매자 : 입점업체(00-0000-0000)</span><br />
+            <span>[배송비 : 50,000원 이상구매시 무료]</span>
+          </div>
+          <div class="order_pay_info_cont_right">
+            <span> 상품가격 22,000원</span><br />
+            <span>배송비3,000원</span>
+          </div>
+        </div>
+        <p class="line_hide"></p>
+        <div class="crt_total">
+          <h3 style="margin: 0px 0px 12px">결제금액 안내</h3>
+          <div class="crt_total_cont">
+            <div class="crt_total_cont_left">
+              <span> 상품가격</span><br />
+              <span>배송비</span><br />
+              <span>주문총액</span>
+            </div>
+            <div class="crt_total_cont_right">
+              <span> 22,000원</span><br />
+              <span>3,000원</span><br />
+              <span style="font-size: 17px; color: #ef4023">25,000원 </span>
+            </div>
+          </div>
+        </div>
+        <div class="gry_bar"></div>
+      </div>
+      <div class="order_cancel_cont text_area">
+        <h3 class="order_title">반품사유</h3>
+        <textarea name="textarea" rows="20" class="" style="height: 190px">
+        </textarea>
+      </div>
+    </div>
+    <div class="button_list_conts">
+      <div></div>
+      <div>
+        <button type="button" class="submit_btn">주문 취소</button>
+        <button type="button" class="cancel_btn">프린트 하기</button>
+      </div>
+      <div></div>
+    </div>
     ${require('./include/_footer.html')}
   </body>
 </html>

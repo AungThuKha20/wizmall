@@ -358,14 +358,18 @@ img {
   background: var(--bs-primary);
   color: var(--bs-white);
 }
+.mb_head {
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
 .head .all_cate_items.open {
   display: block;
 }
 /* header end */
 /* header_mobile_version  */
 .head .mb_icon_gp {
-  padding: 20px 15px;
-  width: 100vw;
+  padding:20px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -384,11 +388,13 @@ img {
 .head .mb_icon_gp button {
   background-color: transparent;
   border: none;
+  padding: 0;
+  width: fit-content;
 }
 .head .mb_icon_gp .mb_icon_btn {
   width: 100px;
   display: flex;
-  gap: 5px;
+  gap: 20px;
   justify-content: end;
 }
 .head .mb_icon_gp .mb_search button img {
@@ -405,12 +411,12 @@ img {
 }
 
 .head .mb_all_cate_items {
-  padding: 20px 20px;
+  padding: 20px 30px;
   border: 1px solid var(--bs-white-gray);
-  display: block;
+  display: block !important;
   border-left: none;
   border-right: none;
-  width: 100%;
+  width: 100vw !important;
 }
 .head .mb_all_cate_items ul {
   display: flex;
@@ -644,6 +650,8 @@ img {
 }
 .head .search_sidebar .search_suggest li a {
   font-size: 1.05rem;
+  width: 100%;
+  display: block;
   padding-left: 15px;
   font-weight: 500;
 }
@@ -733,6 +741,8 @@ img {
 }
 .sub_banner .sub_cate_gp {
   display: flex;
+  padding: 0px 15px;
+  max-height: 60px;
   align-items: center;
 }
 .sub_banner .home_icon img {
@@ -1692,7 +1702,29 @@ a.link_btn {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
 }
-
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw;
+  z-index: 998 !important;
+  position: relative;
+}
+.no-scroll2 {
+  overflow: hidden !important;
+  height: 100% !important;
+  width: 100%;
+  z-index: 998 !important;
+  position: relative;
+}
+.no-scroll-wrapper {
+  position: fixed;
+  width: 100vw;
+  z-index: 98;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 .product_cards_container .product_card_item {
   color: var(--bs-black);
   text-decoration: none;
@@ -1904,17 +1936,17 @@ a.link_btn {
   margin: 0 40px 40px 0;
 }
 .product_search_list li .wish_btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 25px;
-  height: 25px;
-  background: url(/assets/imgs/icons/wish_on.png) 50% 50%
+    content: " ";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: none;
+    margin-top: 20px;
+    right: 10px;
+    z-index: 1;
+    top: 0;
+    background: url(/assets/imgs/icons/wish_on.png) 50% 50%
     no-repeat;
-  text-indent: -9999px;
-  cursor: pointer;
-  border: none;
-  z-index: 2;
 }
 .product_search_list .icon_list {
   width: 30px;
@@ -1978,7 +2010,7 @@ a.link_btn {
   margin-top: -14px;
   width: 14px;
   height: 28px;
-  background: url(http://wizmall.anywiz.co.kr/images/shop/step_arrow.png)
+  background: url(/assets/imgs/step_arrow.png)
     no-repeat;
 }
 .shopping_card_step .shopping_card_step_item li.on span {

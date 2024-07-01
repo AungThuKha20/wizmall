@@ -47,6 +47,8 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
+<!-- route js   -->
+<script src="../assets/js/route_path.js"></script>
 
     <script>
       (function (d) {
@@ -95,7 +97,7 @@
       <li class="head_line">line</li>
       <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
       <li class="head_line">line</li>
-      <li><a href="/order" title="고객센터">고객센터</a></li>
+      <li><a href="/dist/community_notice.html" title="고객센터">고객센터</a></li>
     </ul>
   </div>
   <div class="head_middle container">
@@ -193,8 +195,8 @@
     </div>
   </div>
 </header>
-<header class="head pc_hidden">
-  <div class="mb_icon_gp container">
+<header class="head mb_head pc_hidden">
+  <div class="mb_icon_gp container ">
     <div class="mb_hamburger">
       <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
     </div>
@@ -206,11 +208,11 @@
      </div>
      <div style="width: 90%;">
       <div class="mb_side_bar_header">
-        <h3>위즈몰에</h3>
+        <h3>아반몰에</h3>
         <h4>오신 것을 환영합니다.</h4>
       </div>
       <div class="mb_btn_gp">
-        <a>로그인</a>
+        <a href="/dist/login_page.html">로그인</a>
         <a href="/dist/mypage_navLinks.html">화원가입</a>
       </div>
       <div class="mb_cate_gp">
@@ -410,14 +412,14 @@
 </div>
 </header>
 
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       <div class="sub_banner ">
        <ul class="sub_cate_gp container">
         <li class="home_icon">
-            <img src="/assets/imgs/icons/home_ico.png" alt="">
+            <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
         </li>
-        <li class="li_ico"></li>
-        <li class="sub_cate_select1">
+        <li class="li_ico mobile_hidden"></li>
+        <li class="sub_cate_select1 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option1">전체보기</option>
@@ -434,7 +436,7 @@
               </div>
         </li>
         <li class="li_ico"></li>
-        <li class="sub_cate_select2">
+        <li class="sub_cate_select2 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option2">전체보기</option>
@@ -444,8 +446,8 @@
                 </select>
               </div>
         </li>
-        <li class="pc_hidden">전체보기</li>
-    </ul>
+        <li class="pc_hidden breadcrumbsEl "></li>
+     </ul>
 </div>
       <div class="gry_bar"></div>
     </div>
@@ -527,14 +529,13 @@
             </li>
           </ul>
         </div>
-        <div class="form_table_container">
-          <h2 class="my_page header header_mobile_hidden">기본정보 입력</h2>
-          <h2 class="my_page header_pc_hidden">회원 정보 수정</h2>
+        <div class="form_table_container form_table_mobile_hidden">
+          <h2 class="my_page header header">기본정보 입력</h2>
           <table class="form_table">
             <tbody>
               <tr>
                 <td class="my_page td_label_7">아이디 <span class="star_red_hidden">*</span></td>
-                <td colspan="9" class="text_box"></td>
+                <td colspan="9" class="text_box" style="padding-left: 16px; color: #333;">jijb1010</td>
               </tr>
               <tr class="tr_responsive">
                 <td class="my_page td_label">비밀번호 <span class="star_red_hidden">*</span></td>
@@ -562,7 +563,7 @@
               </tr>
               <tr>
                 <td class="my_page td_label">이름 <span class="star_red_hidden">*</span></td>
-                <td colspan="9"></td>
+                <td colspan="9" style="padding-left: 16px; color: #333;">홍길동</td>
               </tr>
               <tr class="tr_responsive">
                 <td class="my_page td_label2">주소 <span class="star_red_hidden">*</span></td>
@@ -686,21 +687,152 @@
             </tbody>
           </table>
         </div>
+      </div>
+      <div class="my_page my_page_cont my_page_cont_pc_hidden">
+        <div class="title_container">
+          <h2 class="title">회원 정보 수정</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 회원정보</span>
+          </div>
+        </div>
+        <form>
+          <div class="form_table_container_pc_hidden">
+            <h2 class="my_page header_pc_hidden">회원 정보 수정</h2>
+            <dl class="data_table">
+              <dt>아이디 <i>*</i> jijb1010 </dt>
+              <dd></dd>
+            </dl>
+            <dl class="data_table">
+              <dt>비밀번호  
+                <i>*</i>
+                <small>(영문,숫자,특수문자를 혼합하여 6자리 ~ 12자리입력.)</small> 
+              </dt>
+              <dd>
+                <input name="passwd" type="password" class="input_style">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>비밀번호 확인 
+                 <i>*</i> 
+              </dt>
+              <dd>
+                <input name="passwd2" type="password" class="input_style">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>이메일  <i>*</i> </dt>
+              <dd>
+                <input name="email1" type="text" class="input_style">
+                <!-- <input name="email2" type="text" class="input_style">
+                <select name="email3">
+                  <option value="">직접입력</option>
+                  <option value="https://www.naver.com/">naver.com</option>
+                  <option value="https://www.nate.com/">nate.com</option>
+                  <option value="https://dreamwiz.com/">dreamwiz.com</option>
+                  <option value="https://www.yahoo.com/?guccounter=1">yahoo.co.kr</option>
+                  <option value="https://empal.com/">empal.com</option>
+                  <option value="http://unitel.co.kr/">unitel.co.kr</option>
+                  <option value="https://mail.google.com/">gmail.com</option>
+                  <option value="https://www.korea.com/">korea.com</option>
+                  <option value="https://chol.com/">chol.com</option>
+                  <option value="https://paran.com/">paran.com</option>
+                  <option value="https://freechal.com/">freechal.com</option>
+                  <option value="https://www.daum.net/">hanmail.net</option>
+                  <option value="https://hotmail.com/">hotmail.com</option>
+                </select> -->
+                <div style="margin: 10px 0 0;">
+                  메일정보수신&nbsp;
+                  <input name="reemail" type="radio" value="Y" checked id="eamil_Y">
+                  <label for="email_Y">동의</label>
+                  <input name="reemail" type="radio" value="N" id="email_N">
+                  <label for="email_N">동의안함</label>
+                </div>
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>전화번호</dt>
+              <dd>
+                <select name="tphone">
+                  <option value="">선택</option>
+                  <option value="02">02</option>
+                  <option value="031">031</option>
+                  <option value="032">032</option>
+                  <option value="033">033</option>
+                  <option value="041">041</option>
+                  <option value="042">042</option>
+                  <option value="043">043</option>
+                  <option value="051">051</option>
+                  <option value="052">052</option>
+                  <option value="053">053</option>
+                  <option value="054">054</option>
+                  <option value="055">055</option>
+                  <option value="061">061</option>
+                  <option value="062">062</option>
+                  <option value="063">063</option>
+                  <option value="064">064</option>
+                </select> -
+                <input name="tphone2" value="" type="text" class="input_style" style="width: 80px;"> -
+                <input name="tphone3" value="" type="text" class="input_style" style="width: 80px;">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>휴대폰<i>*</i></dt>
+              <dd>
+                <select name="hphone">
+                  <option value="">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                  <option value="016">016</option>
+                  <option value="017">017</option>
+                  <option value="018">018</option>
+                  <option value="019">019</option>
+                </select> -
+                <input name="hphone2" value="" type="text" class="input_style" style="width: 80px;"> -
+                <input name="hphone3" value="" type="text" class="input_style" style="width: 80px;">
+                <div>
+                  SMS수신&nbsp;
+                  <input name="resms" type="radio" value="Y" checked id="sms_Y">
+                  <label for="sms_Y">동의</label>
+                  <input name="resms" type="radio" value="N" checked id="sms_N">
+                  <label for="sms_N">동의안함</label>
+                </div>
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>주소<i>*</i></dt>
+              <dd>
+                <div class="dd_btn_inner">
+                  <input name="post" type="text" class="input_style" readonly>
+                  <button type="button">우편번호 찾기</button>
+                </div>
+                <div style="margin: 5px 0 0;">
+                  <input name="address" type="text" class="input_style">
+                </div>
+                <div style="margin: 5px 0 0;">
+                  <input name="address2" type="text" class="input_style">
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </form>
         <div class="gry_bar"></div>
         <div class="gry_bar"></div>
-        <div class="hidden_btn_cont">
-          <button type="submit" class="submit_btn hidden_btn">수정</button>
+      </div>
+      <div class="button_list_conts">
+        <div>
+          <a href="/dist/mypage_withdrawal.html" class="list_btn">회원탈퇴</a>
         </div>
-        <div class="button_list_conts">
-          <div>
-            <a href="/dist/mypage_withdrawal.html" class="list_btn">회원탈퇴</a>
-          </div>
-          <div>
-            <button type="submit" class="submit_btn">확인</button>
-            <button type="button" class="cancel_btn">취소</button>
-          </div>
-          <div></div>
+        <div>
+          <button type="submit" class="submit_btn">확인</button>
+          <button type="button" class="cancel_btn">취소</button>
         </div>
+        <div></div>
       </div>
     </div>
     <footer class="footer">
@@ -725,14 +857,14 @@
             </ul>
             <div class="foot_info">
                 <div>
-                    <p>위즈몰</p>
+                    <p>데모몰</p>
                     <p>대표자 : <span>대표자</span></p>
-                    <p>주소 : <span>서울 금천구 가산디지털1로 171</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 000</span></p>
                     <p>사업자등록번호 : <span>000-00-000000</span></p>
                 </div>
                 <div class="foot_info_sub">
-                    <p>고객센터 : <span>1544-0713</span></p>
-                    <p>이메일 : <span>help@anywiz.co.kr</span></p>
+                    <p>고객센터 : <span>0000-0000</span></p>
+                    <p>이메일 : <span> help@avan.co.kr</span></p>
                     <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
                 </div>
             </div>

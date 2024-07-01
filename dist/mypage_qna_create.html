@@ -47,6 +47,8 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
+<!-- route js   -->
+<script src="../assets/js/route_path.js"></script>
 
     <script>
       (function (d) {
@@ -95,7 +97,7 @@
       <li class="head_line">line</li>
       <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
       <li class="head_line">line</li>
-      <li><a href="/order" title="고객센터">고객센터</a></li>
+      <li><a href="/dist/community_notice.html" title="고객센터">고객센터</a></li>
     </ul>
   </div>
   <div class="head_middle container">
@@ -193,8 +195,8 @@
     </div>
   </div>
 </header>
-<header class="head pc_hidden">
-  <div class="mb_icon_gp container">
+<header class="head mb_head pc_hidden">
+  <div class="mb_icon_gp container ">
     <div class="mb_hamburger">
       <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
     </div>
@@ -206,11 +208,11 @@
      </div>
      <div style="width: 90%;">
       <div class="mb_side_bar_header">
-        <h3>위즈몰에</h3>
+        <h3>아반몰에</h3>
         <h4>오신 것을 환영합니다.</h4>
       </div>
       <div class="mb_btn_gp">
-        <a>로그인</a>
+        <a href="/dist/login_page.html">로그인</a>
         <a href="/dist/mypage_navLinks.html">화원가입</a>
       </div>
       <div class="mb_cate_gp">
@@ -410,14 +412,14 @@
 </div>
 </header>
 
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       <div class="sub_banner ">
        <ul class="sub_cate_gp container">
         <li class="home_icon">
-            <img src="/assets/imgs/icons/home_ico.png" alt="">
+            <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
         </li>
-        <li class="li_ico"></li>
-        <li class="sub_cate_select1">
+        <li class="li_ico mobile_hidden"></li>
+        <li class="sub_cate_select1 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option1">전체보기</option>
@@ -434,7 +436,7 @@
               </div>
         </li>
         <li class="li_ico"></li>
-        <li class="sub_cate_select2">
+        <li class="sub_cate_select2 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option2">전체보기</option>
@@ -444,8 +446,8 @@
                 </select>
               </div>
         </li>
-        <li class="pc_hidden">전체보기</li>
-    </ul>
+        <li class="pc_hidden breadcrumbsEl "></li>
+     </ul>
 </div>
       <div class="gry_bar"></div>
     </div>
@@ -545,6 +547,24 @@
                 class="th_label"
                 style="text-align: left; padding-left: 18px; color: #555"
               >
+                작성자
+              </th>
+              <td colspan="3" style="background-color: #fff">홍길동</td>
+            </tr>
+            <tr class="tr_responsive">
+              <th
+                class="th_label"
+                style="text-align: left; padding-left: 18px; color: #555"
+              >
+                연락처
+              </th>
+              <td colspan="3" style="background-color: #fff">010-1234-5678</td>
+            </tr>
+            <tr class="tr_responsive">
+              <th
+                class="th_label"
+                style="text-align: left; padding-left: 18px; color: #555"
+              >
                 내용 *
               </th>
               <td style="background-color: #fff">
@@ -556,11 +576,53 @@
         <div class="hidden_btn_cont">
           <button type="submit" class="submit_btn hidden_btn">확인</button>
         </div>
-        <div class="my_qna_create btn_cont">
-          <div class="right">
-            <a href="mypage_qna_create.html">확인</a>
-            <a href="mypage_qna_detail.html" class="리스트">리스트</a>
+        <div class="button_list_conts ">
+          <div></div>
+          <div>
+            <button type="submit" class="cancel_btn">작성</button>
+            <button type="button" class="submit_btn">목록</button>
           </div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="my_page my_qna_create_mobile">
+        <form>
+          <div class="form_table_container_pc_hidden">
+            <h2 class="my_page header_pc_hidden">1:1문의</h2>
+            <dl class="data_table">
+              <dt>제목  <i>*</i></dt>
+              <dd>
+                <input name="subject" type="text" class="input_style">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>작성자 &nbsp; &nbsp; &nbsp; &nbsp;
+                <span>홍길동</span>
+              </dt>
+              <dd></dd>
+            </dl>
+            <dl class="data_table">
+              <dt>연락처 &nbsp; &nbsp; &nbsp; &nbsp;
+                <span>010-1234-5678</span>
+              </dt>
+              <dd></dd>
+            </dl>
+            <dl class="data_table">
+              <dt> 내용 <i>*</i></dt>
+              <dd>
+                <textarea name="question" cols="85" rows="8"></textarea>
+              </dd>
+            </dl>
+          </div>
+        </form>
+        <div class="button_list_conts ">
+          <div></div>
+          <div>
+            <button type="submit" class="cancel_btn">작성</button>
+            <button type="button" class="submit_btn">목록</button>
+          </div>
+          <div></div>
         </div>
       </div>
     </div>
@@ -587,14 +649,14 @@
             </ul>
             <div class="foot_info">
                 <div>
-                    <p>위즈몰</p>
+                    <p>데모몰</p>
                     <p>대표자 : <span>대표자</span></p>
-                    <p>주소 : <span>서울 금천구 가산디지털1로 171</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 000</span></p>
                     <p>사업자등록번호 : <span>000-00-000000</span></p>
                 </div>
                 <div class="foot_info_sub">
-                    <p>고객센터 : <span>1544-0713</span></p>
-                    <p>이메일 : <span>help@anywiz.co.kr</span></p>
+                    <p>고객센터 : <span>0000-0000</span></p>
+                    <p>이메일 : <span> help@avan.co.kr</span></p>
                     <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
                 </div>
             </div>

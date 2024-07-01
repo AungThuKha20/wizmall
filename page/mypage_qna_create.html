@@ -36,7 +36,7 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
@@ -98,6 +98,24 @@
                 class="th_label"
                 style="text-align: left; padding-left: 18px; color: #555"
               >
+                작성자
+              </th>
+              <td colspan="3" style="background-color: #fff">홍길동</td>
+            </tr>
+            <tr class="tr_responsive">
+              <th
+                class="th_label"
+                style="text-align: left; padding-left: 18px; color: #555"
+              >
+                연락처
+              </th>
+              <td colspan="3" style="background-color: #fff">010-1234-5678</td>
+            </tr>
+            <tr class="tr_responsive">
+              <th
+                class="th_label"
+                style="text-align: left; padding-left: 18px; color: #555"
+              >
                 내용 *
               </th>
               <td style="background-color: #fff">
@@ -109,11 +127,53 @@
         <div class="hidden_btn_cont">
           <button type="submit" class="submit_btn hidden_btn">확인</button>
         </div>
-        <div class="my_qna_create btn_cont">
-          <div class="right">
-            <a href="mypage_qna_create.html">확인</a>
-            <a href="mypage_qna_detail.html" class="리스트">리스트</a>
+        <div class="button_list_conts ">
+          <div></div>
+          <div>
+            <button type="submit" class="cancel_btn">작성</button>
+            <button type="button" class="submit_btn">목록</button>
           </div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="my_page my_qna_create_mobile">
+        <form>
+          <div class="form_table_container_pc_hidden">
+            <h2 class="my_page header_pc_hidden">1:1문의</h2>
+            <dl class="data_table">
+              <dt>제목  <i>*</i></dt>
+              <dd>
+                <input name="subject" type="text" class="input_style">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>작성자 &nbsp; &nbsp; &nbsp; &nbsp;
+                <span>홍길동</span>
+              </dt>
+              <dd></dd>
+            </dl>
+            <dl class="data_table">
+              <dt>연락처 &nbsp; &nbsp; &nbsp; &nbsp;
+                <span>010-1234-5678</span>
+              </dt>
+              <dd></dd>
+            </dl>
+            <dl class="data_table">
+              <dt> 내용 <i>*</i></dt>
+              <dd>
+                <textarea name="question" cols="85" rows="8"></textarea>
+              </dd>
+            </dl>
+          </div>
+        </form>
+        <div class="button_list_conts ">
+          <div></div>
+          <div>
+            <button type="submit" class="cancel_btn">작성</button>
+            <button type="button" class="submit_btn">목록</button>
+          </div>
+          <div></div>
         </div>
       </div>
     </div>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    ${require('./include/_subMenuCate.html')}
+    ${require('./include/_quick_menu.html')}
+    <div class="gry_bar1"></div>
+    <div class="container notice_write_form notice_m">
+      <h3>
+        * 표시는 필수입력 사항으로 글 작성시 반드시 기재해야 하는 항목입니다
+      </h3>
+      <table width="100%" class="notice_write_form_table view">
+        <tbody>
+          <tr>
+            <th align="center"><strong>작성자 * </strong></th>
+            <td align="left">
+              <input type="text" value="위즈몰" class="notice_input" />
+            </td>
+            <th align="center"><strong>이메일</strong></th>
+            <td align="left" style="text-align: left; padding-left: 10px">
+              <input type="text" value="test@test.com" class="notice_input" />
+            </td>
+          </tr>
+          <tr>
+            <th width="15%" align="center" height="30">
+              <strong>비밀번호 * </strong>
+            </th>
+            <td colspan="3" align="left">
+              <input
+                type="password"
+                class="notice_input_psd"
+                style="width: 150px"
+              />
+              <br />
+              <p style="padding: 4px 0 0 8px; box-sizing: border-box">
+                * 글 수정 삭제시 필요하시 꼭 기재해 주시기 바랍니다.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th align="center" height="30"><strong>제목 *</strong></th>
+            <td colspan="3" align="left" style="text-align: left">
+              <input type="text" class="notice_input1" style="width: 100%" />
+            </td>
+          </tr>
+
+          <tr>
+            <td height="50" colspan="4">
+              <div class="form_input_check_box">
+                <input type="checkbox" />
+                <label for="">비밀글</label>
+                <input type="checkbox" />
+                <label for="">공지글</label>
+              </div>
+              <div>
+                <textarea name="content" cols="85" rows="13">
+                    &#10;==================== 답 변 ====================
+                </textarea>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>첨부파일1</th>
+            <td colspan="3"><input type="file" class="notice_input_file" /></td>
+          </tr>
+          <tr>
+            <th>첨부파일2</th>
+            <td colspan="3"><input type="file" class="notice_input_file" /></td>
+          </tr>
+          <tr>
+            <th height="55">자동등록방지</th>
+            <td colspan="3">
+              <img src="/assets/imgs/norobot2_image.png" />
+              <input type="text" class="notice_input_reg" />
+              * 왼쪽의 자동등록방지 코드를 입력하세요.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="input_btn">
+        <div class="left">
+          <a href="community_notice.html">리스트</a>
+        </div>
+        <div class="right">
+          <a href="#" class="on_btn">확인</a>
+          <a href="/dist/community_notice_view.html">취소</a>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

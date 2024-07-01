@@ -36,7 +36,7 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
@@ -101,22 +101,12 @@
                 </td>
               </tr>
               <tr>
-                <td class="my_page td_label">전화번호</td>
+                <td class="my_page td_label">연락처*</td>
                 <td class="my_page td_content3">
                   <div class="td_content_sub">
                     <input type="text" id="tphone1" name="tphone1" /> -
                     <input type="text" id="tphone2" name="tphone2" /> -
                     <input type="text" id="tphone3" name="tphone3" />
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="my_page td_label">휴대폰 번호 *</td>
-                <td class="my_page td_content4">
-                  <div class="td_content_sub">
-                    <input type="text" id="hphone1" name="hphone1" /> -
-                    <input type="text" id="hphone2" name="hphone2" /> -
-                    <input type="text" id="hphone3" name="hphone3" />
                   </div>
                 </td>
               </tr>
@@ -148,18 +138,64 @@
               </tr>
             </tbody>
           </table>
-          <div class="button_list_conts">
-            <div></div>
-            <div>
-              <button type="submit" class="submit_btn">확인</button>
-              <button type="button" class="cancel_btn">취소</button>
-            </div>
-            <div></div>
+        </div>
+      </div>
+      <div class="my_page my_page_cont my_page_cont_pc_hidden">
+        <form>
+          <div class="form_table_container_pc_hidden">
+            <h2 class="my_page header_pc_hidden">배송지관리</h2>
+            <dl class="data_table">
+              <dt>비밀번호*</dt>
+              <dd>
+                <input name="passwd" type="password" class="input_style">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>수취인명* </dt>
+              <dd>
+                <input name="passwd2" type="password" class="input_style">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>휴대폰</dt>
+              <dd>
+                <select name="tphone">
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                  <option value="012">012</option>
+                  <option value="013">013</option>
+                </select> -
+                <input name="tphone2" value="" type="text" class="input_style" style="width: 80px;"> -
+                <input name="tphone3" value="" type="text" class="input_style" style="width: 80px;">
+              </dd>
+            </dl>
+            <dl class="data_table">
+              <dt>주소*</dt>
+              <dd>
+                <div class="dd_btn_inner">
+                  <input name="post" type="text" class="input_style" readonly>
+                  <button type="button">우편번호 찾기</button>
+                </div>
+                <div style="margin: 5px 0 0;">
+                  <input name="address" type="text" class="input_style">
+                </div>
+                <div style="margin: 5px 0 0;">
+                  <input name="address2" type="text" class="input_style">
+                </div>
+              </dd>
+            </dl>
           </div>
+        </form>
+        <div class="gry_bar"></div>
+        <div class="gry_bar"></div>
+      </div>
+      <div class="button_list_conts">
+        <div></div>
+        <div>
+          <button type="submit" class="submit_btn">확인</button>
+          <button type="button" class="cancel_btn">취소</button>
         </div>
-        <div class="hidden_btn_cont">
-          <button type="submit" class="submit_btn hidden_btn">수정</button>
-        </div>
+        <div></div>
       </div>
     </div>
 

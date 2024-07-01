@@ -47,6 +47,8 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
+<!-- route js   -->
+<script src="../assets/js/route_path.js"></script>
 
     <script>
       (function (d) {
@@ -95,7 +97,7 @@
       <li class="head_line">line</li>
       <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
       <li class="head_line">line</li>
-      <li><a href="/order" title="고객센터">고객센터</a></li>
+      <li><a href="/dist/community_notice.html" title="고객센터">고객센터</a></li>
     </ul>
   </div>
   <div class="head_middle container">
@@ -193,8 +195,8 @@
     </div>
   </div>
 </header>
-<header class="head pc_hidden">
-  <div class="mb_icon_gp container">
+<header class="head mb_head pc_hidden">
+  <div class="mb_icon_gp container ">
     <div class="mb_hamburger">
       <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
     </div>
@@ -206,11 +208,11 @@
      </div>
      <div style="width: 90%;">
       <div class="mb_side_bar_header">
-        <h3>위즈몰에</h3>
+        <h3>아반몰에</h3>
         <h4>오신 것을 환영합니다.</h4>
       </div>
       <div class="mb_btn_gp">
-        <a>로그인</a>
+        <a href="/dist/login_page.html">로그인</a>
         <a href="/dist/mypage_navLinks.html">화원가입</a>
       </div>
       <div class="mb_cate_gp">
@@ -410,14 +412,14 @@
 </div>
 </header>
 
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       <div class="sub_banner ">
        <ul class="sub_cate_gp container">
         <li class="home_icon">
-            <img src="/assets/imgs/icons/home_ico.png" alt="">
+            <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
         </li>
-        <li class="li_ico"></li>
-        <li class="sub_cate_select1">
+        <li class="li_ico mobile_hidden"></li>
+        <li class="sub_cate_select1 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option1">전체보기</option>
@@ -434,7 +436,7 @@
               </div>
         </li>
         <li class="li_ico"></li>
-        <li class="sub_cate_select2">
+        <li class="sub_cate_select2 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option2">전체보기</option>
@@ -444,8 +446,8 @@
                 </select>
               </div>
         </li>
-        <li class="pc_hidden">전체보기</li>
-    </ul>
+        <li class="pc_hidden breadcrumbsEl "></li>
+     </ul>
 </div>
       <div class="gry_bar"></div>
     </div>
@@ -527,29 +529,31 @@
             </li>
           </ul>
         </div>
-        <div class="my_page my_order_return order_return_cont">
-          <table class="shopping_detail_cont table_cont">
-            <tbody>
+        <div class="my_page my_order_cancel order_cancel_cont">
+          <table class="order_cancel_cont table_cont">
+            <thead>
               <tr>
-                <th style="width: 82px">이미지</th>
-                <th style="text-align: center; min-width: 514px">
+                <th class="th_label2" style="width: 7%">이미지</th>
+                <th class="th_label2" style="text-align: center">
                   구매상품정보
                 </th>
-                <th class="">제품가격</th>
-                <th class="">구매수량</th>
-                <th class="">합계</th>
-                <th class="">수 량</th>
-                <th class="">환불금액</th>
+                <th class="th_label2" style="width: 10%;">제품가격</th>
+                <th class="th_label2" style="width: 10%;">구매수량</th>
+                <th class="th_label2" style="width: 10%;">합계</th>
+                <th class="th_label2" style="width: 20%; text-align:left;">수 량</th>
+                <th class="th_label2" style="width: 10%;">환불금액</th>
               </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td class="td_label4">
-                  <a href="#" target="_blank"
+                  <a href=""
                     ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
                   /></a>
                 </td>
                 <td class="td_label4_sub">
                   <p>
-                    <a href="#" target="_blank"
+                    <a href=""
                       >[디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)</a
                     >
                   </p>
@@ -570,7 +574,6 @@
                     />
                     <a class="up" onclick="incrementCount()">+</a>
                   </div>
-                  <!-- //count_box -->
                 </td>
                 <td class="td_label4">22,000원</td>
               </tr>
@@ -601,23 +604,97 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <div class="my_order_return text_area">
-          <h3 class="order_title">반품사유</h3>
-          <textarea name="textarea" rows="20" class="" style="height: 190px">
-          </textarea>
-        </div>
-        <div class="button_list_conts">
-          <div></div>
-          <div>
-            <button type="button" class="submit_btn">주문 취소</button>
-            <button type="button" class="cancel_btn">프린트 하기</button>
+          <div class="my_order_return text_area">
+            <h3 class="order_title">반품사유</h3>
+            <textarea name="textarea" rows="20" class="" style="height: 190px">
+            </textarea>
           </div>
-          <div></div>
         </div>
       </div>
     </div>
-
+    <div class="order_pay_container pc_hidden_p">
+      <div class="order_pay_m">
+        <div class="order_pay_cont1 order_pay_cont2 order_pay_cont">
+          <div class="order_pay_cont1_left">
+            <div class="img_box">
+              <img src="/assets/imgs/sub02/my_order/fun.jpg" alt="" />
+            </div>
+            <div class="order_pay_cont_text">
+              <div class="prd_tit">
+                <a href="#">
+                  [디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)
+                </a>
+              </div>
+              <div class="order_pay_cont_text_list">
+                <div class="order_pay_cont_left_text">
+                  <span>상품가격</span> <br />
+                  <span>적립금</span> <br />
+                  <span class="order_pay_cont_text1">수량</span>
+                  <br />
+                </div>
+                <div class="order_pay_cont_right_text">
+                  <span class="prd_price">22,000원</span> <br />
+                  <span> 1,100원</span><br />
+                  <span class="count_box">
+                    <a class="down" onclick="decrementCount()">-</a>
+                    <input
+                      type="text"
+                      name="amount"
+                      value="1"
+                      onchange="checkAmount(this.form)"
+                      onkeyup="checkAmount(this.form)"
+                      class="input_number"
+                    />
+                    <a class="up" onclick="incrementCount()">+</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="line_hide"></p>
+        <div class="order_pay_info">
+          <div class="order_pay_info_cont_left">
+            <span> 판매자 : 입점업체(00-0000-0000)</span><br />
+            <span>[배송비 : 50,000원 이상구매시 무료]</span>
+          </div>
+          <div class="order_pay_info_cont_right">
+            <span> 상품가격 22,000원</span><br />
+            <span>배송비3,000원</span>
+          </div>
+        </div>
+        <p class="line_hide"></p>
+        <div class="crt_total">
+          <h3 style="margin: 0px 0px 12px">결제금액 안내</h3>
+          <div class="crt_total_cont">
+            <div class="crt_total_cont_left">
+              <span> 상품가격</span><br />
+              <span>배송비</span><br />
+              <span>주문총액</span>
+            </div>
+            <div class="crt_total_cont_right">
+              <span> 22,000원</span><br />
+              <span>3,000원</span><br />
+              <span style="font-size: 17px; color: #ef4023">25,000원 </span>
+            </div>
+          </div>
+        </div>
+        <div class="gry_bar"></div>
+      </div>
+      <div class="order_cancel_cont text_area">
+        <h3 class="order_title">반품사유</h3>
+        <textarea name="textarea" rows="20" class="" style="height: 190px">
+        </textarea>
+      </div>
+    </div>
+    <div class="button_list_conts">
+      <div></div>
+      <div>
+        <button type="button" class="submit_btn">주문 취소</button>
+        <button type="button" class="cancel_btn">프린트 하기</button>
+      </div>
+      <div></div>
+    </div>
     <footer class="footer">
     <div class="foot_left foot_left_hidden">
         <ul class="foot_menu">
@@ -640,14 +717,14 @@
             </ul>
             <div class="foot_info">
                 <div>
-                    <p>위즈몰</p>
+                    <p>데모몰</p>
                     <p>대표자 : <span>대표자</span></p>
-                    <p>주소 : <span>서울 금천구 가산디지털1로 171</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 000</span></p>
                     <p>사업자등록번호 : <span>000-00-000000</span></p>
                 </div>
                 <div class="foot_info_sub">
-                    <p>고객센터 : <span>1544-0713</span></p>
-                    <p>이메일 : <span>help@anywiz.co.kr</span></p>
+                    <p>고객센터 : <span>0000-0000</span></p>
+                    <p>이메일 : <span> help@avan.co.kr</span></p>
                     <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
                 </div>
             </div>

@@ -36,7 +36,7 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
@@ -80,7 +80,7 @@
             </li>
           </ul>
         </div>
-        <div class="my_page my_coupon coupon_cont">
+        <div style="margin-bottom: 30px;" class="my_page my_coupon coupon_cont">
           <table class="coupon_cont table_cont">
             <thead>
               <tr>
@@ -90,21 +90,53 @@
                 <th class="th_label2" style="width: 18%">사용여부</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody >
               <tr>
-                <td
-                  colspan="5"
-                  class="coupon_cont td_label2"
-                  style="height: 47px; color: #333"
-                >
-                  쿠폰이 없습니다.
-                </td>
+                <td class="td_label2">2024-02-04 ~ 2030-05-23</td>
+                <td class="td_label2">회원가입 축하 쿠폰</td>
+                <td class="td_label2">50%</td>
+                <td class="td_label2">사용함</td>
               </tr>
               <tr>
                 <td colspan="5" style="text-align: center; height: 50px; background-color: #fff; border: none;"></td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="my_page my_coupon_mobile order_list_wrap_pc_hidden">
+          <div class="order_list_wrap">
+            <div class="order_list">
+              <h2>회원가입 축하 쿠폰</h2>
+              <div class="info_box">
+                <div class="order_info">
+                  <span class="date">2024-02-04 ~ 2030-05-23</span>
+                  <span class="id">50%</span>
+                  <div class="text_box">
+                    <div class="text_info">
+                      <p class="price">사용함</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page_btns">
+            <button class="page_btn">
+              <img src="/assets/imgs/icons/page-first.jpg" alt="" />
+            </button>
+            <button class="page_btn" style="margin: 0 5px">
+              <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
+            </button>
+            <div class="page_no">
+              <a href="#">1</a>
+            </div>
+            <button class="page_btn" style="margin: 0 5px">
+              <img src="/assets/imgs/icons/page-last.jpg" alt="" />
+            </button>
+            <button class="page_btn">
+              <img src="/assets/imgs/icons/page-next.jpg" alt="" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

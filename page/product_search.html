@@ -133,7 +133,7 @@
         </form>
         <ul class="product_search_image clearfix">
           <li class="product_search_item">
-            <button type="button" class="wish_btn">관심상품 등록</button>
+            <button type="button" class="wish_btn"></button>
             <a href="#" target="_blank">
               <div class="img_box" style="margin-bottom: 20px">
                 <img
@@ -172,35 +172,26 @@
       </div>
     </div>
     <!-- pages buttons -->
-    <div class="page_btns">
-      <button class="page_btn">
-        <img
-          src="/assets/imgs/icons/page-first.jpg"
-          alt=""
-        />
-      </button>
-      <button class="page_btn" style="margin: 0 5px">
-        <img
-          src="/assets/imgs/icons/page-prev.jpg"
-          alt=""
-        />
-      </button>
-      <div class="page_no">
-        <a href="#">1</a>
+    <div style="display: flex; justify-content: center; width: 100%">
+      <div class="page_btns">
+        <button class="page_btn">
+          <img src="/assets/imgs/icons/page-first.jpg" alt="" />
+        </button>
+        <button class="page_btn" style="margin: 0 5px">
+          <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
+        </button>
+        <div class="page_no">
+          <a href="#">1</a>
+        </div>
+        <button class="page_btn" style="margin: 0 5px">
+          <img src="/assets/imgs/icons/page-last.jpg" alt="" />
+        </button>
+        <button class="page_btn">
+          <img src="/assets/imgs/icons/page-next.jpg" alt="" />
+        </button>
       </div>
-      <button class="page_btn" style="margin: 0 5px">
-        <img
-          src="/assets/imgs/icons/page-last.jpg"
-          alt=""
-        />
-      </button>
-      <button class="page_btn">
-        <img
-          src="/assets/imgs/icons/page-next.jpg"
-          alt=""
-        />
-      </button>
     </div>
+
     ${require('./include/_footer.html')}
   </body>
 </html>

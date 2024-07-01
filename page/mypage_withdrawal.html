@@ -36,7 +36,7 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
@@ -104,22 +104,42 @@
                 <td class="mypage_withdrawal td_label">불편하셨던 점</td>
                 <td class="mypage_withdrawal td_content">
                   <div class="mypage_withdrawal checkbox_cont">
-                    <input type="checkbox" name="out_reason" id="out1" />
-                    <label for="out1">고객서비스 불만</label>
-                    <input type="checkbox" name="out_reason2" id="out2" />
-                    <label for="out2">배송불만 </label>
-                    <input type="checkbox" name="out_reason3" id="out3" />
-                    <label for="out3">교환/환불/반품 불만</label>
-                    <input type="checkbox" name="out_reason4" id="out4" />
-                    <label for="out4">방문 빈도가 낮음 </label><br />
-                    <input type="checkbox" name="out_reason5" id="out5" />
-                    <label for="out5">상품가격 불만</label>
-                    <input type="checkbox" name="out_reason6" id="out6" />
-                    <label for="out6">개인 정보유출 우려</label>
-                    <input type="checkbox" name="out_reason7" id="out7" />
-                    <label for="out7">쇼핑몰의 신뢰도 불만</label>
-                    <input type="checkbox" name="out_reason8" id="out8" />
-                    <label for="out8">쇼핑 기능 불만</label>
+                    <div class="out_reason_box">
+                      <div>
+                        <input type="checkbox" name="out_reason" id="out1" />
+                        <label for="out1">고객서비스 불만</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="out_reason2" id="out2" />
+                        <label for="out2">배송불만 </label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="out_reason3" id="out3" />
+                        <label for="out3">교환/환불/반품 불만</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="out_reason4" id="out4" />
+                        <label for="out4">방문 빈도가 낮음 </label><br />
+                      </div>
+                    </div>
+                    <div class="out_reason_box">
+                      <div>
+                        <input type="checkbox" name="out_reason5" id="out5" />
+                        <label for="out5">상품가격 불만</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="out_reason6" id="out6" />
+                        <label for="out6">개인 정보유출 우려</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="out_reason7" id="out7" />
+                        <label for="out7">쇼핑몰의 신뢰도 불만</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="out_reason8" id="out8" />
+                        <label for="out8">쇼핑 기능 불만</label>
+                      </div>
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -135,9 +155,6 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <div class="hidden_btn_cont">
-          <button type="submit" class="submit_btn hidden_btn">회원탈퇴</button>
         </div>
         <div class="button_list_conts">
           <div></div>

@@ -36,7 +36,7 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
@@ -48,7 +48,7 @@
           <div class="menu">
             <a href="#"
               ><img
-                src="h/assets/imgs/icons/home_ico.png"
+                src="/assets/imgs/icons/home_ico.png"
                 class="home_icon"
                 alt=""
             /></a>
@@ -93,7 +93,16 @@
             </thead>
             <tbody>
               <tr>
-                <td colspan="5" class="td_label2">등록된 배송지가 없습니다.</td>
+                <td class="td_label2" style="padding: 8px 0px">
+                  <input type="checkbox" name="select_checkbox" />
+                </td>
+                <td class="td_label2">test</td>
+                <td class="td_label2">test</td>
+                <td class="td_label2">010-1234-1234</td>
+                <td class="td_label2">
+                  (06225) 서울 강남구 역삼로37길 11<br />
+                  혜원빌딩 5층 501호
+                </td>
               </tr>
             </tbody>
           </table>
@@ -105,32 +114,67 @@
           </div>
           <div class="page_btns">
             <button class="page_btn">
-              <img
-                src="/assets/imgs/icons/page-first.jpg"
-                alt=""
-              />
+              <img src="/assets/imgs/icons/page-first.jpg" alt="" />
             </button>
             <button class="page_btn" style="margin: 0 5px">
-              <img
-                src="/assets/imgs/icons/page-prev.jpg"
-                alt=""
-              />
+              <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
             </button>
             <div class="page_no">
               <a href="#">1</a>
             </div>
             <button class="page_btn" style="margin: 0 5px">
-              <img
-                src="/assets/imgs/icons/page-last.jpg"
-                alt=""
-              />
+              <img src="/assets/imgs/icons/page-last.jpg" alt="" />
             </button>
             <button class="page_btn">
-              <img
-                src="/assets/imgs/icons/page-next.jpg"
-                alt=""
-              />
+              <img src="/assets/imgs/icons/page-next.jpg" alt="" />
             </button>
+          </div>
+        </div>
+        <div class="my_page my_address order_list_wrap_pc_hidden">
+          <div class="order_list_wrap">
+            <div class="order_list">
+              <h2>test</h2>
+              <div class="info_box">
+                <div class="order_info">
+                  <span class="date">test</span>
+                  <span class="id">010-1234-1234</span>
+                  <div class="text_box">
+                    <p>(01234) 서울 강남구 역삼로37길 11</p>
+                    <div class="text_info">
+                      <p>혜원빌딩 5층 501호</p>
+                      <div class="order_info_btn_box">
+                        <a href="#" class="order_info_btn">삭제</a>
+                        <a href="#" class="order_info_btn">보기</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page_btns">
+            <button class="page_btn">
+              <img src="/assets/imgs/icons/page-first.jpg" alt="" />
+            </button>
+            <button class="page_btn" style="margin: 0 5px">
+              <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
+            </button>
+            <div class="page_no">
+              <a href="#">1</a>
+            </div>
+            <button class="page_btn" style="margin: 0 5px">
+              <img src="/assets/imgs/icons/page-last.jpg" alt="" />
+            </button>
+            <button class="page_btn">
+              <img src="/assets/imgs/icons/page-next.jpg" alt="" />
+            </button>
+          </div>
+          <div class="qna_button">
+            <div class="right">
+              <a href="/dist/mypage_address_add.html" class="listing_btn"
+                >배송지 추가</a
+              >
+            </div>
           </div>
         </div>
       </div>

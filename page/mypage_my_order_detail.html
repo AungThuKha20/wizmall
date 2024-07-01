@@ -36,7 +36,7 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
@@ -224,8 +224,9 @@
           <div>
             <a href="mypage_my_order.html" class="list_btn">리스트</a>
           </div>
-          <div>
-            <button type="button" class="cancel_btn">프린트 하기</button>
+          <div class="link_btn_container">
+            <a href="/dist/mypage_my_order_cancel.html" class="submit_btn">주문취소</a>
+            <a href="#" class="cancel_btn">프린트하기</a>
           </div>
           <div></div>
         </div>

@@ -47,6 +47,8 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
+<!-- route js   -->
+<script src="../assets/js/route_path.js"></script>
 
     <script>
       (function (d) {
@@ -95,7 +97,7 @@
       <li class="head_line">line</li>
       <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
       <li class="head_line">line</li>
-      <li><a href="/order" title="고객센터">고객센터</a></li>
+      <li><a href="/dist/community_notice.html" title="고객센터">고객센터</a></li>
     </ul>
   </div>
   <div class="head_middle container">
@@ -193,8 +195,8 @@
     </div>
   </div>
 </header>
-<header class="head pc_hidden">
-  <div class="mb_icon_gp container">
+<header class="head mb_head pc_hidden">
+  <div class="mb_icon_gp container ">
     <div class="mb_hamburger">
       <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
     </div>
@@ -206,11 +208,11 @@
      </div>
      <div style="width: 90%;">
       <div class="mb_side_bar_header">
-        <h3>위즈몰에</h3>
+        <h3>아반몰에</h3>
         <h4>오신 것을 환영합니다.</h4>
       </div>
       <div class="mb_btn_gp">
-        <a>로그인</a>
+        <a href="/dist/login_page.html">로그인</a>
         <a href="/dist/mypage_navLinks.html">화원가입</a>
       </div>
       <div class="mb_cate_gp">
@@ -410,14 +412,14 @@
 </div>
 </header>
 
-    <div style="width: 100%" class="pc_hidden">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
       <div class="sub_banner ">
        <ul class="sub_cate_gp container">
         <li class="home_icon">
-            <img src="/assets/imgs/icons/home_ico.png" alt="">
+            <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
         </li>
         <li class="li_ico"></li>
-        <li class="sub_cate_select1">
+        <li class="sub_cate_select1 ">
             <div class="custom-select">
                 <select>
                   <option value="option1">전체보기</option>
@@ -434,7 +436,7 @@
               </div>
         </li>
         <li class="li_ico"></li>
-        <li class="sub_cate_select2">
+        <li class="sub_cate_select2 ">
             <div class="custom-select">
                 <select>
                   <option value="option2">전체보기</option>
@@ -444,7 +446,7 @@
                 </select>
               </div>
         </li>
-        <li class="pc_hidden">전체보기</li>
+        <li class="pc_hidden breadcrumbsEl"></li>
     </ul>
 </div>
       <div class="gry_bar"></div>
@@ -531,57 +533,69 @@
           <table class="detail_cont table_cont">
             <thead>
               <tr>
-                <th class="th_label" style="width: 15%">처리현황</th>
                 <th
                   class="th_label"
-                  style="text-align: left; padding: 0px 0px 0px 10px"
+                  style="padding: 0px 0px 0px 60px; text-align: left"
                 >
                   제목
                 </th>
                 <th class="th_label" style="width: 15%">작성일</th>
+                <th class="th_label" style="width: 15%">처리현황</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="td_label" style="background-color: #fff">
-                  처리현황
-                </td>
                 <td
                   class="td_middle"
-                  style="background-color: #fff; text-align: left"
+                  style="background-color: #fff; padding-left: 40px"
                 >
-                  케이
+                  주문취소 문의
                 </td>
                 <td class="td_label" style="background-color: #fff">
-                  2024-06-11
+                  2024-05-21
+                </td>
+                <td class="td_label" style="background-color: #fff">
+                  접수완료
                 </td>
               </tr>
               <tr>
-                <td class="td_label" style="background-color: #fff">
-                  처리현황
-                </td>
                 <td
                   class="td_middle"
-                  style="background-color: #fff; text-align: left"
+                  style="background-color: #fff; padding-left: 40px"
                 >
-                  메이
+                  주문취소 문의
                 </td>
                 <td class="td_label" style="background-color: #fff">
-                  2024-06-11
+                  2024-05-21
+                </td>
+                <td class="td_label" style="background-color: #fff">처리중</td>
+              </tr>
+              <tr>
+                <td
+                  class="td_middle"
+                  style="background-color: #fff; padding-left: 40px"
+                >
+                  주문취소 문의
+                </td>
+                <td class="td_label" style="background-color: #fff">
+                  2024-05-21
+                </td>
+                <td class="td_label" style="background-color: #fff">
+                  답변완료
                 </td>
               </tr>
               <tr>
-                <td class="td_label" style="background-color: #fff">
-                  처리현황
-                </td>
                 <td
                   class="td_middle"
-                  style="background-color: #fff; text-align: left"
+                  style="background-color: #fff; padding-left: 40px"
                 >
-                  수몬
+                  주문취소 문의
                 </td>
                 <td class="td_label" style="background-color: #fff">
-                  2024-06-11
+                  2024-05-21
+                </td>
+                <td class="td_label" style="background-color: #fff">
+                  답변완료
                 </td>
               </tr>
             </tbody>
@@ -589,31 +603,19 @@
           <div class="qna_footer">
             <div class="page_btns">
               <button class="page_btn">
-                <img
-                  src="/assets/imgs/icons/page-first.jpg"
-                  alt=""
-                />
+                <img src="/assets/imgs/icons/page-first.jpg" alt="" />
               </button>
               <button class="page_btn" style="margin: 0 5px">
-                <img
-                  src="/assets/imgs/icons/page-prev.jpg"
-                  alt=""
-                />
+                <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
               </button>
               <div class="page_no">
                 <a href="#">1</a>
               </div>
               <button class="page_btn" style="margin: 0 5px">
-                <img
-                  src="/assets/imgs/icons/page-last.jpg"
-                  alt=""
-                />
+                <img src="/assets/imgs/icons/page-last.jpg" alt="" />
               </button>
               <button class="page_btn">
-                <img
-                  src="/assets/imgs/icons/page-next.jpg"
-                  alt=""
-                />
+                <img src="/assets/imgs/icons/page-next.jpg" alt="" />
               </button>
             </div>
             <div class="search_cont">
@@ -621,15 +623,39 @@
                 <input type="hidden" name="code" />
                 <input type="hidden" name="category" />
                 <input type="hidden" name="mallid" />
-                <select name="searchOption" class="select">
-                  <option value="subject">제 목</option>
-                  <option value="content">내 용</option>
-                  <option value="subcon">제목 + 내용</option>
-                  <option value="name">작성자</option>
-                  <option value="memid">아이디</option>
-                </select>
-                <input name="searchkey" type="text" class="search_input" />
-                <button type="submit">검색</button>
+                <div class="span_box">
+                  <span>기간검색</span>
+                  <input
+                    name="date1" value="2024.02"
+                    type="text"
+                    class="input_style"
+                  />
+                  ~
+                  <input
+                    name="date2" value="2024.06"
+                    type="text"
+                    class="input_style"
+                  />
+                </div>
+                <div class="span_box">
+                  <span>처리현황</span>
+                  <select name="application" class="application">
+                    <option value="접수완료">접수완료</option>
+                    <option value="저리중">저리중</option>
+                    <option value="답변완료">답변완료</option>
+                  </select>
+                </div>
+                <div>
+                  <select name="searchOption" class="select">
+                    <option value="subject">제 목</option>
+                    <option value="content">내 용</option>
+                    <option value="subcon">제목 + 내용</option>
+                    <option value="name">작성자</option>
+                    <option value="memid">아이디</option>
+                  </select>
+                  <input name="searchkey" type="text" class="search_input" />
+                  <button type="submit">보기</button>
+                </div>
               </form>
             </div>
           </div>
@@ -638,6 +664,80 @@
               <a href="mypage_qna_detail.html" class="listing_btn">리스트</a>
               <a href="mypage_qna_create.html" class="writing_btn">글쓰기</a>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="my_page my_qna_detail order_list_wrap_pc_hidden">
+        <div class="order_list_wrap">
+          <div class="order_list">
+            <h2>주문취소 문의</h2>
+            <div class="info_box">
+              <div class="order_info">
+                <span class="date">2024-05-21</span>
+                <span class="id">접수완료</span>
+                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
+                  >보기</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="order_list">
+            <h2>주문취소 문의</h2>
+            <div class="info_box">
+              <div class="order_info">
+                <span class="date">2024-05-21</span>
+                <span class="id">처리중</span>
+                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
+                  >보기</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="order_list">
+            <h2>주문취소 문의</h2>
+            <div class="info_box">
+              <div class="order_info">
+                <span class="date">2024-05-21</span>
+                <span class="id">답변완료</span>
+                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
+                  >보기</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="order_list">
+            <h2>주문취소 문의</h2>
+            <div class="info_box">
+              <div class="order_info">
+                <span class="date">2024-05-21</span>
+                <span class="id">답변완료</span>
+                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
+                  >보기</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page_btns">
+          <button class="page_btn">
+            <img src="/assets/imgs/icons/page-first.jpg" alt="" />
+          </button>
+          <button class="page_btn" style="margin: 0 5px">
+            <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
+          </button>
+          <div class="page_no">
+            <a href="#">1</a>
+          </div>
+          <button class="page_btn" style="margin: 0 5px">
+            <img src="/assets/imgs/icons/page-last.jpg" alt="" />
+          </button>
+          <button class="page_btn">
+            <img src="/assets/imgs/icons/page-next.jpg" alt="" />
+          </button>
+        </div>
+        <div class="qna_button">
+          <div class="right">
+            <a href="mypage_qna_create.html" class="listing_btn">글쓰기</a>
           </div>
         </div>
       </div>
@@ -665,14 +765,14 @@
             </ul>
             <div class="foot_info">
                 <div>
-                    <p>위즈몰</p>
+                    <p>데모몰</p>
                     <p>대표자 : <span>대표자</span></p>
-                    <p>주소 : <span>서울 금천구 가산디지털1로 171</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 000</span></p>
                     <p>사업자등록번호 : <span>000-00-000000</span></p>
                 </div>
                 <div class="foot_info_sub">
-                    <p>고객센터 : <span>1544-0713</span></p>
-                    <p>이메일 : <span>help@anywiz.co.kr</span></p>
+                    <p>고객센터 : <span>0000-0000</span></p>
+                    <p>이메일 : <span> help@avan.co.kr</span></p>
                     <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
                 </div>
             </div>

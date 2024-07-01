@@ -47,6 +47,8 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
+<!-- route js   -->
+<script src="../assets/js/route_path.js"></script>
 
     <script>
       (function (d) {
@@ -95,7 +97,7 @@
       <li class="head_line">line</li>
       <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
       <li class="head_line">line</li>
-      <li><a href="/order" title="고객센터">고객센터</a></li>
+      <li><a href="/dist/community_notice.html" title="고객센터">고객센터</a></li>
     </ul>
   </div>
   <div class="head_middle container">
@@ -193,8 +195,8 @@
     </div>
   </div>
 </header>
-<header class="head pc_hidden">
-  <div class="mb_icon_gp container">
+<header class="head mb_head pc_hidden">
+  <div class="mb_icon_gp container ">
     <div class="mb_hamburger">
       <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
     </div>
@@ -206,11 +208,11 @@
      </div>
      <div style="width: 90%;">
       <div class="mb_side_bar_header">
-        <h3>위즈몰에</h3>
+        <h3>아반몰에</h3>
         <h4>오신 것을 환영합니다.</h4>
       </div>
       <div class="mb_btn_gp">
-        <a>로그인</a>
+        <a href="/dist/login_page.html">로그인</a>
         <a href="/dist/mypage_navLinks.html">화원가입</a>
       </div>
       <div class="mb_cate_gp">
@@ -413,10 +415,10 @@
     <div class="sub_banner ">
        <ul class="sub_cate_gp container">
         <li class="home_icon">
-            <img src="/assets/imgs/icons/home_ico.png" alt="">
+            <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
         </li>
-        <li class="li_ico"></li>
-        <li class="sub_cate_select1">
+        <li class="li_ico mobile_hidden"></li>
+        <li class="sub_cate_select1 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option1">전체보기</option>
@@ -433,7 +435,7 @@
               </div>
         </li>
         <li class="li_ico"></li>
-        <li class="sub_cate_select2">
+        <li class="sub_cate_select2 mobile_hidden ">
             <div class="custom-select">
                 <select>
                   <option value="option2">전체보기</option>
@@ -443,8 +445,8 @@
                 </select>
               </div>
         </li>
-        <li class="pc_hidden">전체보기</li>
-    </ul>
+        <li class="pc_hidden breadcrumbsEl "></li>
+     </ul>
 </div>
     <div class="quick_menu mobile_hidden">
   <ul class="head_shop_menu">
@@ -486,17 +488,17 @@
 </div>
 
     <div class="gry_bar1"></div>
-    <div class="container notice">
+    <div class="container notice mobile_hidden_m">
       <div class="title_container">
         <h2 class="title">고객센터</h2>
-        <div class="menu">
-          <a href="#"
-            ><img
-              src="/assets/imgs/icons/home_ico.png"
-              class="home_icon"
-              alt=""
-          /></a>
-          <span style="margin-left: 5px">고객센터 > 공지사항</span>
+        <div class="section_select">
+          <select name="searchopt" class="select">
+            <option>제 목</option>
+            <option>내 용</option>
+            <option>제목 + 내용</option>
+          </select>
+          <input type="text" class="input" value="" />
+          <button type="submit" class="btns">검색</button>
         </div>
       </div>
       <div class="my_page list_menu_container community_list_menu">
@@ -506,12 +508,6 @@
           </li>
           <li>
             <a href="community_faq.html">자주하는 질문</a>
-          </li>
-          <li>
-            <a href="community_qna.html">상품문의</a>
-          </li>
-          <li>
-            <a href="community_review.html">상품후기</a>
           </li>
         </ul>
       </div>
@@ -625,32 +621,77 @@
       <!-- pages buttons -->
       <div class="page_btns">
         <button class="page_btn">
-          <img
-            src="/assets/imgs/icons/page-first.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-first.jpg" alt="" />
         </button>
         <button class="page_btn" style="margin: 0 5px">
-          <img
-            src="/assets/imgs/icons/page-prev.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
         </button>
         <div class="page_no">
           <a href="#">1</a>
         </div>
         <button class="page_btn" style="margin: 0 5px">
-          <img
-            src="/assets/imgs/icons/page-last.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-last.jpg" alt="" />
         </button>
         <button class="page_btn">
-          <img
-            src="/assets/imgs/icons/page-next.jpg"
-            alt=""
-          />
+          <img src="/assets/imgs/icons/page-next.jpg" alt="" />
         </button>
+      </div>
+    </div>
+
+    <div class="container notice_m pc_hidden_p">
+      <table width="100%" class="notice_view">
+        <tbody>
+          <tr>
+            <th class="notice_view_th" colspan="2">
+              쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+            </th>
+          </tr>
+
+          <tr>
+            <th class="notice_view_td">작성자 : 위즈몰</th>
+            <th class="notice_view_td" width="90">
+              <span class="date">2023-04-24</span>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td class="notice_cont_text">
+              쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+              <br />쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="100%" class="nextpre_post">
+        <tbody>
+          <tr>
+            <th>이전글</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>다음글</th>
+            <td>
+              <a href="#">쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="input_btn">
+        <div class="left">
+          <a href="/dist/community_notice.html">리스트</a>
+        </div>
+        <div class="right">
+          <a href="/dist/notice_write_form.html">글쓰기</a>
+          <a href="/dist/notice_collection_form.html">수정</a>
+          <a href="/dist/notice_delete_form.html">삭제</a>
+          <a href="/dist/notice_reply_form.html">답글</a>
+        </div>
       </div>
     </div>
 
@@ -676,14 +717,14 @@
             </ul>
             <div class="foot_info">
                 <div>
-                    <p>위즈몰</p>
+                    <p>데모몰</p>
                     <p>대표자 : <span>대표자</span></p>
-                    <p>주소 : <span>서울 금천구 가산디지털1로 171</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 000</span></p>
                     <p>사업자등록번호 : <span>000-00-000000</span></p>
                 </div>
                 <div class="foot_info_sub">
-                    <p>고객센터 : <span>1544-0713</span></p>
-                    <p>이메일 : <span>help@anywiz.co.kr</span></p>
+                    <p>고객센터 : <span>0000-0000</span></p>
+                    <p>이메일 : <span> help@avan.co.kr</span></p>
                     <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
                 </div>
             </div>
