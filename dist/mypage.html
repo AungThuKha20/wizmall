@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shopping Mall</title>
+
+<!-- CSS -->
+<!-- Bootstrap css  -->
+<link
+  rel="stylesheet"
+  href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="../assets/css/reset.css" />
+<link rel="stylesheet" href="../assets/css/common.css" />
+<link rel="stylesheet" href="../assets/css/sub02.css" />
+<link rel="stylesheet" href="../assets/css/sub01.css" />
+<link rel="stylesheet" href="../assets/css/sub03.css" />
+<link rel="stylesheet" href="../assets/css/sub.css" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/media.css" />
+<link rel="stylesheet" href="/assets/css/media1.css" />
+<link rel="stylesheet" href="/assets/css/media2.css">
+<link rel="stylesheet" href="../assets/css/media3.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- AOS animation library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"
+></script>
+<!-- AOS animation library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Swiper element Js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<!-- Bootstrap js  -->
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Common script -->
+<script src="../assets/js/common.js"></script>
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header class="head mobile_hidden">
+  <div class="head_top_menu container">
+    <ul>
+      <li>
+        <a href="/dist/mypage_favorite.html" title="즐겨찾기">즐겨찾기</a>
+      </li>
+      <li class="head_line">line</li>
+      <li><a href="" title="입점신청">입점신청</a></li>
+    </ul>
+    <ul>
+      <li><a href="/dist/login_page.html" title="로그아웃">로그아웃</a></li>
+      <li class="head_line">line</li>
+      <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
+      <li class="head_line">line</li>
+      <li><a href="/order" title="고객센터">고객센터</a></li>
+    </ul>
+  </div>
+  <div class="head_middle container">
+    <div class="head_logo">
+      <a href="/dist/main.html"><img src="/assets/imgs/logo.png" alt="logo" /></a>
+    </div>
+    <div class="head_search">
+      <input type="text" id="search_input" name="search" placeholder="검색어를 입력하세요" />
+      <button class="search_ico"></button>
+      <div class="head_search_sugges" id="search_suggestions">
+        <ul>
+          <li class="txt_red">인기 검색어 <button id="close_suggestions">닫기</button></li>
+          <li><a href="/dist/product_search.html">우산</a></li>
+          <li><a href="/dist/product_search.html">추석 선물세트</a></li>
+          <li><a href="/dist/product_search.html">블루투스 스피커</a></li>
+          <li><a href="/dist/product_search.html">선풍기</a></li>
+          <li><a href="/dist/product_search.html">달력</a></li>
+          <li><a href="/dist/product_search.html">USB</a></li>
+          <li><a href="/dist/product_search.html">보조배터리</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="head_shop_menu">
+      <li>
+        <a href="/dist/shopping_cart.html" title="장바구니">
+          <img src="../../assets/imgs/icons/ico_baguni.png" alt="장바구니" />
+          <span>장바구니</span>
+          <i>0</i>
+        </a>
+      </li>
+      <li>
+        <a href="/dist/mypage_favorite.html" title="관심상품">
+          <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
+          <span>관심상품</span>
+          <i>0</i>
+        </a>
+      </li>
+      <li>
+        <a href="/dist/mypage.html" title="마이쇼핑">
+          <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
+          <span>마이쇼핑</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="head_gnb">
+    <div class="head_gnb_inn container">
+      <div class="all_cate_middle">
+        <div class="menu_all_cate">
+          <button class="all_cate_btn">전체 카테고리</button>
+          <ul class="all_cate_items">
+            <li><a href="/dist/product_list.html">여성의류
+        
+            </a>
+              <div class="sub_cate_items">
+                <h5>여성의류</h5>
+                <ul>
+                  <li><a href="">하위분류 1</a></li>
+                  <li><a href="">하위분류 2</a></li>
+                  <li><a href="">하위분류 3</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="/dist/product_list.html">남성의류</a>
+              <div class="sub_cate_items2">
+                <h5>남성의류</h5>
+                <ul>
+                  <li><a href="">하위분류 1</a></li>
+                  <li><a href="">하위분류 2</a></li>
+                  <li><a href="">하위분류 3</a></li>
+                </ul>
+            </div></li>
+            <li><a href="/dist/product_list.html">패션잡화</a></li>
+            <li><a href="/dist/product_list.html">화장품/뷰티</a></li>
+            <li><a href="/dist/product_list.html">출산/완구/아동용품</a></li>
+            <li><a href="/dist/product_list.html">가구/인테리어/리빙</a></li>
+            <li><a href="/dist/product_list.html">취미/스포츠/자동차</a></li>
+            <li><a href="/dist/product_list.html">디지털/가전</a></li>
+            <li><a href="/dist/product_list.html">도서/상품권</a></li>
+          </ul>
+          
+        </div>
+        <ul class="gnb_items">
+          <li><a href="/dist/product_list.html">신상품</a></li>
+          <li><a href="/dist/product_list.html">베스트상품</a></li>
+          <li><a href="/dist/product_list.html">세일상품</a></li>
+          <li><a href="/dist/product_list.html">MD추천상품</a></li>
+        </ul>
+      </div>
+      <ul class="gnb_items">
+        <li><a href="/dist/product_list.html">인기상품</a></li>
+        <li><a href="/dist/product_list.html">브랜드샵</a></li>
+        <li><a href="/dist/community_notice.html">고객센터</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<header class="head pc_hidden">
+  <div class="mb_icon_gp container">
+    <div class="mb_hamburger">
+      <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
+    </div>
+    <div class="mobile_menu_sideBar">
+      <div class="mb_sidebar_close_btn_gp">
+        <button class="mb_sidebar_close_btn">
+          <img src="/assets/imgs/sub3_img/close.png" alt="" />
+        </button>
+     </div>
+     <div style="width: 90%;">
+      <div class="mb_side_bar_header">
+        <h3>위즈몰에</h3>
+        <h4>오신 것을 환영합니다.</h4>
+      </div>
+      <div class="mb_btn_gp">
+        <a>로그인</a>
+        <a href="/dist/mypage_navLinks.html">화원가입</a>
+      </div>
+      <div class="mb_cate_gp">
+        <ul class="head_shop_menu">
+          <li>
+            <a href="/dist/mypage_my_order_detail.html" title="주문배송">
+              <img
+                class="truck"
+                src="/assets/imgs/icons/menu_ico2.png"
+                alt="주문배송"
+              />
+              <span>주문배송</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dist/shopping_cart.html" title="장바구니">
+              <img
+                src="/assets/imgs/icons/mobile_cart_icon.png"
+                alt="장바구니"
+              />
+              <span>장바구니</span>
+              <i class="ico1">0</i>
+            </a>
+          </li>
+          <li>
+            <a href="/dist/mypage_favorite.html" title="관심상품">
+              <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
+              <span>관심상품</span>
+              <i class="ico_heart">0</i>
+            </a>
+          </li>
+          <li>
+            <a href="/dist/mypage_qna.html" title="마이쇼핑">
+              <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
+              <span>1:1문의</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="mb_all_cate_item">
+          <li class="mb_dropdown">
+            <button
+              >여성의류 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+              <li><a href="/dist/product_list_category.html">하위분류 1</a></li>
+              <li><a href="/dist/product_list_category.html">하위분류 2</a></li>
+              <li><a href="/dist/product_list_category.html">하위분류 3</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >남성의류 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >패션잡화 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >화장품/뷰티 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >출산/완구/아동용품
+              <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >가구/인테리어/리빙
+              <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >취미/스포츠/자동차
+              <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >디지털/가전 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >도서/상품권 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </div>
+    <div class="mb_logo">
+      <a href="/dist/main.html">
+        <img
+          src="/assets/imgs/logo.png"
+          alt="logo"
+        />
+      </a>
+    </div>
+    <div class="mb_icon_btn">
+      <button class="mb_search_sidebar">
+        <img src="/assets/imgs/icons/search_ico.png" alt="Search Icon" />
+    </button>
+    <div class="search_sidebar">
+        <div class="mb_search_gp">
+            <div class="mb_search"> 
+                <input type="text" name="" id="" placeholder="어떤 상품을 찾으세요?">
+                <button><img src="/assets/imgs/icons/search_on.png" alt="Search Button"></button>
+            </div>
+            <button class="search_close_btn"><img src="/assets/imgs/icons/close_ico2.png" alt="Close Button"></button>
+        </div>
+        <ul class="search_suggest">
+          <li><a class="txt_red" href="#">인기 검색어</a></li>
+          <li><a href="/dist/product_search_fan.html">우산</a></li>
+          <li><a href="/dist/product_search_fan.html">추석 선물세트</a></li>
+          <li><a href="/dist/product_search_fan.html">블루투스 스피커</a></li>
+          <li><a href="/dist/product_search_fan.html">선풍기</a></li>
+          <li><a href="/dist/product_search_fan.html">달력</a></li>
+          <li><a href="/dist/product_search_fan.html">USB</a></li>
+          <li><a href="/dist/product_search_fan.html">보조배터리</a></li>
+        </ul>
+        <div class="close_btn_div">
+          <button class="search_close_text">닫기</button>
+        </div>
+    </div>
+      <a href="/dist/shopping_cart.html">
+        <img class="cart_img" src="/assets/imgs/icons/cart_ico.png" alt="장바구니" />
+      </a>
+    </div>
+  </div>
+  <div class="mb_all_cate_items container">
+    <ul>
+      <li><a href="/dist/product_list.html">신상품</a></li>
+      <li><a href="/dist/product_list.html">베스트100</a></li>
+      <li><a href="/dist/product_list.html">베스트상품</a></li>
+      <li><a href="/dist/product_list.html">MD추천상품</a></li>
+    </ul>
+  </div>
+  <div class="scroll_top_gp">
+    <button class="scroll_top_btn" id="scrollToTopBtn">
+        <img src="/assets/imgs/icons/go_top.png" alt="">
+    </button>
+   <div class="sub_quick_gp">
+    <button class="fixed_quick_menu_btn">
+      <img src="/assets/imgs/icons/snb_ico.png" alt="">
+   </button>
+  <div class="sub_quick_menu">
+      <a href="/dist/shopping_cart.html">
+        <span>장바구니</span>
+        <img src="/assets/imgs/icons/mobile_cart_icon.png" alt="">
+      </a>
+      <a href="#">
+        <span>주문배송</span>
+        <img src="/assets/imgs/icons/menu_ico2.png" alt="">
+      </a>
+      <a href="/dist/product_search.html">
+        <span>상품검색</span>
+        <img src="/assets/imgs/icons/menu_ico3.png" alt="">
+      </a>    
+      <a href="/dist/mypage_qna.html">
+        <span>1:1문의</span>
+        <img src="/assets/imgs/icons/menu_ico4.png" alt="">
+      </a>
+  </div>
+   </div>
+  </div>
+</div>
+</header>
+
+    <div style="width: 100%" class="pc_hidden">
+      <div class="sub_banner ">
+       <ul class="sub_cate_gp container">
+        <li class="home_icon">
+            <img src="/assets/imgs/icons/home_ico.png" alt="">
+        </li>
+        <li class="li_ico"></li>
+        <li class="sub_cate_select1">
+            <div class="custom-select">
+                <select>
+                  <option value="option1">전체보기</option>
+                  <option value="option2">여성의류</option>
+                  <option value="option3" selected>남성의류</option>
+                  <option value="option4">패션잡화</option>
+                  <option value="option5">화장품/뷰티</option>
+                  <option value="option6">출산/완구/아동용품</option>
+                  <option value="option7">가구/인테리어/리빙</option>
+                  <option value="option8">취미/스포츠/자동차</option>
+                  <option value="option9">디지털/가전</option>
+                  <option value="option10">도서/상품권</option>
+                </select>
+              </div>
+        </li>
+        <li class="li_ico"></li>
+        <li class="sub_cate_select2">
+            <div class="custom-select">
+                <select>
+                  <option value="option2">전체보기</option>
+                  <option value="option3">하위분류 1</option>
+                  <option value="option4">하위분류 2</option>
+                  <option value="option5">하위분류 3</option>
+                </select>
+              </div>
+        </li>
+        <li class="pc_hidden">전체보기</li>
+    </ul>
+</div>
+      <div class="gry_bar"></div>
+    </div>
+    <div class="quick_menu mobile_hidden">
+  <ul class="head_shop_menu">
+    <li>
+      <a href="/dist/shopping_cart.html" title="장바구니">
+        <img src="../../assets/imgs/icons/ico_baguni.png" alt="장바구니" />
+        <span>장바구니</span>
+        <i>0</i>
+      </a>
+    </li>
+    <li>
+      <a href="/dist/mypage_favorite.html" title="관심상품">
+        <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
+        <span>관심상품</span>
+      </a>
+    </li>
+    <li>
+      <a href="/dist/mypage.html" title="마이쇼핑">
+        <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
+        <span>마이쇼핑</span>
+      </a>
+    </li>
+  </ul>
+  <div class="brasket_list">
+    <h4>TODAY</h4>
+    <img
+      class="pd_img"
+      src="/assets/imgs/sub3_img/pd.jpeg"
+      alt=""
+    />
+    <div class="quick_menu_btn_gp">
+      <button><img src="/assets/imgs/icons/left.png" alt="" /></button>
+      <button><img src="/assets/imgs/icons/next.png" alt="" /></button>
+    </div>
+  </div>
+  <div class="quick_menu_on_btn">
+    <button id="quick_menu_on_btn"></button>
+  </div>
+</div>
+
+    <div class="container my_page_container">
+      <div class="my_page my_page_cont">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">마이페이지 > 회원정보</span>
+          </div>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li class="active">
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li>
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="form_table_container">
+          <h2 class="my_page header header_mobile_hidden">기본정보 입력</h2>
+          <h2 class="my_page header_pc_hidden">회원 정보 수정</h2>
+          <table class="form_table">
+            <tbody>
+              <tr>
+                <td class="my_page td_label_7">아이디 <span class="star_red_hidden">*</span></td>
+                <td colspan="9" class="text_box"></td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">비밀번호 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content">
+                  <input type="password" id="psw" name="psw" class="Psw_box" />
+                  <span class="td_content sub_span"
+                    >(영문,숫자,특수문자를 혼합하여 6자리 ~ 12자리입력.)</span
+                  >
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">비밀번호 확인 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content">
+                  <input
+                    type="password"
+                    id="Confirmpsw"
+                    name="Confirmpsw"
+                    class="Psw_box"
+                  />
+                  <span class="td_content sub_span"
+                    >(비밀번호 확인을 위해 다시 한 번 입력해 주시기
+                    바랍니다.)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td class="my_page td_label">이름 <span class="star_red_hidden">*</span></td>
+                <td colspan="9"></td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label2">주소 <span class="star_red_hidden">*</span></td>
+                <td colspan="9" class="td_content2">
+                  <div class="postalCode_box2_cont">
+                    <div>
+                      <input
+                        class="postalCode_box2"
+                        type="text"
+                        id="postalCode1"
+                        name="postalCode1"
+                      />
+                    </div>
+                    <div>
+                      <button>우편번호 찾기</button>
+                    </div>
+                  </div>
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode2"
+                    name="postalCode2"
+                  /><br />
+                  <input
+                    class="postalCode_box"
+                    type="text"
+                    id="postalCode3"
+                    name="postalCode3"
+                  />
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">전화번호</td>
+                <td class="my_page td_content3">
+                  <div class="td_content_sub">
+                    <input type="text" id="tphone1" name="tphone1" /> -
+                    <input type="text" id="tphone2" name="tphone2" /> -
+                    <input type="text" id="tphone3" name="tphone3" />
+                  </div>
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">휴대폰 번호 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content4">
+                  <div class="td_content_sub">
+                    <input type="text" id="hphone1" name="hphone1" /> -
+                    <input type="text" id="hphone2" name="hphone2" /> -
+                    <input type="text" id="hphone3" name="hphone3" />
+                  </div>
+                  <div class="td_content_sub2">
+                    <div class="sub_span_container">
+                      <div class="sub_span_cont">
+                        <span class="td_content sub_span"
+                          >문자 정보 서비스를 받으시겠습니까?</span
+                        >
+                      </div>
+                      <div class="radio_btn_container">
+                        <input
+                          type="radio"
+                          checked
+                          id="inbox"
+                          name="radioBtn1"
+                          value="inbox"
+                        />
+                        <label for="inbox" class="label_box">수신함</label>
+                        <input
+                          type="radio"
+                          id="receive"
+                          name="radioBtn1"
+                          value="receive"
+                        />
+                        <label for="receive" class="label_box"
+                          >수신하지 않음</label
+                        >
+                      </div>
+                      <br />
+                    </div>
+                    <div>
+                      <span class="td_content sub_span_red"
+                        >* 주문확인,배송 진행상황,알리미 등록,이벤트 공지 서비스
+                        제공 해 드립니다.</span
+                      >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="tr_responsive">
+                <td class="my_page td_label">이메일 <span class="star_red_hidden">*</span></td>
+                <td class="my_page td_content5">
+                  <input type="text" id="email" name="email" /><br />
+                  <div class="td_content_sub2">
+                    <div class="sub_span_container">
+                      <div class="sub_span_cont">
+                        <span class="td_content sub_span"
+                          >이메일 서비스를 받으시겠습니까?</span
+                        >
+                      </div>
+                      <div class="radio_btn_container">
+                        <input
+                          type="radio"
+                          checked
+                          id="yes"
+                          name="radioBtn2"
+                          value="yes"
+                        />
+                        <label for="yes" class="label_box">예</label>
+                        <input type="radio" id="no" name="radioBtn2" value="no" />
+                        <label for="no" class="label_box">아니오</label>
+                      </div>
+                      <br />
+                    </div>
+                    <div>
+                      <span class="td_content sub_span_red"
+                        >* 주문,결제,이벤트 정보제공, 단 유효하지 않은 이메일은
+                        서비스 불가</span
+                      >
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gry_bar"></div>
+        <div class="gry_bar"></div>
+        <div class="hidden_btn_cont">
+          <button type="submit" class="submit_btn hidden_btn">수정</button>
+        </div>
+        <div class="button_list_conts">
+          <div>
+            <a href="/dist/mypage_withdrawal.html" class="list_btn">회원탈퇴</a>
+          </div>
+          <div>
+            <button type="submit" class="submit_btn">확인</button>
+            <button type="button" class="cancel_btn">취소</button>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+    <div class="foot_left foot_left_hidden">
+        <ul class="foot_menu">
+            <li><a href="/dist/center_company.html">회사소개</a></li>
+            <li><a href="/dist/center_guide.html">이용안내</a></li>
+            <li><a href="/dist/center_privacy.html">개인정보처리방침</a></li>
+            <li><a href="/dist/member_mall_info.html">입점문의</a></li>
+        </ul>
+    </div>
+    <div class="footer_inn container">
+        <div class="foot_right foot_right_hidden">
+            <img src="/assets/imgs/icons/logo_mb.png" alt="logo">
+        </div>
+        <div class="foot_left">
+            <ul class="foot_menu">
+                <li><a href="/dist/center_company.html">회사소개</a></li>
+                <li><a href="/dist/center_guide.html">이용안내</a></li>
+                <li><a href="/dist/center_privacy.html">개인정보처리방침</a></li>
+                <li><a href="/dist/member_mall_info.html">입점문의</a></li>
+            </ul>
+            <div class="foot_info">
+                <div>
+                    <p>위즈몰</p>
+                    <p>대표자 : <span>대표자</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 171</span></p>
+                    <p>사업자등록번호 : <span>000-00-000000</span></p>
+                </div>
+                <div class="foot_info_sub">
+                    <p>고객센터 : <span>1544-0713</span></p>
+                    <p>이메일 : <span>help@anywiz.co.kr</span></p>
+                    <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
+                </div>
+            </div>
+            <span class="foot_cr">
+                Copyright(C) by 데모몰. All rights reserved.
+            </span>
+        </div>
+        <div class="foot_right">
+            <img src="/assets/imgs/foot_logo.png" alt="logo">
+        </div>
+    </div>
+
+</footer>
+
+  </body>
+</html>
