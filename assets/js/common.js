@@ -446,12 +446,18 @@ if(window) {
 function hideShow(x) {
   if (x == 2) {
     document.querySelector(".tax_body1").style.display = "block";
+    document.querySelector(".tax_body1_m").style.display = "block";
+    document.querySelector(".tax_body_m").style.display = "none";
     document.querySelector(".tax_body").style.display = "none";
   } else if (x == 1) {
     document.querySelector(".tax_body").style.display = "block";
+    document.querySelector(".tax_body_m").style.display = "block";
     document.querySelector(".tax_body1").style.display = "none";
+    document.querySelector(".tax_body1_m").style.display = "none";
   } else {
     document.querySelector(".tax_body").style.display = "none";
+    document.querySelector(".tax_body_m").style.display = "none";
+    document.querySelector(".tax_body1_m").style.display = "none";
     document.querySelector(".tax_body1").style.display = "none";
     return;
   }
