@@ -438,6 +438,7 @@ body {
 .shopping_detail_cont td {
   background-color: var(--bs-white);
 }
+
 .shopping_detail_cont .td_label3 {
   height: 47px;
   min-width: 144px;
@@ -1264,7 +1265,9 @@ textarea {
 }
 
 /* login form */
-
+.login_page .title_container .title_span {
+  display: none;
+}
 .login_page_wrap {
   width: 100%;
   padding: 70px;
@@ -1301,6 +1304,22 @@ textarea {
   border: 1px solid #333;
   border-radius: 3px;
   transition: all 0.3s;
+}
+.login-link .login_a {
+  position: relative;
+  padding: 0 16px 0 0;
+  box-sizing: border-box;
+}
+.login-link .login_a::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background: #666;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .login_page_wrap .login-check {
   margin: 20px 0 0;
@@ -1366,24 +1385,9 @@ textarea {
   background-size: 16px auto;
 }
 .login_page_wrap .login-link {
-  margin: 40px 0 0;
   padding: 20px 0 0;
   text-align: center;
   border-top: 1px solid #f2f2f5;
-}
-.login_page .non_member {
-  margin: 50px 0;
-  text-align: center;
-}
-.login_page .non_member a {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 40px;
-  letter-spacing: -0.07em;
-  color: #fff;
-  background: #ef4023;
-  border-radius: 2px;
 }
 
 /* npay */

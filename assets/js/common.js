@@ -439,45 +439,45 @@ if(window) {
   
     document.getElementById('scrollToTopBtn').addEventListener('click', scrollToTop);
   });
-  function hideShow(x) {
-    if (x == 2) {
-      document.querySelector(".tax_body1").style.display = "block";
-      document.querySelector(".tax_body").style.display = "none";
-    } else if (x == 1) {
-      document.querySelector(".tax_body").style.display = "block";
-      document.querySelector(".tax_body1").style.display = "none";
-    } else {
-      document.querySelector(".tax_body").style.display = "none";
-      document.querySelector(".tax_body1").style.display = "none";
-      return;
-    }
-  }
-  function incrementCount(selector) {
-    console.log(selector);
-    let selectedEl = document.querySelector(`.input_number${selector}`);
-    console.log(selectedEl);
-    if (Number(selectedEl.innerHTML) >= 1) {
-      selectedEl.innerHTML = Number(selectedEl.innerHTML) + 1;
-    } else {
-      selectedEl.innerHTML = 1; 
-    }
-    console.log(selectedEl.innerHTML);
-  }
-  function decrementCount(selector) {
-    let selectedEl = document.querySelector(`.input_number${selector}`);
-    console.log(selectedEl);
-  
-    if (Number(selectedEl.innerHTML) >= 1) {
-      selectedEl.innerHTML = Number(selectedEl.innerHTML) - 1;
-    }
-    if (Number(selectedEl.innerHTML) < 1) {
-      selectedEl.innerHTML = 1;
-    }
-  }
+ 
 })
 
+// hide_show radio
+function hideShow(x) {
+  if (x == 2) {
+    document.querySelector(".tax_body1").style.display = "block";
+    document.querySelector(".tax_body").style.display = "none";
+  } else if (x == 1) {
+    document.querySelector(".tax_body").style.display = "block";
+    document.querySelector(".tax_body1").style.display = "none";
+  } else {
+    document.querySelector(".tax_body").style.display = "none";
+    document.querySelector(".tax_body1").style.display = "none";
+    return;
+  }
+}
+function incrementCount(selector) {
+  console.log(selector);
+  let selectedEl = document.querySelector(`.input_number${selector}`);
+  console.log(selectedEl);
+  if (Number(selectedEl.innerHTML) >= 1) {
+    selectedEl.innerHTML = Number(selectedEl.innerHTML) + 1;
+  } else {
+    selectedEl.innerHTML = 1; 
+  }
+  console.log(selectedEl.innerHTML);
+}
+function decrementCount(selector) {
+  let selectedEl = document.querySelector(`.input_number${selector}`);
+  console.log(selectedEl);
 
-
+  if (Number(selectedEl.innerHTML) >= 1) {
+    selectedEl.innerHTML = Number(selectedEl.innerHTML) - 1;
+  }
+  if (Number(selectedEl.innerHTML) < 1) {
+    selectedEl.innerHTML = 1;
+  }
+}
 
 
 
