@@ -453,6 +453,19 @@ body {
   max-width: 60px;
   height: 60px;
 }
+.shopping_cart .shopping_detail_cont .count_box {
+  margin-left: 24px;
+}
+.shopping_cart .table_cont.shopping_detail_cont .td_label_icon {
+  width: 5%;
+}
+.shopping_cart .table_cont.shopping_detail_cont .shop_detail_th {
+  width: 2%;
+}
+.shopping_cart .shopping_table .shopping_detail_cont .img_icon {
+  width: 20px;
+  height: 20px;
+}
 .shopping_detail_cont .count_box a.up,
 .shopping_detail_cont .count_box a.down {
   border-left: 1px solid #ddd;
@@ -617,9 +630,14 @@ body {
   vertical-align: middle;
   box-sizing: border-box;
 }
+.shopping_cart_p .shop_order_table2 .tax_td1 {
+  padding: 8px 0 0 16px;
+}
+.shopping_cart_p .shop_order_table2 .tax_td{
+  padding-top: 16px;
+}
 .shopping_cart_p .shop_order_table2 td {
   height: 40px;
-  padding: 8px 0 8px 16px;
   text-align: left;
   font-size: 15px;
   color: #555;
@@ -627,6 +645,9 @@ body {
   border-bottom: 1px solid #ddd;
   vertical-align: middle;
   box-sizing: border-box;
+}
+.shopping_cart_p .shop_order_table2 .td_label {
+  min-width: 192px;
 }
 .shopping_cart_p .shop_order_table2 .input_coupon {
   min-width: 200px;
@@ -637,6 +658,7 @@ body {
   font-size: 14px;
   color: #333;
   padding: 0 8px;
+  margin: 5px 16px;
   background: #f6f6f6;
   box-sizing: border-box;
 }
@@ -715,10 +737,10 @@ body {
   margin: 0 0 0 6px;
   vertical-align: middle;
 }
-.shopping_order_table .reserve_ttl {
+.reserve_ttl {
   font-size: 13px;
   color: #f00;
-  margin: 5px 0 0;
+  margin: 5px 16px;
 }
 .shopping_order_btn {
   display: flex;
@@ -726,7 +748,7 @@ body {
 }
 .shopping_order_btn .submit_btn,
 .shopping_order_btn .cancel_btn {
-  width: 150px;
+  width: 250px;
   height: 50px;
   line-height: 20px;
 }
@@ -969,6 +991,19 @@ body {
   background: #f9f9f9;
   border: 1px solid #ddd;
 }
+.tax_table1 .input_box_item {
+  width: 70px;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+.tax_table1 .input_box_list {
+  margin: 5px 16px;
+}
+.tax_table1 hr {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 .shop_order_table2 .tax_table .tax_body .tax_input1 {
   width: 60%;
   background: #f9f9f9;
@@ -998,7 +1033,26 @@ body {
 .radio_content {
   width: 198px;
 }
-
+.radio_content_input {
+  padding: 8px 0 8px 16px;
+}
+.tax_table1 {
+  margin: 8px 16px;
+}
+.tax_table1 .label_list {
+  padding: 5px 16px;
+  line-height: 30px;
+}
+.tax_table1 .label_list label {
+  padding: 0;
+}
+.tax_table {
+  margin-left: 16px;
+}
+.tax_table .tax_input,
+.tax_table .input_box1 {
+  margin: 0px 16px;
+}
 /************************ product Search **********************/
 .product_search_list .search_detail {
   font-size: 24px;

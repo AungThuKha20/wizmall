@@ -44,7 +44,7 @@
 <!-- Swiper element Js -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <!-- Bootstrap js  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
 <!-- route js   -->
@@ -218,7 +218,7 @@
       <div class="mb_cate_gp">
         <ul class="head_shop_menu">
           <li>
-            <a href="/dist/mypage_my_order_detail.html" title="주문배송">
+            <a href="/dist/mypage_my_order.html" title="주문배송">
               <img
                 class="truck"
                 src="/assets/imgs/icons/menu_ico2.png"
@@ -245,9 +245,9 @@
             </a>
           </li>
           <li>
-            <a href="/dist/mypage_qna.html" title="마이쇼핑">
+            <a href="/dist/community_notice.html" title="마이쇼핑">
               <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
-              <span>1:1문의</span>
+              <span>고객센터 </span>
             </a>
           </li>
         </ul>
@@ -394,7 +394,7 @@
         <span>장바구니</span>
         <img src="/assets/imgs/icons/mobile_cart_icon.png" alt="">
       </a>
-      <a href="#">
+      <a href="/dist/mypage_my_order.html">
         <span>주문배송</span>
         <img src="/assets/imgs/icons/menu_ico2.png" alt="">
       </a>
@@ -461,9 +461,9 @@
       </a>
     </li>
     <li>
-      <a href="/dist/mypage_favorite.html" title="관심상품">
+      <a href="/dist/mypage_my_order.html" title="관심상품">
         <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
-        <span>관심상품</span>
+        <span>주문배송</span>
       </a>
     </li>
     <li>
@@ -538,16 +538,15 @@
                   구매상품정보
                 </th>
                 <th class="th_label2" style="width: 10%">제품가격</th>
-                <th class="th_label2" style="width: 10%">적립금</th>
-                <th class="th_label2" style="width: 10%">구매수량</th>
-                <th class="th_label2" style="width: 15%">배송조회</th>
-                <th class="th_label2" style="width: 10%">상태</th>
+                <th class="th_label2" style="width: 15%">구매수량</th>
+                <th class="th_label2" style="width: 10%">합계</th>
+                <th class="th_label2" style="width: 10%">주문상태</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="td_label4">
-                  <a href="/dist/product_detail.html"
+                  <a href=""
                     ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
                   /></a>
                 </td>
@@ -559,13 +558,9 @@
                   </p>
                 </td>
                 <td class="td_label4">22,000원</td>
-                <td class="td_label4">1,100원</td>
                 <td class="td_label4">1</td>
-                <td class="td_label4">
-                  <a href="">현대택배(1111111)</a>
-                  <br />발송일자 : 2024-06-03
-                </td>
-                <td class="td_label4">반품요청</td>
+                <td class="td_label4">22,000원</td>
+                <td class="td_label4">배송준비중</td>
               </tr>
               <tr>
                 <td colspan="7" class="td_label5">
@@ -586,7 +581,6 @@
                     text-align: right;
                     background-color: #fafafa;
                     padding-right: 10px;
-                    color: #333;
                   "
                 >
                   총결제금액 : 상품가격 22,000원 + 배송비 3,000원 =
@@ -622,7 +616,7 @@
           </table>
         </div>
         <div class="my my_order_detail order_detail_cont2">
-          <h2 class="order_title">주문상품 정보</h2>
+          <h2 class="order_title">주문자 정보</h2>
           <table class="order_detail_cont2 table_cont">
             <tbody>
               <tr>
@@ -670,9 +664,7 @@
           </table>
         </div>
         <div class="button_list_conts">
-          <div>
-            <a href="mypage_my_order.html" class="list_btn">리스트</a>
-          </div>
+          <div></div>
           <div class="link_btn_container">
             <a href="/dist/mypage_my_order_cancel.html" class="submit_btn">주문취소</a>
             <a href="#" class="cancel_btn">프린트하기</a>

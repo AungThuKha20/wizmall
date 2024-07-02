@@ -91,7 +91,7 @@
                 <th class="th_label2" style="width: 10%;">제품가격</th>
                 <th class="th_label2" style="width: 10%;">구매수량</th>
                 <th class="th_label2" style="width: 10%;">합계</th>
-                <th class="th_label2" style="width: 20%; text-align:left;">수 량</th>
+                <th class="th_label2" style="width: 15%;">반품수량</th>
                 <th class="th_label2" style="width: 10%;">환불금액</th>
               </tr>
             </thead>
@@ -113,17 +113,11 @@
                 <td class="td_label4">1</td>
                 <td class="td_label4">22,000원</td>
                 <td class="td_label4">
-                  <div class="count_box clearfix">
-                    <a class="down" onclick="decrementCount()">-</a>
-                    <input
-                      type="text"
-                      name="amount"
-                      value="1"
-                      onchange="checkAmount(this.form)"
-                      onkeyup="checkAmount(this.form)"
-                      class="input_number"
-                    />
-                    <a class="up" onclick="incrementCount()">+</a>
+                  <div class="OptionOfNum">
+                    <select name="searchNumber" class="select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
                   </div>
                 </td>
                 <td class="td_label4">22,000원</td>
@@ -180,24 +174,18 @@
                 <div class="order_pay_cont_left_text">
                   <span>상품가격</span> <br />
                   <span>적립금</span> <br />
-                  <span class="order_pay_cont_text1">수량</span>
+                  <span class="order_pay_cont_text1">반품수량</span>
                   <br />
                 </div>
                 <div class="order_pay_cont_right_text">
                   <span class="prd_price">22,000원</span> <br />
                   <span> 1,100원</span><br />
-                  <span class="count_box">
-                    <a class="down" onclick="decrementCount()">-</a>
-                    <input
-                      type="text"
-                      name="amount"
-                      value="1"
-                      onchange="checkAmount(this.form)"
-                      onkeyup="checkAmount(this.form)"
-                      class="input_number"
-                    />
-                    <a class="up" onclick="incrementCount()">+</a>
-                  </span>
+                  <div class="OptionOfNum">
+                    <select name="searchNumber" class="select">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,13 +226,19 @@
         </textarea>
       </div>
     </div>
-    <div class="button_list_conts">
+    <div class="button_list_conts btn_mobile_hidden">
       <div></div>
       <div>
         <button type="button" class="submit_btn">주문 취소</button>
         <button type="button" class="cancel_btn">프린트 하기</button>
       </div>
       <div></div>
+    </div>
+    <div class="all_btn_container">
+      <div class="button_list_conts_pc_hidden">
+        <button type="submit" class="submit_btn">주문 취소</button>
+        <button type="button" class="cancel_btn">프린트 하기</button>
+    </div>
     </div>
     ${require('./include/_footer.html')}
   </body>

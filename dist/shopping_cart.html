@@ -44,7 +44,7 @@
 <!-- Swiper element Js -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <!-- Bootstrap js  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
 <!-- route js   -->
@@ -218,7 +218,7 @@
       <div class="mb_cate_gp">
         <ul class="head_shop_menu">
           <li>
-            <a href="/dist/mypage_my_order_detail.html" title="주문배송">
+            <a href="/dist/mypage_my_order.html" title="주문배송">
               <img
                 class="truck"
                 src="/assets/imgs/icons/menu_ico2.png"
@@ -245,9 +245,9 @@
             </a>
           </li>
           <li>
-            <a href="/dist/mypage_qna.html" title="마이쇼핑">
+            <a href="/dist/community_notice.html" title="마이쇼핑">
               <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
-              <span>1:1문의</span>
+              <span>고객센터 </span>
             </a>
           </li>
         </ul>
@@ -394,7 +394,7 @@
         <span>장바구니</span>
         <img src="/assets/imgs/icons/mobile_cart_icon.png" alt="">
       </a>
-      <a href="#">
+      <a href="/dist/mypage_my_order.html">
         <span>주문배송</span>
         <img src="/assets/imgs/icons/menu_ico2.png" alt="">
       </a>
@@ -458,9 +458,9 @@
       </a>
     </li>
     <li>
-      <a href="/dist/mypage_favorite.html" title="관심상품">
+      <a href="/dist/mypage_my_order.html" title="관심상품">
         <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
-        <span>관심상품</span>
+        <span>주문배송</span>
       </a>
     </li>
     <li>
@@ -533,7 +533,12 @@
                 적립금
               </th>
 
-              <th class="td_label3" style="background-color: #f7f7f7">기능</th>
+              <th class="td_label_icon" style="background-color: #f7f7f7">
+                찜
+              </th>
+              <th class="td_label_icon" style="background-color: #f7f7f7">
+                삭제
+              </th>
             </tr>
             <tr>
               <td style="min-width: 40px; text-align: center">
@@ -547,7 +552,7 @@
               <td class="td_label4_sub">
                 <p>
                   <a href="/dist/product_detail.html" target="blank"
-                    >[디버거] THE FAN 3in1 멀티선풍기 핸디/접이식(1011021)</a
+                    >멜란체크 층간소음 슬리퍼 색상:검정, 사이즈 : 235</a
                   >
                 </p>
               </td>
@@ -557,17 +562,58 @@
                   <a class="down" onclick="decrementCount(1)">-</a>
                   <span class="input_number input_number1">1</span>
                   <a class="up" onclick="incrementCount(1)">+</a>
-                  <input type="submit" value="수정" class="edit_btn" />
                 </div>
               </td>
               <td class="td_label4">1,100원</td>
               <td style="text-align: center">
-                <a href="#" class="btn">관심상품</a><br />
-                <a href="#" class="btn"> 삭제하기</a>
+                <img
+                  src="/assets/imgs/icons/ico_heart.png"
+                  class="img_icon"
+                  alt=""
+                />
+              </td>
+              <td style="text-align: center">
+                <img src="/assets/imgs/delete.png" class="img_icon" alt="" />
               </td>
             </tr>
             <tr>
-              <td colspan="7" class="td_label5">
+              <td style="min-width: 40px; text-align: center">
+                <input type="checkbox" name="select_tmp" checked="" />
+              </td>
+              <td class="td_label4">
+                <a href="#" target="_blank"
+                  ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
+                /></a>
+              </td>
+              <td class="td_label4_sub">
+                <p>
+                  <a href="/dist/product_detail.html" target="blank"
+                    >멜란체크 층간소음 슬리퍼 색상:검정, 사이즈 : 235</a
+                  >
+                </p>
+              </td>
+              <td class="td_label4">22,000원</td>
+              <td>
+                <div class="count_box clearfix">
+                  <a class="down" onclick="decrementCount(5)">-</a>
+                  <span class="input_number input_number5">1</span>
+                  <a class="up" onclick="incrementCount(5)">+</a>
+                </div>
+              </td>
+              <td class="td_label4">1,100원</td>
+              <td style="text-align: center">
+                <img
+                  src="/assets/imgs/icons/ico_heart.png"
+                  class="img_icon"
+                  alt=""
+                />
+              </td>
+              <td style="text-align: center">
+                <img src="/assets/imgs/delete.png" class="img_icon" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="8" class="td_label5">
                 <p>판매자 : 입점업체2 (000-0000-0000)</p>
                 <span class="span_container">
                   <span>배송비 : 50,000원 이상구매시 무료</span>
@@ -578,8 +624,44 @@
               </td>
             </tr>
             <tr>
+              <td style="min-width: 40px; text-align: center">
+                <input type="checkbox" name="select_tmp" checked="" />
+              </td>
+              <td class="td_label4">
+                <a href="#" target="_blank"
+                  ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
+                /></a>
+              </td>
+              <td class="td_label4_sub">
+                <p>
+                  <a href="/dist/product_detail.html" target="blank"
+                    >멜란체크 층간소음 슬리퍼 색상:검정, 사이즈 : 235</a
+                  >
+                </p>
+              </td>
+              <td class="td_label4">22,000원</td>
+              <td>
+                <div class="count_box clearfix">
+                  <a class="down" onclick="decrementCount(6)">-</a>
+                  <span class="input_number input_number6">1</span>
+                  <a class="up" onclick="incrementCount(6)">+</a>
+                </div>
+              </td>
+              <td class="td_label4">1,100원</td>
+              <td style="text-align: center">
+                <img
+                  src="/assets/imgs/icons/ico_heart.png"
+                  class="img_icon"
+                  alt=""
+                />
+              </td>
+              <td style="text-align: center">
+                <img src="/assets/imgs/delete.png" class="img_icon" alt="" />
+              </td>
+            </tr>
+            <tr>
               <td
-                colspan="7"
+                colspan="8"
                 class="td_label4"
                 style="
                   text-align: right;
@@ -606,7 +688,6 @@
         <a href="/dist/order_delete.html" class="shopping_cart_btn"
           >선택 삭제</a
         >
-        <a href="/dist/order_delete.html" class="shopping_cart_btn">비우기</a>
         <a href="/dist/product_detail.html" class="shopping_cart_btn"
           >쇼핑 계속하기</a
         >

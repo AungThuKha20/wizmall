@@ -42,7 +42,7 @@
     </div>
     ${require('./include/_quick_menu.html')}
     <div class="container">
-      <div class="my_page my_order_cancel">
+      <div class="my_page my_order_detail">
         <div class="title_container">
           <h2 class="title">마이페이지</h2>
           <div class="menu">
@@ -80,8 +80,8 @@
             </li>
           </ul>
         </div>
-        <div class="my_page my_order_cancel order_cancel_cont">
-          <table class="order_cancel_cont table_cont">
+        <div class="my_page my_order_detail order_detail_cont">
+          <table class="order_detail_cont table_cont">
             <thead>
               <tr>
                 <th class="th_label2" style="width: 7%">이미지</th>
@@ -140,92 +140,91 @@
               </tr>
             </tbody>
           </table>
+          <h2 class="order_title">주문상품 정보</h2>
+          <table class="order_detail_cont table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub" style="width: 20%">주문번호</td>
+                <td class="td_label6" style="width: 30%">231219163703141</td>
+                <td class="td_label6_sub" style="width: 20%">주문일</td>
+                <td class="td_label6" style="width: 30%">
+                  2023-12-19 16:37:03
+                </td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">결제방법</td>
+                <td class="td_label6" colspan="3">무통장입금</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub" style="width: 20%">입금계좌</td>
+                <td class="td_label6" style="width: 30%">
+                  신한은행 000-000-00000 테스트
+                </td>
+                <td class="td_label6_sub" style="width: 20%">입금자명</td>
+                <td class="td_label6" style="width: 30%">관리자</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="order_cancel_cont text_area">
-          <h3 class="order_title">취소사유</h3>
-          <textarea name="textarea" rows="20" class="" style="height: 190px">
-          </textarea>
+        <div class="my my_order_detail order_detail_cont2">
+          <h2 class="order_title">주문자 정보</h2>
+          <table class="order_detail_cont2 table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub">주문하시는 분</td>
+                <td class="td_label6">d</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">휴대전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">이메일</td>
+                <td class="td_label6">123@123.com</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">주소</td>
+                <td class="td_label6">[05237] 서울 강동구 아리수로 46 123</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="order_title">배송지 정보</h2>
+          <table class="order_detail_cont2 table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub">주문하시는 분</td>
+                <td class="td_label6">d</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">휴대전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">주소</td>
+                <td class="td_label6">[05237] 서울 강동구 아리수로 46 123</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="button_list_conts">
+          <div></div>
+          <div class="link_btn_container">
+            <a href="/dist/mypage_my_order_cancel.html" class="submit_btn">주문반품</a>
+            <a href="#" class="cancel_btn">프린트하기</a>
+          </div>
+          <div></div>
         </div>
       </div>
     </div>
-    <div class="order_pay_container pc_hidden_p">
-      <div class="order_pay_m">
-        <div class="order_pay_cont1 order_pay_cont2 order_pay_cont">
-          <div class="order_pay_cont1_left">
-            <div class="img_box">
-              <img src="/assets/imgs/sub02/my_order/fun.jpg" alt="" />
-            </div>
-            <div class="order_pay_cont_text">
-              <div class="prd_tit">
-                <a href="#">
-                  [디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)
-                </a>
-              </div>
-              <div class="order_pay_cont_text_list">
-                <div class="order_pay_cont_left_text">
-                  <span>상품가격</span> <br />
-                  <span>적립금</span> <br />
-                  <span class="order_pay_cont_text1">수량</span>
-                  <br />
-                </div>
-                <div class="order_pay_cont_right_text">
-                  <span class="prd_price">22,000원</span> <br />
-                  <span> 1,100원</span><br />
-                  <span>1</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="line_hide"></p>
-        <div class="order_pay_info">
-          <div class="order_pay_info_cont_left">
-            <span> 판매자 : 입점업체(00-0000-0000)</span><br />
-            <span>[배송비 : 50,000원 이상구매시 무료]</span>
-          </div>
-          <div class="order_pay_info_cont_right">
-            <span> 상품가격 22,000원</span><br />
-            <span>배송비3,000원</span>
-          </div>
-        </div>
-        <p class="line_hide"></p>
-        <div class="crt_total">
-          <h3 style="margin: 0px 0px 12px">결제금액 안내</h3>
-          <div class="crt_total_cont">
-            <div class="crt_total_cont_left">
-              <span> 상품가격</span><br />
-              <span>배송비</span><br />
-              <span>주문총액</span>
-            </div>
-            <div class="crt_total_cont_right">
-              <span> 22,000원</span><br />
-              <span>3,000원</span><br />
-              <span style="font-size: 17px; color: #ef4023">25,000원 </span>
-            </div>
-          </div>
-        </div>
-        <div class="gry_bar"></div>
-      </div>
-      <div class="order_cancel_cont text_area">
-        <h3 class="order_title">취소사유</h3>
-        <textarea name="textarea" rows="20" class="" style="height: 190px">
-        </textarea>
-      </div>
-    </div>
-    <div class="button_list_conts btn_mobile_hidden">
-      <div></div>
-      <div>
-        <button type="button" class="submit_btn">주문 취소</button>
-        <button type="button" class="cancel_btn">프린트 하기</button>
-      </div>
-      <div></div>
-    </div>
-    <div class="all_btn_container">
-      <div class="button_list_conts_pc_hidden">
-        <button type="submit" class="submit_btn">주문 취소</button>
-        <button type="button" class="cancel_btn">프린트 하기</button>
-    </div>
-    </div>
+
     ${require('./include/_footer.html')}
   </body>
 </html>

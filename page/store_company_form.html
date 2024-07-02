@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     ${require('./include/_meta.html')}
@@ -69,12 +69,12 @@
                 </textarea
             >
             <div class="join_arg1_cont">
-              <input type="checkbox" name="agree" id="join_agr1" required>
+              <input type="checkbox" name="agree" id="join_agr1" required />
               <label for="join_agr1">입점업체가입 약관에 동의합니다.</label>
             </div>
           </div>
         </form>
-        <div class="button_list_conts">
+        <div class="button_list_conts btn_mobile_hidden">
           <div></div>
           <div class="link_btn_container">
             <a href="/dist/store_company_terms.html" class="submit_btn"
@@ -83,6 +83,14 @@
             <a href="#" class="cancel_btn">동의안함</a>
           </div>
           <div></div>
+        </div>
+        <div class="all_btn_container">
+          <div class="button_list_conts_pc_hidden">
+            <a href="/dist/store_company_terms.html" class="submit_btn"
+              >동의함</a
+            >
+            <a href="#" class="cancel_btn">동의안함</a>
+          </div>
         </div>
       </div>
     </div>

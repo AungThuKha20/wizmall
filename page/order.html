@@ -400,7 +400,7 @@
             </tr>
             <tr>
               <td class="my_page td_label">결제방법</td>
-              <td width="84%" class="val">
+              <td width="84%" class="val tax_td1" style="font-size: 14px">
                 <input
                   type="radio"
                   name="pay_method"
@@ -433,7 +433,7 @@
             </tr>
             <tr>
               <td class="my_page td_label">세금계산서</td>
-              <td width="84%" class="val tax_td">
+              <td width="84%" class="val tax_td" style="font-size: 14px">
                 <input
                   type="radio"
                   name="pay_method"
@@ -441,7 +441,9 @@
                   id=""
                   style="display: none"
                 />
-                <label class="radio_label" style="margin-right: 10px"
+                <label
+                  class="radio_label"
+                  style="margin-right: 10px; padding-left: 16px"
                   ><input
                     type="radio"
                     name="pay_method"
@@ -523,7 +525,10 @@
                         </td>
                       </tr>
                       <tr>
-                        <td bgcolor="#F9F9F9" class="shopping_order_td td_input">
+                        <td
+                          bgcolor="#F9F9F9"
+                          class="shopping_order_td td_input"
+                        >
                           &nbsp; 사업장 소재지
                         </td>
                         <td colspan="3" bgcolor="#FFFFFF" class="input_box">
@@ -601,34 +606,37 @@
                         &nbsp; 발급사유
                       </td>
                       <td width="80%" bgcolor="#FFFFFF" class="">
-                        <label style="margin-right: 10px"
-                          ><input
-                            type="radio"
-                            name="cash_type"
-                            value="C"
-                            onclick="qclick2('01');"
-                            id="cash_C"
-                          />
-                          사업자 지출증빙용</label
+                        <label style="margin-right: 10px; margin-left: 16px"
+                          ><input type="radio" /> 사업자 지출증빙용</label
                         >
                         <label style="margin-right: 10px"
-                          ><input
-                            type="radio"
-                            name="cash_type"
-                            value="P"
-                            id="cash_P"
-                          />
-                          개인소득 공제용</label
+                          ><input type="radio" /> 개인소득 공제용</label
                         >
                       </td>
                     </tr>
-                    <tr>
-                      <td bgcolor="#F9F9F9" class="radio_content">
+                    <tr style="height: auto">
+                      <th
+                        bgcolor="#F9F9F9"
+                        class="radio_content"
+                        style="height: auto;"
+                      >
                         &nbsp; 신청정보
-                      </td>
+                      </th>
                       <td bgcolor="#FFFFFF">
-                        <div id="cash_info01"></div>
-                        <div id="cash_info02" style="padding: 3px"></div>
+                        <div class="label_list">
+                          <label style="margin-right: 28px"
+                            ><input type="radio" /> 사업자 지출증빙용</label
+                          ><label
+                            ><input type="radio" /> 사업자 지출증빙용</label
+                          >
+                        </div>
+                        <hr />
+                        <div class="input_box_list">
+                          <input type="text" class="input_box_item" />~
+                          <input type="text" class="input_box_item" />~
+                          <input type="text" class="input_box_item" />~
+                          <input type="text" class="input_box_item" />
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -1159,7 +1167,6 @@
                       <td bgcolor="#FFFFFF">
                         <input
                           class="tax_input"
-                          style="width: 100%; max-width: 120px"
                           type="text"
                           name="com_class"
                           value=""
@@ -1177,7 +1184,6 @@
                       <td bgcolor="#FFFFFF">
                         <input
                           class="tax_input"
-                          style="width: 100%; max-width: 90px"
                           type="text"
                           name="com_tel"
                           value=""
@@ -1195,7 +1201,6 @@
                       <td bgcolor="#FFFFFF">
                         <input
                           class="tax_input"
-                          style="width: 100%; max-width: 200px"
                           type="text"
                           name="com_email"
                           value=""
@@ -1234,13 +1239,29 @@
                       >
                     </td>
                   </tr>
-                  <tr>
-                    <th bgcolor="#F9F9F9" class="radio_content">
+                  <tr style="height: auto">
+                    <th
+                      bgcolor="#F9F9F9"
+                      class="radio_content"
+                      style="height: auto"
+                    >
                       &nbsp; 신청정보
                     </th>
                     <td bgcolor="#FFFFFF">
-                      <div id="cash_info01"></div>
-                      <div id="cash_info02" style="padding: 3px"></div>
+                      <label style="margin-right: 10px"
+                        ><input type="radio" value="C" /> 사업자
+                        지출증빙용</label
+                      ><label style="margin-right: 10px"
+                        ><input type="radio" /> 사업자 지출증빙용</label
+                      >
+                      <br />
+                      <hr />
+                      <div class="input_box_list">
+                        <input type="text" class="input_box_item" />~
+                        <input type="text" class="input_box_item" />~
+                        <input type="text" class="input_box_item" />~
+                        <input type="text" class="input_box_item" />
+                      </div>
                     </td>
                   </tr>
                   <tr>

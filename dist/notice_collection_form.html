@@ -412,8 +412,7 @@
 </div>
 </header>
 
-    <div style="width: 100%" class="gry_bar_pc_hidden">
-      <div class="sub_banner ">
+    <div class="sub_banner ">
        <ul class="sub_cate_gp container">
         <li class="home_icon">
             <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
@@ -449,8 +448,6 @@
         <li class="pc_hidden breadcrumbsEl "></li>
      </ul>
 </div>
-      <div class="gry_bar"></div>
-    </div>
     <div class="quick_menu mobile_hidden">
   <ul class="head_shop_menu">
     <li>
@@ -490,255 +487,67 @@
   </div>
 </div>
 
-    <div class="container">
-      <div class="my_page my_qna_detail">
-        <div class="title_container">
-          <h2 class="title">마이페이지</h2>
-          <div class="menu">
-            <a href="#"
-              ><img
-                src="/assets/imgs/icons/home_ico.png"
-                class="home_icon"
-                alt=""
-            /></a>
-            <span style="margin-left: 5px">마이페이지 > 1:1문의</span>
-          </div>
-        </div>
-        <div class="my_page list_menu_container">
-          <ul class="list_menu">
-            <li>
-              <a href="mypage.html">회원정보</a>
-            </li>
-            <li>
-              <a href="mypage_my_order.html">주문 · 배송조회</a>
-            </li>
-            <li class="active">
-              <a href="mypage_qna.html">1:1문의</a>
-            </li>
-            <li>
-              <a href="mypage_address.html">배송지관리</a>
-            </li>
-            <li>
-              <a href="mypage_favorite.html">관심상품</a>
-            </li>
-            <li>
-              <a href="mypage_point.html">내 적립금</a>
-            </li>
-            <li>
-              <a href="mypage_coupon.html">내 쿠폰함</a>
-            </li>
-          </ul>
-        </div>
-        <div class="my_page my_qna_detail detail_cont">
-          <table class="detail_cont table_cont">
-            <thead>
-              <tr>
-                <th
-                  class="th_label"
-                  style="padding: 0px 0px 0px 60px; text-align: left"
-                >
-                  제목
-                </th>
-                <th class="th_label" style="width: 15%">작성일</th>
-                <th class="th_label" style="width: 15%">처리현황</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
-                >
-                  주문취소 문의
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  접수완료
-                </td>
-              </tr>
-              <tr>
-                <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
-                >
-                  주문취소 문의
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
-                </td>
-                <td class="td_label" style="background-color: #fff">처리중</td>
-              </tr>
-              <tr>
-                <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
-                >
-                  주문취소 문의
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  답변완료
-                </td>
-              </tr>
-              <tr>
-                <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
-                >
-                  주문취소 문의
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  답변완료
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="qna_footer">
-            <div class="page_btns">
-              <button class="page_btn">
-                <img src="/assets/imgs/icons/page-first.jpg" alt="" />
-              </button>
-              <button class="page_btn" style="margin: 0 5px">
-                <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
-              </button>
-              <div class="page_no">
-                <a href="#">1</a>
+    <div class="gry_bar1"></div>
+    <div class="container notice_write_form notice_m">
+      <h3>
+        * 표시는 필수입력 사항으로 글 작성시 반드시 기재해야 하는 항목입니다
+      </h3>
+      <table width="100%" class="notice_write_form_table view">
+        <tbody>
+          <tr>
+            <th align="center"><strong>작성자 *</strong></th>
+            <td align="left">
+              <input type="text" value="위즈몰" class="notice_input" />
+            </td>
+            <th align="center"><strong>이메일</strong></th>
+            <td align="left" style="text-align: left; padding-left: 10px">
+              <input type="text" value="test@test.com" class="notice_input" />
+            </td>
+          </tr>
+        
+          <tr>
+            <th align="center" height="30"><strong>제목 *</strong></th>
+            <td colspan="3" align="left" style="text-align: left">
+              <input type="text" class="notice_input1" style="width: 100%" placeholder="쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다." />
+            </td>
+          </tr>
+
+          <tr>
+            <td height="50" colspan="4">
+              <div class="form_input_check_box">
+                <input type="checkbox" />
+                <label for="">비밀글</label>
+                <input type="checkbox" />
+                <label for="">공지글</label>
               </div>
-              <button class="page_btn" style="margin: 0 5px">
-                <img src="/assets/imgs/icons/page-last.jpg" alt="" />
-              </button>
-              <button class="page_btn">
-                <img src="/assets/imgs/icons/page-next.jpg" alt="" />
-              </button>
-            </div>
-            <div class="search_cont">
-              <form>
-                <input type="hidden" name="code" />
-                <input type="hidden" name="category" />
-                <input type="hidden" name="mallid" />
-                <div class="span_box">
-                  <span>기간검색</span>
-                  <input
-                    name="date1" value="2024.02"
-                    type="text"
-                    class="input_style"
-                  />
-                  ~
-                  <input
-                    name="date2" value="2024.06"
-                    type="text"
-                    class="input_style"
-                  />
-                </div>
-                <div class="span_box">
-                  <span>처리현황</span>
-                  <select name="application" class="application">
-                    <option value="접수완료">접수완료</option>
-                    <option value="저리중">저리중</option>
-                    <option value="답변완료">답변완료</option>
-                  </select>
-                </div>
-                <div class="select_cont">
-                  <select name="searchOption" class="select">
-                    <option value="subject">제 목</option>
-                    <option value="content">내 용</option>
-                    <option value="subcon">제목 + 내용</option>
-                    <option value="name">작성자</option>
-                    <option value="memid">아이디</option>
-                  </select>
-                  <input name="searchkey" type="text" class="search_input" />
-                  <button type="submit">보기</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="qna_button">
-            <div class="right">
-              <a href="mypage_qna_detail.html" class="listing_btn">리스트</a>
-              <a href="mypage_qna_create.html" class="writing_btn">글쓰기</a>
-            </div>
-          </div>
+              <div>
+                <textarea name="content" cols="85" rows="13">
+                    &#10;쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+                    &#10;쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+                    &#10;쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+                    &#10;쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+                    &#10;쇼핑몰 오픈준비중입니다. 쇼핑몰 오픈준비중입니다.
+                </textarea>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>첨부파일1</th>
+            <td colspan="3"><input type="file" class="notice_input_file" /></td>
+          </tr>
+          <tr>
+            <th>첨부파일2</th>
+            <td colspan="3"><input type="file" class="notice_input_file" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="input_btn">
+        <div class="left">
+          <a href="community_notice.html">리스트</a>
         </div>
-      </div>
-      <div class="my_page my_qna_detail order_list_wrap_pc_hidden">
-        <div class="order_list_wrap">
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">접수완료</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">처리중</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">답변완료</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">답변완료</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="page_btns">
-          <button class="page_btn">
-            <img src="/assets/imgs/icons/page-first.jpg" alt="" />
-          </button>
-          <button class="page_btn" style="margin: 0 5px">
-            <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
-          </button>
-          <div class="page_no">
-            <a href="#">1</a>
-          </div>
-          <button class="page_btn" style="margin: 0 5px">
-            <img src="/assets/imgs/icons/page-last.jpg" alt="" />
-          </button>
-          <button class="page_btn">
-            <img src="/assets/imgs/icons/page-next.jpg" alt="" />
-          </button>
-        </div>
-        <div class="qna_button">
-          <div class="right">
-            <a href="mypage_qna_create.html" class="listing_btn">글쓰기</a>
-          </div>
+        <div class="right">
+          <a href="#" class="on_btn">확인</a>
+          <a href="/dist/community_notice_view.html">취소</a>
         </div>
       </div>
     </div>

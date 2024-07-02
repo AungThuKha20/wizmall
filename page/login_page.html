@@ -38,7 +38,8 @@
     ${require('./include/_header.html')}
     <div class="container login_page">
       <div class="title_container">
-        <h2 class="title">고객센터</h2>
+        <h2 class="title">로그인</h2>
+        <span class="title_span">위즈몰에 오신 것을 환영합니다.</span>
         <div class="menu">
           <a href="#"
             ><img
@@ -51,54 +52,57 @@
       </div>
       <form action="">
         <div class="login_page_wrap">
-            <div class="login_page_wrapinner">
-              <div class="login-form">
-                <div class="input_list">
-                  <div>
-                    <input name="id" style="margin-bottom: 12px;" type="text" value="" placeholder="아이디" />
-                  </div>
-                  <div>
-                    <input name="passwd" type="password" placeholder="비밀번호" />
-                  </div>
-                </div>
-    
-                <button type="submit">로그인</button>
-              </div>
-    
-              <div class="login-check">
-                <p class="only_chk font">
+          <div class="login_page_wrapinner">
+            <div class="login-form">
+              <div class="input_list">
+                <div>
                   <input
-                    type="checkbox"
-                    name="id_save"
-                    id="id_save"
-                    value="id_save"
-                  /><label for="id_save">아이디 저장</label>
-                </p>
+                    name="id"
+                    style="margin-bottom: 12px"
+                    type="text"
+                    value=""
+                    placeholder="아이디"
+                  />
+                </div>
+                <div>
+                  <input name="passwd" type="password" placeholder="비밀번호" />
+                </div>
               </div>
-    
-              <div class="login-social">
-                <button type="button" onclick="loginFacebook();" class="facebook">
-                  <i></i><span>페이스북 계정 로그인</span>
-                </button>
-                <button type="button" onclick="loginNaver();" class="naver">
-                  <i></i><span>네이버 계정 로그인</span>
-                </button>
-                <button type="button" onclick="loginKakao();" class="kakao">
-                  <i></i><span>카카오 계정 로그인</span>
-                </button>
-              </div>
-    
-              <div class="login-link">
-                <a href="/member/join.php">회원가입</a>
-                <i></i>
-                <a href="/member/id_search.php">아이디/비밀번호 찾기</a>
-              </div>
+
+              <button type="submit">로그인</button>
+            </div>
+
+            <div class="login-check">
+              <p class="only_chk font">
+                <input
+                  type="checkbox"
+                  name="id_save"
+                  id="id_save"
+                  value="id_save"
+                /><label for="id_save">아이디 저장</label>
+              </p>
+            </div>
+
+            <div class="login-social">
+              <button type="button" onclick="loginFacebook();" class="facebook">
+                <i></i><span>페이스북 계정 로그인</span>
+              </button>
+              <button type="button" onclick="loginNaver();" class="naver">
+                <i></i><span>네이버 계정 로그인</span>
+              </button>
+              <button type="button" onclick="loginKakao();" class="kakao">
+                <i></i><span>카카오 계정 로그인</span>
+              </button>
+            </div>
+
+            <div class="login-link">
+              <a href="#" class="login_a">회원가입</a>
+
+              <a href="#">아이디/비번찾기</a>
             </div>
           </div>
+        </div>
       </form>
-      <div class="non_member">
-        <a href="#">비회원으로 구매하기</a>
-      </div>
     </div>
 
     ${require('./include/_footer.html')}

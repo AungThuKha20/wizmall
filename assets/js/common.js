@@ -181,7 +181,6 @@ $(document).ready(function () {
       if (noScrollWrapper) {
         noScrollWrapper.remove();
       }
-
     });
   }
   //search_sidebar
@@ -317,6 +316,8 @@ $(document).ready(function () {
         nextRow.style.display === "table-row" ? "none" : "table-row";
     });
   });
+  // select route 
+
   //
   var modal = document.querySelector(".pd_detail_swiper_gp");
 var closeBtn = document.querySelector(".close");
@@ -391,8 +392,11 @@ if(window) {
   showText(currentIndex);
 
   setInterval(nextText, intervalTime);
-   // counting  
+   // select_route  
   
+
+
+
   // sub_quick menu at scroll to top gp
   function toggleQuickMenu() {
     var subQuickMenu = document.querySelector('.sub_quick_menu');
@@ -426,9 +430,14 @@ if(window) {
   
     if (scrollPosition >= window.innerHeight * 0.01) {
       scrollTopGp.style.bottom = '20px';
-    } else {
+  } else {
       scrollTopGp.style.bottom = '-100vh';
-    }
+      const noScrollWrapper = document.querySelector('.no-scroll-wrapper');
+      if (noScrollWrapper) {
+          noScrollWrapper.remove();
+      }
+      document.body.classList.remove('no-scroll');
+  }
     // scroll to top 
     function scrollToTop() {
       window.scrollTo({
@@ -441,6 +450,10 @@ if(window) {
   });
  
 })
+// select route 
+
+
+
 
 // hide_show radio
 function hideShow(x) {
@@ -482,6 +495,16 @@ function decrementCount(selector) {
   }
   if (Number(selectedEl.innerHTML) < 1) {
     selectedEl.innerHTML = 1;
+  }
+}
+
+//
+function navigateToPage() {
+  var select = document.getElementById("customSelect");
+  var selectedValue = select.value;
+  if (selectedValue) {
+      window.location.href = selectedValue;
+      console.log("hello")
   }
 }
 

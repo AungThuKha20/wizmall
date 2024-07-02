@@ -37,7 +37,27 @@
   </head>
   <body>
     ${require('./include/_header.html')}
-    ${require('./include/_subMenuCate.html')}
+    <div class="sub_banner">
+      <ul class="sub_cate_gp container">
+        <li class="home_icon">
+          <a href="/dist/main.html"
+            ><img src="/assets/imgs/icons/home_ico.png" alt=""
+          /></a>
+        </li>
+        <li class="li_ico mobile_hidden"></li>
+        <li class="mobile_hidden sub_subCate_txt">고객센터</li>
+        <li class="li_ico"></li>
+        <li class="sub_cate_select2 mobile_hidden">
+          <div class="custom-select">
+            <select id="customSelect" onchange="navigateToPage()">
+              <option value="/dist/community_faq.html">자주하는 질문</option>
+              <option value="/dist/community_notice.html">공지사항</option>
+            </select>
+          </div>
+        </li>
+        <li class="pc_hidden breadcrumbsEl"></li>
+      </ul>
+    </div>
     ${require('./include/_quick_menu.html')}
     <div class="gry_bar1"></div>
     <div class="container faq">

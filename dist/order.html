@@ -44,7 +44,7 @@
 <!-- Swiper element Js -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <!-- Bootstrap js  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Common script -->
 <script src="../assets/js/common.js"></script>
 <!-- route js   -->
@@ -225,7 +225,7 @@
       <div class="mb_cate_gp">
         <ul class="head_shop_menu">
           <li>
-            <a href="/dist/mypage_my_order_detail.html" title="주문배송">
+            <a href="/dist/mypage_my_order.html" title="주문배송">
               <img
                 class="truck"
                 src="/assets/imgs/icons/menu_ico2.png"
@@ -252,9 +252,9 @@
             </a>
           </li>
           <li>
-            <a href="/dist/mypage_qna.html" title="마이쇼핑">
+            <a href="/dist/community_notice.html" title="마이쇼핑">
               <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
-              <span>1:1문의</span>
+              <span>고객센터 </span>
             </a>
           </li>
         </ul>
@@ -401,7 +401,7 @@
         <span>장바구니</span>
         <img src="/assets/imgs/icons/mobile_cart_icon.png" alt="">
       </a>
-      <a href="#">
+      <a href="/dist/mypage_my_order.html">
         <span>주문배송</span>
         <img src="/assets/imgs/icons/menu_ico2.png" alt="">
       </a>
@@ -465,9 +465,9 @@
       </a>
     </li>
     <li>
-      <a href="/dist/mypage_favorite.html" title="관심상품">
+      <a href="/dist/mypage_my_order.html" title="관심상품">
         <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
-        <span>관심상품</span>
+        <span>주문배송</span>
       </a>
     </li>
     <li>
@@ -849,7 +849,7 @@
             </tr>
             <tr>
               <td class="my_page td_label">결제방법</td>
-              <td width="84%" class="val">
+              <td width="84%" class="val tax_td1" style="font-size: 14px">
                 <input
                   type="radio"
                   name="pay_method"
@@ -882,7 +882,7 @@
             </tr>
             <tr>
               <td class="my_page td_label">세금계산서</td>
-              <td width="84%" class="val tax_td">
+              <td width="84%" class="val tax_td" style="font-size: 14px">
                 <input
                   type="radio"
                   name="pay_method"
@@ -890,7 +890,9 @@
                   id=""
                   style="display: none"
                 />
-                <label class="radio_label" style="margin-right: 10px"
+                <label
+                  class="radio_label"
+                  style="margin-right: 10px; padding-left: 16px"
                   ><input
                     type="radio"
                     name="pay_method"
@@ -972,7 +974,10 @@
                         </td>
                       </tr>
                       <tr>
-                        <td bgcolor="#F9F9F9" class="shopping_order_td td_input">
+                        <td
+                          bgcolor="#F9F9F9"
+                          class="shopping_order_td td_input"
+                        >
                           &nbsp; 사업장 소재지
                         </td>
                         <td colspan="3" bgcolor="#FFFFFF" class="input_box">
@@ -1050,34 +1055,37 @@
                         &nbsp; 발급사유
                       </td>
                       <td width="80%" bgcolor="#FFFFFF" class="">
-                        <label style="margin-right: 10px"
-                          ><input
-                            type="radio"
-                            name="cash_type"
-                            value="C"
-                            onclick="qclick2('01');"
-                            id="cash_C"
-                          />
-                          사업자 지출증빙용</label
+                        <label style="margin-right: 10px; margin-left: 16px"
+                          ><input type="radio" /> 사업자 지출증빙용</label
                         >
                         <label style="margin-right: 10px"
-                          ><input
-                            type="radio"
-                            name="cash_type"
-                            value="P"
-                            id="cash_P"
-                          />
-                          개인소득 공제용</label
+                          ><input type="radio" /> 개인소득 공제용</label
                         >
                       </td>
                     </tr>
-                    <tr>
-                      <td bgcolor="#F9F9F9" class="radio_content">
+                    <tr style="height: auto">
+                      <th
+                        bgcolor="#F9F9F9"
+                        class="radio_content"
+                        style="height: auto;"
+                      >
                         &nbsp; 신청정보
-                      </td>
+                      </th>
                       <td bgcolor="#FFFFFF">
-                        <div id="cash_info01"></div>
-                        <div id="cash_info02" style="padding: 3px"></div>
+                        <div class="label_list">
+                          <label style="margin-right: 28px"
+                            ><input type="radio" /> 사업자 지출증빙용</label
+                          ><label
+                            ><input type="radio" /> 사업자 지출증빙용</label
+                          >
+                        </div>
+                        <hr />
+                        <div class="input_box_list">
+                          <input type="text" class="input_box_item" />~
+                          <input type="text" class="input_box_item" />~
+                          <input type="text" class="input_box_item" />~
+                          <input type="text" class="input_box_item" />
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -1608,7 +1616,6 @@
                       <td bgcolor="#FFFFFF">
                         <input
                           class="tax_input"
-                          style="width: 100%; max-width: 120px"
                           type="text"
                           name="com_class"
                           value=""
@@ -1626,7 +1633,6 @@
                       <td bgcolor="#FFFFFF">
                         <input
                           class="tax_input"
-                          style="width: 100%; max-width: 90px"
                           type="text"
                           name="com_tel"
                           value=""
@@ -1644,7 +1650,6 @@
                       <td bgcolor="#FFFFFF">
                         <input
                           class="tax_input"
-                          style="width: 100%; max-width: 200px"
                           type="text"
                           name="com_email"
                           value=""
@@ -1683,13 +1688,29 @@
                       >
                     </td>
                   </tr>
-                  <tr>
-                    <th bgcolor="#F9F9F9" class="radio_content">
+                  <tr style="height: auto">
+                    <th
+                      bgcolor="#F9F9F9"
+                      class="radio_content"
+                      style="height: auto"
+                    >
                       &nbsp; 신청정보
                     </th>
                     <td bgcolor="#FFFFFF">
-                      <div id="cash_info01"></div>
-                      <div id="cash_info02" style="padding: 3px"></div>
+                      <label style="margin-right: 10px"
+                        ><input type="radio" value="C" /> 사업자
+                        지출증빙용</label
+                      ><label style="margin-right: 10px"
+                        ><input type="radio" /> 사업자 지출증빙용</label
+                      >
+                      <br />
+                      <hr />
+                      <div class="input_box_list">
+                        <input type="text" class="input_box_item" />~
+                        <input type="text" class="input_box_item" />~
+                        <input type="text" class="input_box_item" />~
+                        <input type="text" class="input_box_item" />
+                      </div>
                     </td>
                   </tr>
                   <tr>

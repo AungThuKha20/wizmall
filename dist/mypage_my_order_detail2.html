@@ -491,7 +491,7 @@
 </div>
 
     <div class="container">
-      <div class="my_page my_qna_detail">
+      <div class="my_page my_order_detail">
         <div class="title_container">
           <h2 class="title">마이페이지</h2>
           <div class="menu">
@@ -501,7 +501,7 @@
                 class="home_icon"
                 alt=""
             /></a>
-            <span style="margin-left: 5px">마이페이지 > 1:1문의</span>
+            <span style="margin-left: 5px">마이페이지 > 주문 · 배송조회</span>
           </div>
         </div>
         <div class="my_page list_menu_container">
@@ -509,10 +509,10 @@
             <li>
               <a href="mypage.html">회원정보</a>
             </li>
-            <li>
+            <li class="active">
               <a href="mypage_my_order.html">주문 · 배송조회</a>
             </li>
-            <li class="active">
+            <li>
               <a href="mypage_qna.html">1:1문의</a>
             </li>
             <li>
@@ -529,216 +529,147 @@
             </li>
           </ul>
         </div>
-        <div class="my_page my_qna_detail detail_cont">
-          <table class="detail_cont table_cont">
+        <div class="my_page my_order_detail order_detail_cont">
+          <table class="order_detail_cont table_cont">
             <thead>
               <tr>
-                <th
-                  class="th_label"
-                  style="padding: 0px 0px 0px 60px; text-align: left"
-                >
-                  제목
+                <th class="th_label2" style="width: 7%">이미지</th>
+                <th class="th_label2" style="text-align: center">
+                  구매상품정보
                 </th>
-                <th class="th_label" style="width: 15%">작성일</th>
-                <th class="th_label" style="width: 15%">처리현황</th>
+                <th class="th_label2" style="width: 10%">제품가격</th>
+                <th class="th_label2" style="width: 15%">구매수량</th>
+                <th class="th_label2" style="width: 10%">합계</th>
+                <th class="th_label2" style="width: 10%">주문상태</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
-                >
-                  주문취소 문의
+                <td class="td_label4">
+                  <a href=""
+                    ><img src="/assets/imgs/sub02/my_order/fun.jpg" alt="img"
+                  /></a>
                 </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
+                <td class="td_label4_sub">
+                  <p>
+                    <a href=""
+                      >[디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)</a
+                    >
+                  </p>
                 </td>
-                <td class="td_label" style="background-color: #fff">
-                  접수완료
+                <td class="td_label4">22,000원</td>
+                <td class="td_label4">1</td>
+                <td class="td_label4">22,000원</td>
+                <td class="td_label4">배송준비중</td>
+              </tr>
+              <tr>
+                <td colspan="7" class="td_label5">
+                  <p>판매자 : 입점업체2 (000-0000-0000)</p>
+                  <span class="span_container">
+                    <span>배송비 : 50,000원 이상구매시 무료</span>
+                    <span class="order_prd_price"
+                      >상품가격 22,000원 + 배송비 3,000원</span
+                    >
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
+                  colspan="7"
+                  class="td_label4"
+                  style="
+                    text-align: right;
+                    background-color: #fafafa;
+                    padding-right: 10px;
+                  "
                 >
-                  주문취소 문의
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
-                </td>
-                <td class="td_label" style="background-color: #fff">처리중</td>
-              </tr>
-              <tr>
-                <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
-                >
-                  주문취소 문의
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  답변완료
-                </td>
-              </tr>
-              <tr>
-                <td
-                  class="td_middle"
-                  style="background-color: #fff; padding-left: 40px"
-                >
-                  주문취소 문의
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  2024-05-21
-                </td>
-                <td class="td_label" style="background-color: #fff">
-                  답변완료
+                  총결제금액 : 상품가격 22,000원 + 배송비 3,000원 =
+                  <span class="order_prd_price">25,000원</span>
                 </td>
               </tr>
             </tbody>
           </table>
-          <div class="qna_footer">
-            <div class="page_btns">
-              <button class="page_btn">
-                <img src="/assets/imgs/icons/page-first.jpg" alt="" />
-              </button>
-              <button class="page_btn" style="margin: 0 5px">
-                <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
-              </button>
-              <div class="page_no">
-                <a href="#">1</a>
-              </div>
-              <button class="page_btn" style="margin: 0 5px">
-                <img src="/assets/imgs/icons/page-last.jpg" alt="" />
-              </button>
-              <button class="page_btn">
-                <img src="/assets/imgs/icons/page-next.jpg" alt="" />
-              </button>
-            </div>
-            <div class="search_cont">
-              <form>
-                <input type="hidden" name="code" />
-                <input type="hidden" name="category" />
-                <input type="hidden" name="mallid" />
-                <div class="span_box">
-                  <span>기간검색</span>
-                  <input
-                    name="date1" value="2024.02"
-                    type="text"
-                    class="input_style"
-                  />
-                  ~
-                  <input
-                    name="date2" value="2024.06"
-                    type="text"
-                    class="input_style"
-                  />
-                </div>
-                <div class="span_box">
-                  <span>처리현황</span>
-                  <select name="application" class="application">
-                    <option value="접수완료">접수완료</option>
-                    <option value="저리중">저리중</option>
-                    <option value="답변완료">답변완료</option>
-                  </select>
-                </div>
-                <div class="select_cont">
-                  <select name="searchOption" class="select">
-                    <option value="subject">제 목</option>
-                    <option value="content">내 용</option>
-                    <option value="subcon">제목 + 내용</option>
-                    <option value="name">작성자</option>
-                    <option value="memid">아이디</option>
-                  </select>
-                  <input name="searchkey" type="text" class="search_input" />
-                  <button type="submit">보기</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="qna_button">
-            <div class="right">
-              <a href="mypage_qna_detail.html" class="listing_btn">리스트</a>
-              <a href="mypage_qna_create.html" class="writing_btn">글쓰기</a>
-            </div>
-          </div>
+          <h2 class="order_title">주문상품 정보</h2>
+          <table class="order_detail_cont table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub" style="width: 20%">주문번호</td>
+                <td class="td_label6" style="width: 30%">231219163703141</td>
+                <td class="td_label6_sub" style="width: 20%">주문일</td>
+                <td class="td_label6" style="width: 30%">
+                  2023-12-19 16:37:03
+                </td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">결제방법</td>
+                <td class="td_label6" colspan="3">무통장입금</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub" style="width: 20%">입금계좌</td>
+                <td class="td_label6" style="width: 30%">
+                  신한은행 000-000-00000 테스트
+                </td>
+                <td class="td_label6_sub" style="width: 20%">입금자명</td>
+                <td class="td_label6" style="width: 30%">관리자</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-      <div class="my_page my_qna_detail order_list_wrap_pc_hidden">
-        <div class="order_list_wrap">
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">접수완료</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">처리중</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">답변완료</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="order_list">
-            <h2>주문취소 문의</h2>
-            <div class="info_box">
-              <div class="order_info">
-                <span class="date">2024-05-21</span>
-                <span class="id">답변완료</span>
-                <a href="/dist/mypage_qna_view.html" class="order_info_btn"
-                  >보기</a
-                >
-              </div>
-            </div>
-          </div>
+        <div class="my my_order_detail order_detail_cont2">
+          <h2 class="order_title">주문자 정보</h2>
+          <table class="order_detail_cont2 table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub">주문하시는 분</td>
+                <td class="td_label6">d</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">휴대전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">이메일</td>
+                <td class="td_label6">123@123.com</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">주소</td>
+                <td class="td_label6">[05237] 서울 강동구 아리수로 46 123</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="order_title">배송지 정보</h2>
+          <table class="order_detail_cont2 table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub">주문하시는 분</td>
+                <td class="td_label6">d</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">휴대전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">주소</td>
+                <td class="td_label6">[05237] 서울 강동구 아리수로 46 123</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="page_btns">
-          <button class="page_btn">
-            <img src="/assets/imgs/icons/page-first.jpg" alt="" />
-          </button>
-          <button class="page_btn" style="margin: 0 5px">
-            <img src="/assets/imgs/icons/page-prev.jpg" alt="" />
-          </button>
-          <div class="page_no">
-            <a href="#">1</a>
+        <div class="button_list_conts">
+          <div></div>
+          <div class="link_btn_container">
+            <a href="/dist/mypage_my_order_cancel.html" class="submit_btn">주문반품</a>
+            <a href="#" class="cancel_btn">프린트하기</a>
           </div>
-          <button class="page_btn" style="margin: 0 5px">
-            <img src="/assets/imgs/icons/page-last.jpg" alt="" />
-          </button>
-          <button class="page_btn">
-            <img src="/assets/imgs/icons/page-next.jpg" alt="" />
-          </button>
-        </div>
-        <div class="qna_button">
-          <div class="right">
-            <a href="mypage_qna_create.html" class="listing_btn">글쓰기</a>
-          </div>
+          <div></div>
         </div>
       </div>
     </div>
