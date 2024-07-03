@@ -362,41 +362,42 @@ if(window) {
   // text slide 
   const prevButton = document.getElementById("pre_txt");
   const nextButton = document.getElementById("next_txt");
-  const texts = document.querySelectorAll(".below_txt h1");
+  const texts = Array.from(document.querySelectorAll(".below_txt h1"));
   let currentIndex = 0;
   const intervalTime = 2000;
-
+  
   function showText(index) {
     texts.forEach((text, idx) => {
-      text.classList.toggle("hidden_text", idx !== index);
-      text.classList.toggle("current_text", idx === index);
+      if (idx === index) {
+        text.classList.remove("hidden_text");
+        text.classList.add("current_text")
+      } else {
+        text.classList.add("hidden_text");
+        text.classList.remove("current_text")
+      }
     });
   }
-
+  
   function nextText() {
-    currentIndex = (currentIndex + 1) % texts.length;
+    // currentIndex = (currentIndex + 1) % texts.length;
+    currentIndex = (currentIndex + 1) % 2;
     showText(currentIndex);
   }
-
+  
   function prevText() {
     currentIndex = (currentIndex - 1 + texts.length) % texts.length;
     showText(currentIndex);
   }
-
-  if(nextButton || prevButton){
+  
+  if (nextButton && prevButton) {
     nextButton.addEventListener("click", nextText);
     prevButton.addEventListener("click", prevText);
   }
-
-
-  showText(currentIndex);
-
-  setInterval(nextText, intervalTime);
-   // select_route  
   
-
-
-
+  showText(currentIndex);
+  
+  setInterval(nextText, intervalTime);
+  
   // sub_quick menu at scroll to top gp
   function toggleQuickMenu() {
     var subQuickMenu = document.querySelector('.sub_quick_menu');

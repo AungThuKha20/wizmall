@@ -194,7 +194,7 @@
       </div>
       <ul class="gnb_items">
         <li><a href="/dist/product_list.html">인기상품</a></li>
-        <li><a href="/dist/product_list.html">브랜드샵</a></li>
+        <li><a href="/dist/brand_shop.html">브랜드샵</a></li>
         <li><a href="/dist/community_notice.html">고객센터</a></li>
       </ul>
     </div>
@@ -501,7 +501,7 @@
             <table width="100%" class="product_search_table">
               <tbody>
                 <tr>
-                  <th>상품분류</th>
+                  <th width="12%">상품분류</th>
                   <td colspan="3">
                     <div
                       class="product_content_container1 product_content_container"
@@ -509,7 +509,7 @@
                       <div class="product_select">
                         <select name="catcode">
                           <option value="">
-                            :::::: 상품 분류를 선택하세요 ::::::
+                            :: 상품 분류를 선택하세요 ::
                           </option>
                           <option value="100000">여성의류</option>
                           <option value="110000">남성의류</option>
@@ -531,7 +531,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>상품명</th>
+                  <th class="name_th">상품명</th>
                   <td class="name_td">
                     <input
                       type="text"
@@ -540,7 +540,7 @@
                       class="input"
                     />
                   </td>
-                  <th>가격</th>
+                  <th class="name_th">가격</th>
                   <td class="price_td">
                     <input type="text" value="" class="price_input" />
                     ~
@@ -548,7 +548,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>브랜드검색</th>
+                  <th width="12%">브랜드검색</th>
                   <td>
                     <input
                       type="text"
@@ -557,7 +557,7 @@
                       class="input"
                     />
                   </td>
-                  <th>포인트</th>
+                  <th class="name_th">포인트</th>
                   <td class="price_td">
                     <input type="text" value="" class="price_input" />
                     ~
@@ -568,14 +568,11 @@
             </table>
           </div>
           <div class="product_content_container">
-            <span class="count"
-              >총
-              <span class="11red_01"
-                ><strong style="color: var(--bs-primary)">1</strong></span
-              >개의 상품이 검색되었습니다.</span
+            <span class="product_content_title"
+              >총<span style="color: #ef4023">1</span>개 상품</span
             >
             <div class="product_select">
-              <select name="order">
+              <select name="orderby" onchange="this.form.submit();">
                 <option value="">상품정렬방식</option>
                 <option value="">조회수 순</option>
                 <option value="">최근등록순 순</option>

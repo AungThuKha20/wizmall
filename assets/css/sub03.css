@@ -45,6 +45,9 @@
   width: 70px;
   height: 70px;
 }
+.current_text {
+  display: block;
+}
 
 .mydetail_Swiper2 .swiper-slide-thumb-active img {
   border: 1px solid var(--bs-dark);

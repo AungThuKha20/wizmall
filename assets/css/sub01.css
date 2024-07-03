@@ -1062,6 +1062,11 @@ body {
 .tax_table .input_box1 {
   margin: 0px 16px;
 }
+
+/* brand */
+.brand_shop .product_search_list  li{
+  height: auto;
+}
 /************************ product Search **********************/
 .product_search_list .search_detail {
   font-size: 24px;
@@ -1071,6 +1076,7 @@ body {
   color: #333;
   margin: 30px 0 12px;
 }
+
 .product_search_area {
   width: 100%;
   border: 1px solid #ddd;
@@ -1577,9 +1583,7 @@ textarea {
   font-size: 10px;
   letter-spacing: -0.05em;
 }
-.hidden_text {
-  display: none;
-}
+
 .detail_txt_slide button {
   width: 16px;
   height: 16px;

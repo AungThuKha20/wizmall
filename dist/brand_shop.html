@@ -194,7 +194,7 @@
       </div>
       <ul class="gnb_items">
         <li><a href="/dist/product_list.html">인기상품</a></li>
-        <li><a href="/dist/product_list.html">브랜드샵</a></li>
+        <li><a href="/dist/brand_shop.html">브랜드샵</a></li>
         <li><a href="/dist/community_notice.html">고객센터</a></li>
       </ul>
     </div>
@@ -494,20 +494,20 @@
 
     <div class="container brand_shop">
       <h3 class="product_list_title">아반소프트</h3>
-      <div class="product_content_container">
-        <span class="count"
-          >카테고리에<span style="color: #ef4023">1</span>개 상품</span
-        >
-        <div class="product_select">
-          <select name="orderby" onchange="this.form.submit();">
-            <option value="">상품정렬방식</option>
-            <option value="">조회수 순</option>
-            <option value="">최근등록순 순</option>
-            <option value="">최저가격 순</option>
-            <option value="">최고가격 순</option>
-          </select>
-        </div>
-      </div>
+       <div class="product_content_container">
+            <span class="product_content_title"
+              >총<span style="color: #ef4023">1</span>개 상품</span
+            >
+            <div class="product_select">
+              <select name="orderby" onchange="this.form.submit();">
+                <option value="">상품정렬방식</option>
+                <option value="">조회수 순</option>
+                <option value="">최근등록순 순</option>
+                <option value="">최저가격 순</option>
+                <option value="">최고가격 순</option>
+              </select>
+            </div>
+          </div>
       <ul class="product_search_list clearfix">
         <li>
           <button type="button" class="wish_btn"></button>
@@ -539,7 +539,36 @@
         </li>
       </ul>
     </div>
-
+ <!-- pages buttons -->
+ <div class="page_btns">
+  <button class="page_btn">
+    <img
+      src="/assets/imgs/icons/page-first.jpg"
+      alt=""
+    />
+  </button>
+  <button class="page_btn" style="margin: 0 5px">
+    <img
+      src="/assets/imgs/icons/page-prev.jpg"
+      alt=""
+    />
+  </button>
+  <div class="page_no">
+    <a href="#">1</a>
+  </div>
+  <button class="page_btn" style="margin: 0 5px">
+    <img
+      src="/assets/imgs/icons/page-last.jpg"
+      alt=""
+    />
+  </button>
+  <button class="page_btn">
+    <img
+      src="/assets/imgs/icons/page-next.jpg"
+      alt=""
+    />
+  </button>
+</div>
     <footer class="footer">
     <div class="foot_left foot_left_hidden">
         <ul class="foot_menu">

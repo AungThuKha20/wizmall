@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Shopping Mall</title>
+
+<!-- iOS specific meta tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+
+<!-- CSS -->
+<!-- Bootstrap css  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="../assets/css/reset.css" />
+<link rel="stylesheet" href="../assets/css/common.css" />
+<link rel="stylesheet" href="../assets/css/sub02.css" />
+<link rel="stylesheet" href="../assets/css/sub01.css" />
+<link rel="stylesheet" href="../assets/css/sub03.css" />
+<link rel="stylesheet" href="../assets/css/sub.css" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<link rel="stylesheet" href="../assets/css/media.css" />
+<link rel="stylesheet" href="/assets/css/media1.css" />
+<link rel="stylesheet" href="/assets/css/media2.css">
+<link rel="stylesheet" href="../assets/css/media3.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- AOS animation library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- Jquery -->
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"
+></script>
+<!-- AOS animation library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Swiper element Js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<!-- Bootstrap js  -->
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Common script -->
+<script src="../assets/js/common.js"></script>
+<!-- route js   -->
+<script src="../assets/js/route_path.js"></script>
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header class="head mobile_hidden">
+  <div class="head_top_menu container">
+    <ul>
+      <li>
+        <a href="/dist/mypage_favorite.html" title="즐겨찾기">즐겨찾기</a>
+      </li>
+      <li class="head_line">line</li>
+      <li><a href="" title="입점신청">입점신청</a></li>
+    </ul>
+    <ul>
+      <li><a href="/dist/login_page.html" title="로그아웃">로그아웃</a></li>
+      <li class="head_line">line</li>
+      <li><a href="/dist/mypage.html" title="마이페이지">마이페이지</a></li>
+      <li class="head_line">line</li>
+      <li><a href="/dist/community_notice.html" title="고객센터">고객센터</a></li>
+    </ul>
+  </div>
+  <div class="head_middle container">
+    <div class="head_logo">
+      <a href="/dist/main.html"><img src="/assets/imgs/logo.png" alt="logo" /></a>
+    </div>
+    <div class="head_search">
+      <input type="text" id="search_input" name="search" placeholder="검색어를 입력하세요" />
+      <button class="search_ico"></button>
+      <div class="head_search_sugges" id="search_suggestions">
+        <ul>
+          <li class="txt_red">인기 검색어 <button id="close_suggestions">닫기</button></li>
+          <li><a href="/dist/product_search.html">우산</a></li>
+          <li><a href="/dist/product_search.html">추석 선물세트</a></li>
+          <li><a href="/dist/product_search.html">블루투스 스피커</a></li>
+          <li><a href="/dist/product_search.html">선풍기</a></li>
+          <li><a href="/dist/product_search.html">달력</a></li>
+          <li><a href="/dist/product_search.html">USB</a></li>
+          <li><a href="/dist/product_search.html">보조배터리</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="head_shop_menu">
+      <li>
+        <a href="/dist/shopping_cart.html" title="장바구니">
+          <img src="../../assets/imgs/icons/ico_baguni.png" alt="장바구니" />
+          <span>장바구니</span>
+          <i>0</i>
+        </a>
+      </li>
+      <li>
+        <a href="/dist/mypage_favorite.html" title="관심상품">
+          <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
+          <span>관심상품</span>
+          <i>0</i>
+        </a>
+      </li>
+      <li>
+        <a href="/dist/mypage.html" title="마이쇼핑">
+          <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
+          <span>마이쇼핑</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="head_gnb">
+    <div class="head_gnb_inn container">
+      <div class="all_cate_middle">
+        <div class="menu_all_cate">
+          <button class="all_cate_btn">전체 카테고리</button>
+          <ul class="all_cate_items">
+            <li><a href="/dist/product_list.html">여성의류
+        
+            </a>
+              <div class="sub_cate_items">
+                <h5>여성의류</h5>
+                <ul>
+                  <li><a href="">하위분류 1</a></li>
+                  <li><a href="">하위분류 2</a></li>
+                  <li><a href="">하위분류 3</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="/dist/product_list.html">남성의류</a>
+              <div class="sub_cate_items2">
+                <h5>남성의류</h5>
+                <ul>
+                  <li><a href="">하위분류 1</a></li>
+                  <li><a href="">하위분류 2</a></li>
+                  <li><a href="">하위분류 3</a></li>
+                </ul>
+            </div></li>
+            <li><a href="/dist/product_list.html">패션잡화</a></li>
+            <li><a href="/dist/product_list.html">화장품/뷰티</a></li>
+            <li><a href="/dist/product_list.html">출산/완구/아동용품</a></li>
+            <li><a href="/dist/product_list.html">가구/인테리어/리빙</a></li>
+            <li><a href="/dist/product_list.html">취미/스포츠/자동차</a></li>
+            <li><a href="/dist/product_list.html">디지털/가전</a></li>
+            <li><a href="/dist/product_list.html">도서/상품권</a></li>
+          </ul>
+          
+        </div>
+        <ul class="gnb_items">
+          <li><a href="/dist/product_list.html">신상품</a></li>
+          <li><a href="/dist/product_list.html">베스트상품</a></li>
+          <li><a href="/dist/product_list.html">세일상품</a></li>
+          <li><a href="/dist/product_list.html">MD추천상품</a></li>
+        </ul>
+      </div>
+      <ul class="gnb_items">
+        <li><a href="/dist/product_list.html">인기상품</a></li>
+        <li><a href="/dist/brand_shop.html">브랜드샵</a></li>
+        <li><a href="/dist/community_notice.html">고객센터</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<header class="head mb_head pc_hidden">
+  <div class="mb_icon_gp container ">
+    <div class="mb_hamburger">
+      <button><img src="/assets/imgs/icons/menu_ico.png" alt="" /></button>
+    </div>
+    <div class="mobile_menu_sideBar">
+      <div class="mb_sidebar_close_btn_gp">
+        <button class="mb_sidebar_close_btn">
+          <img src="/assets/imgs/sub3_img/close.png" alt="" />
+        </button>
+     </div>
+     <div style="width: 90%;">
+      <div class="mb_side_bar_header">
+        <h3>아반몰에</h3>
+        <h4>오신 것을 환영합니다.</h4>
+      </div>
+      <div class="mb_btn_gp">
+        <a href="/dist/login_page.html">로그인</a>
+        <a href="/dist/mypage_navLinks.html">화원가입</a>
+      </div>
+      <div class="mb_cate_gp">
+        <ul class="head_shop_menu">
+          <li>
+            <a href="/dist/mypage_my_order.html" title="주문배송">
+              <img
+                class="truck"
+                src="/assets/imgs/icons/menu_ico2.png"
+                alt="주문배송"
+              />
+              <span>주문배송</span>
+            </a>
+          </li>
+          <li>
+            <a href="/dist/shopping_cart.html" title="장바구니">
+              <img
+                src="/assets/imgs/icons/mobile_cart_icon.png"
+                alt="장바구니"
+              />
+              <span>장바구니</span>
+              <i class="ico1">0</i>
+            </a>
+          </li>
+          <li>
+            <a href="/dist/mypage_favorite.html" title="관심상품">
+              <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
+              <span>관심상품</span>
+              <i class="ico_heart">0</i>
+            </a>
+          </li>
+          <li>
+            <a href="/dist/community_notice.html" title="마이쇼핑">
+              <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
+              <span>고객센터 </span>
+            </a>
+          </li>
+        </ul>
+        <ul class="mb_all_cate_item">
+          <li class="mb_dropdown">
+            <button
+              >여성의류 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+              <li><a href="/dist/product_list_category.html">하위분류 1</a></li>
+              <li><a href="/dist/product_list_category.html">하위분류 2</a></li>
+              <li><a href="/dist/product_list_category.html">하위분류 3</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >남성의류 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >패션잡화 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >화장품/뷰티 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >출산/완구/아동용품
+              <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >가구/인테리어/리빙
+              <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >취미/스포츠/자동차
+              <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >디지털/가전 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+          <li class="mb_dropdown">
+            <button
+              >도서/상품권 <img src="/assets/imgs/icons/down-arrow.png" alt=""
+            /></button>
+            <ul class="mb_dropdown_content">
+              <li><a href="/dist/product_list_category.html">전체보기</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+     </div>
+    </div>
+    <div class="mb_logo">
+      <a href="/dist/main.html">
+        <img
+          src="/assets/imgs/logo.png"
+          alt="logo"
+        />
+      </a>
+    </div>
+    <div class="mb_icon_btn">
+      <button class="mb_search_sidebar">
+        <img src="/assets/imgs/icons/search_ico.png" alt="Search Icon" />
+    </button>
+    <div class="search_sidebar">
+        <div class="mb_search_gp">
+            <div class="mb_search"> 
+                <input type="text" name="" id="" placeholder="어떤 상품을 찾으세요?">
+                <button><img src="/assets/imgs/icons/search_on.png" alt="Search Button"></button>
+            </div>
+            <button class="search_close_btn"><img src="/assets/imgs/icons/close_ico2.png" alt="Close Button"></button>
+        </div>
+        <ul class="search_suggest">
+          <li><a class="txt_red" href="#">인기 검색어</a></li>
+          <li><a href="/dist/product_search_fan.html">우산</a></li>
+          <li><a href="/dist/product_search_fan.html">추석 선물세트</a></li>
+          <li><a href="/dist/product_search_fan.html">블루투스 스피커</a></li>
+          <li><a href="/dist/product_search_fan.html">선풍기</a></li>
+          <li><a href="/dist/product_search_fan.html">달력</a></li>
+          <li><a href="/dist/product_search_fan.html">USB</a></li>
+          <li><a href="/dist/product_search_fan.html">보조배터리</a></li>
+        </ul>
+        <div class="close_btn_div">
+          <button class="search_close_text">닫기</button>
+        </div>
+    </div>
+      <a href="/dist/shopping_cart.html">
+        <img class="cart_img" src="/assets/imgs/icons/cart_ico.png" alt="장바구니" />
+      </a>
+    </div>
+  </div>
+  <div class="mb_all_cate_items container">
+    <ul>
+      <li><a href="/dist/product_list.html">신상품</a></li>
+      <li><a href="/dist/product_list.html">베스트100</a></li>
+      <li><a href="/dist/product_list.html">베스트상품</a></li>
+      <li><a href="/dist/product_list.html">MD추천상품</a></li>
+    </ul>
+  </div>
+  <div class="scroll_top_gp">
+    <button class="scroll_top_btn" id="scrollToTopBtn">
+        <img src="/assets/imgs/icons/go_top.png" alt="">
+    </button>
+   <div class="sub_quick_gp">
+    <button class="fixed_quick_menu_btn">
+      <img src="/assets/imgs/icons/snb_ico.png" alt="">
+   </button>
+  <div class="sub_quick_menu">
+      <a href="/dist/shopping_cart.html">
+        <span>장바구니</span>
+        <img src="/assets/imgs/icons/mobile_cart_icon.png" alt="">
+      </a>
+      <a href="/dist/mypage_my_order.html">
+        <span>주문배송</span>
+        <img src="/assets/imgs/icons/menu_ico2.png" alt="">
+      </a>
+      <a href="/dist/product_search.html">
+        <span>상품검색</span>
+        <img src="/assets/imgs/icons/menu_ico3.png" alt="">
+      </a>    
+      <a href="/dist/mypage_qna.html">
+        <span>1:1문의</span>
+        <img src="/assets/imgs/icons/menu_ico4.png" alt="">
+      </a>
+  </div>
+   </div>
+  </div>
+</div>
+</header>
+
+    <div style="width: 100%" class="gry_bar_pc_hidden">
+      <div class="sub_banner ">
+       <ul class="sub_cate_gp container">
+        <li class="home_icon">
+            <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
+        </li>
+        <li class="li_ico mobile_hidden"></li>
+        <li class="sub_cate_select1 mobile_hidden ">
+            <div class="custom-select">
+                <select>
+                  <option value="option1">전체보기</option>
+                  <option value="option2">여성의류</option>
+                  <option value="option3" selected>남성의류</option>
+                  <option value="option4">패션잡화</option>
+                  <option value="option5">화장품/뷰티</option>
+                  <option value="option6">출산/완구/아동용품</option>
+                  <option value="option7">가구/인테리어/리빙</option>
+                  <option value="option8">취미/스포츠/자동차</option>
+                  <option value="option9">디지털/가전</option>
+                  <option value="option10">도서/상품권</option>
+                </select>
+              </div>
+        </li>
+        <li class="li_ico"></li>
+        <li class="sub_cate_select2 mobile_hidden ">
+            <div class="custom-select">
+                <select>
+                  <option value="option2">전체보기</option>
+                  <option value="option3">하위분류 1</option>
+                  <option value="option4">하위분류 2</option>
+                  <option value="option5">하위분류 3</option>
+                </select>
+              </div>
+        </li>
+        <li class="pc_hidden breadcrumbsEl "></li>
+     </ul>
+</div>
+      <div class="gry_bar"></div>
+    </div>
+    <div class="quick_menu mobile_hidden">
+  <ul class="head_shop_menu">
+    <li>
+      <a href="/dist/shopping_cart.html" title="장바구니">
+        <img src="../../assets/imgs/icons/ico_baguni.png" alt="장바구니" />
+        <span>장바구니</span>
+        <i>0</i>
+      </a>
+    </li>
+    <li>
+      <a href="/dist/mypage_my_order.html" title="관심상품">
+        <img src="../../assets/imgs/icons/ico_heart.png" alt="관심상품" />
+        <span>주문배송</span>
+      </a>
+    </li>
+    <li>
+      <a href="/dist/mypage.html" title="마이쇼핑">
+        <img src="../../assets/imgs/icons/ico_user.png" alt="마이쇼핑" />
+        <span>마이쇼핑</span>
+      </a>
+    </li>
+  </ul>
+  <div class="brasket_list">
+    <h4>TODAY</h4>
+    <img
+      class="pd_img"
+      src="/assets/imgs/sub3_img/pd.jpeg"
+      alt=""
+    />
+    <div class="quick_menu_btn_gp">
+      <button><img src="/assets/imgs/icons/left.png" alt="" /></button>
+      <button><img src="/assets/imgs/icons/next.png" alt="" /></button>
+    </div>
+  </div>
+  <div class="quick_menu_on_btn">
+    <button id="quick_menu_on_btn"></button>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="member_join_cont">
+        <div class="title_container">
+          <h2 class="title">회원가입 약관</h2>
+          <div class="menu">
+            <a href="#"
+              ><img
+                src="/assets/imgs/icons/home_ico.png"
+                class="home_icon"
+                alt=""
+            /></a>
+            <span style="margin-left: 5px">회원가입 약관</span>
+          </div>
+        </div>
+        <div class="member_join_cont1">
+          <h2 class="member_join_header">회원가입 약관</h2>
+          <div class="member_join_box">
+            <p>
+              제1조(목적) 이 약관은 위즈몰 회사(전자상거래 사업자)가 운영하는
+              위즈몰 사이버 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련
+              서비스(이하 “서비스”라 한다)를 이용함에 있어 사이 버 몰과 이용자의
+              권리?의무 및 책임사항을 규정함을 목적으로 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp;※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그
+              성질에 반하지 않는 한 이 약관을 준용합니다」
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>제2조(정의)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”이란 위즈몰 회사가 재화 또는 용역(이하 “재화등”이라
+              함)을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여
+              재화등을 거래할 수 있도록 설정한 가상의 영업장 을 말하며, 아울러
+              사이버몰을 운영하는 사업자의 의미로도 사용합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “이용자”란 “몰”에 접속하여 이 약관에 따라 “몰”이 제공하는
+              서비스를 받는 회원 및 비회원을 말합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ ‘회원’이라 함은 “몰”에 개인정보를 제공하여 회원등록을 한
+              자로서, “몰”의 정보를 지속적으로 제공받으며, “몰”이 제공하는
+              서비스를 계속적으로 이용할 수 있는 자를 말합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ ‘비회원’이라 함은 회원에 가입하지 않고 “몰”이 제공하는
+              서비스를 이용하는 자를 말합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제3조 (약관등의 명시와 설명 및 개정)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 이 약관의 내용과 상호 및 대표자 성명, 영업소
+              소재지 주소(소비자의 불만을 처리할 수 있는 곳의 주소를 포함),
+              전화번호?모사전송번호?전자우편주소, 사업자등록번호,
+              통신판매업신고번호, 개인정보관리책임자등을 이용자가 쉽게 알 수
+              있도록 00 사이버몰의 초기 서비스화면(전면)에 게시합니다. 다만,
+              약관의 내용은 이용자가 연결화면을 통하여 볼 수 있도록 할 수
+              있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰은 이용자가 약관에 동의하기에 앞서 약관에 정하여져
+              있는 내용 중 청약철회?배송책임?환불조건 등과 같은 중요한 내용을
+              이용자가 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을
+              제공하여 이용자의 확인을 구하여야 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ “몰”은 전자상거래등에서의소비자보호에관한법률,
+              약관의규제에관한법률, 전자거래기본법, 전자서명법,
+              정보통신망이용촉진등에관한법률, 방문판매등에관한법률, 소비자보호법
+              등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ “몰”이 약관을 개정할 경우에는 적용일자 및 개정사유를
+              명시하여 현행약관과 함께 몰의 초기화면에 그 적용일자 7일이전부터
+              적용일자 전일까지 공지합니다. 다만, 이용자에게 불리하게 약관내용을
+              변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고
+              공지합니다. 이 경우 "몰“은 개정전 내용과 개정후 내용을 명확하게
+              비교하여 이용자가 알기 쉽도록 표시합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ⑤ “몰”이 약관을 개정할 경우에는 그 개정약관은 그 적용일자
+              이후에 체결되는 계약에만 적용되고 그 이전에 이미 체결된 계약에
+              대해서는 개정전의 약관조항이 그대로 적용됩니다. 다만 이미 계약을
+              체결한 이용자가 개정약관 조항의 적용을 받기를 원하는 뜻을 제3항에
+              의한 개정약관의 공지기간내에 ‘몰“에 송신하여 ”몰“의 동의를 받은
+              경우에는 개정약관 조항이 적용됩니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ⑥ 이 약관에서 정하지 아니한 사항과 이 약관의 해석에
+              관하여는 전자상거래등에서의소비자보호에관한법률,
+              약관의규제등에관한법률, 공정거래위원회가 정하는
+              전자상거래등에서의소비자보호지침 및 관계법령 또는 상관례에
+              따릅니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제4조(서비스의 제공 및 변경)</p>
+            <p>
+              <br />
+            </p>
+            <p>&nbsp; ① “몰”은 다음과 같은 업무를 수행합니다.</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; &nbsp; 1. 재화 또는 용역에 대한 정보 제공 및 구매계약의
+              체결
+            </p>
+            <p>&nbsp; &nbsp; 2. 구매계약이 체결된 재화 또는 용역의 배송</p>
+            <p>&nbsp; &nbsp; 3. 기타 “몰”이 정하는 업무</p>
+            <p>
+              &nbsp; ② “몰”은 재화 또는 용역의 품절 또는 기술적 사양의 변경 등의
+              경우에는 장차 체결되는 계약에 의해 제공할 재화 또는 용역의 내용을
+              변경할 수 있습니다. 이 경우에는 변경된 재화 또는 용역의 내용 및
+              제공일자를 명시하여 현재의 재화 또는 용역의 내용을 게시한 곳에
+              즉시 공지합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ “몰”이 제공하기로 이용자와 계약을 체결한 서비스의 내용을
+              재화등의 품절 또는 기술적 사양의 변경 등의 사유로 변경할 경우에는
+              그 사유를 이용자에게 통지 가능한 주소로 즉시 통지합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ 전항의 경우 “몰”은 이로 인하여 이용자가 입은 손해를
+              배상합니다. 다만, “몰”이 고의 또는 과실이 없음을 입증하는 경우에는
+              그러하지 아니합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제5조(서비스의 중단)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 컴퓨터 등 정보통신설비의 보수점검?교체 및 고장,
+              통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로
+              중단할 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”은 제1항의 사유로 서비스의 제공이 일시적으로
+              중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여
+              배상합니다. 단, “몰”이 고의 또는 과실이 없음을 입증하는 경우에는
+              그러하지 아니합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ 사업종목의 전환, 사업의 포기, 업체간의 통합 등의 이유로
+              서비스를 제공할 수 없게 되는 경우에는 “몰”은 제8조에 정한 방법으로
+              이용자에게 통지하고 당초 “몰”에서 제시한 조건에 따라 소비자에게
+              보상합니다. 다만, “몰”이 보상기준 등을 고지하지 아니한 경우에는
+              이용자들의 마일리지 또는 적립금 등을 “몰”에서 통용되는 통화가치에
+              상응하는 현물 또는 현금으로 이용자에게 지급합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제6조(회원가입)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① 이용자는 “몰”이 정한 가입 양식에 따라 회원정보를 기입한
+              후 이 약관에 동의한다는 의사표시를 함으로서 회원가입을 신청합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”은 제1항과 같이 회원으로 가입할 것을 신청한 이용자 중
+              다음 각호에 해당하지 않는 한 회원으로 등록합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; &nbsp; 1. 가입신청자가 이 약관 제7조제3항에 의하여 이전에
+              회원자격을 상실한 적이 있는 경우, 다만 제7조제3항에 의한 회원자격
+              상실후 3년이 경과한 자로서 “몰”의 회원재가입 승낙을 얻은 경우에는
+              예외로 한다.
+            </p>
+            <p>&nbsp; &nbsp; 2. 등록 내용에 허위, 기재누락, 오기가 있는 경우</p>
+            <p>
+              &nbsp; &nbsp; 3. 기타 회원으로 등록하는 것이 “몰”의 기술상 현저히
+              지장이 있다고 판단되는 경우
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ 회원가입계약의 성립시기는 “몰”의 승낙이 회원에게 도달한
+              시점으로 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ 회원은 제15조제1항에 의한 등록사항에 변경이 있는 경우,
+              즉시 전자우편 기타 방법으로 “몰”에 대하여 그 변경사항을 알려야
+              합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제7조(회원 탈퇴 및 자격 상실 등)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① 회원은 “몰”에 언제든지 탈퇴를 요청할 수 있으며 “몰”은
+              즉시 회원탈퇴를 처리합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② 회원이 다음 각호의 사유에 해당하는 경우, “몰”은
+              회원자격을 제한 및 정지시킬 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>&nbsp; &nbsp; 1. 가입 신청시에 허위 내용을 등록한 경우</p>
+            <p>
+              &nbsp; &nbsp; 2. “몰”을 이용하여 구입한 재화등의 대금, 기타
+              “몰”이용에 관련하여 회원이 부담하는 채무를 기일에 지급하지 않는
+              경우
+            </p>
+            <p>
+              &nbsp; &nbsp; 3. 다른 사람의 “몰” 이용을 방해하거나 그 정보를
+              도용하는 등 전자상거래 질서를 위협하는 경우
+            </p>
+            <p>
+              &nbsp; &nbsp; 4. “몰”을 이용하여 법령 또는 이 약관이 금지하거나
+              공서양속에 반하는 행위를 하는 경우
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ “몰”이 회원 자격을 제한?정지 시킨후, 동일한 행위가
+              2회이상 반복되거나 30일이내에 그 사유가 시정되지 아니하는 경우
+              “몰”은 회원자격을 상실시킬 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ “몰”이 회원자격을 상실시키는 경우에는 회원등록을
+              말소합니다. 이 경우 회원에게 이를 통지하고, 회원등록 말소전에
+              최소한 30일 이상의 기간을 정하여 소명할 기회를 부여합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제8조(회원에 대한 통지)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”이 회원에 대한 통지를 하는 경우, 회원이 “몰”과 미리
+              약정하여 지정한 전자우편 주소로 할 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”은 불특정다수 회원에 대한 통지의 경우 1주일이상 “몰”
+              게시판에 게시함으로서 개별 통지에 갈음할 수 있습니다. 다만, 회원
+              본인의 거래와 관련하여 중대한 영향을 미치는 사항에 대하여는
+              개별통지를 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>
+              제9조(구매신청) “몰”이용자는 “몰”상에서 다음 또는 이와 유사한
+              방법에 의하여 구매를 신청하며, “몰”은 이용자가 구매신청을 함에
+              있어서 다음의 각 내용을 알기 쉽게 제공하여야 합니다. 단, 회원인
+              경우 제2호 내지 제4호의 적용을 제외할 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>&nbsp; &nbsp; 1. 재화등의 검색 및 선택</p>
+            <p>
+              &nbsp; &nbsp; 2. 성명, 주소, 전화번호, 전자우편주소(또는
+              이동전화번호) 등의 입력
+            </p>
+            <p>
+              &nbsp; &nbsp; 3. 약관내용, 청약철회권이 제한되는 서비스,
+              배송료?설치비 등의 비용부담과 관련한 내용에 대한 확인
+            </p>
+            <p>
+              &nbsp; &nbsp; 4. 이 약관에 동의하고 위 3.호의 사항을 확인하거나
+              거부하는 표시(예, 마우스 클릭)
+            </p>
+            <p>
+              &nbsp; &nbsp; 5. 재화등의 구매신청 및 이에 관한 확인 또는 “몰”의
+              확인에 대한 동의
+            </p>
+            <p>&nbsp; &nbsp; 6. 결제방법의 선택</p>
+            <p>
+              <br />
+            </p>
+
+            <p>제10조 (계약의 성립)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 제9조와 같은 구매신청에 대하여 다음 각호에
+              해당하면 승낙하지 않을 수 있습니다. 다만, 미성년자와 계약을
+              체결하는 경우에는 법정대리인의 동의를 얻지 못하면 미성년자 본인
+              또는 법정대리인이 계약을 취소할 수 있다는 내용을 고지하여야
+              합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>&nbsp; &nbsp; 1. 신청 내용에 허위, 기재누락, 오기가 있는 경우</p>
+            <p>
+              &nbsp; &nbsp; 2. 미성년자가 담배, 주류등 청소년보호법에서 금지하는
+              재화 및 용역을 구매하는 경우
+            </p>
+            <p>
+              &nbsp; &nbsp; 3. 기타 구매신청에 승낙하는 것이 “몰” 기술상 현저히
+              지장이 있다고 판단하는 경우
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”의 승낙이 제12조제1항의 수신확인통지형태로 이용자에게
+              도달한 시점에 계약이 성립한 것으로 봅니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ “몰”의 승낙의 의사표시에는 이용자의 구매 신청에 대한 확인
+              및 판매가능 여부, 구매신청의 정정 취소등에 관한 정보등을
+              포함하여야 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>
+              제11조(지급방법) “몰”에서 구매한 재화 또는 용역에 대한
+              대금지급방법은 다음 각호의 방법중 가용한 방법으로 할 수 있습니다.
+              단, “몰”은 이용자의 지급방법에 대하여 재화 등의 대금에 어떠한
+              명목의 수수료도 추가하여 징수할 수 없습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; &nbsp; 1. 폰뱅킹, 인터넷뱅킹, 메일 뱅킹 등의 각종 계좌이체
+            </p>
+            <p>
+              &nbsp; &nbsp; 2. 선불카드, 직불카드, 신용카드 등의 각종 카드 결제
+            </p>
+            <p>&nbsp; &nbsp; 3. 온라인무통장입금</p>
+            <p>&nbsp; &nbsp; 4. 전자화폐에 의한 결제</p>
+            <p>&nbsp; &nbsp; 5. 수령시 대금지급</p>
+            <p>&nbsp; &nbsp; 6. 마일리지 등 “몰”이 지급한 포인트에 의한 결제</p>
+            <p>
+              &nbsp; &nbsp; 7. “몰”과 계약을 맺었거나 “몰”이 인정한 상품권에
+              의한 결제
+            </p>
+            <p>&nbsp; &nbsp; 8. 기타 전자적 지급 방법에 의한 대금 지급 등</p>
+            <p>
+              <br />
+            </p>
+
+            <p>제12조(수신확인통지?구매신청 변경 및 취소)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 이용자의 구매신청이 있는 경우 이용자에게
+              수신확인통지를 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② 수신확인통지를 받은 이용자는 의사표시의 불일치등이 있는
+              경우에는 수신확인통지를 받은 후 즉시 구매신청 변경 및 취소를
+              요청할 수 있고 “몰”은 배송전에 이용자의 요청이 있는 경우에는
+              지체없이 그 요청에 따라 처리하여야 합니다. 다만 이미 대금을 지불한
+              경우에는 제15조의 청약철회 등에 관한 규정에 따릅니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제13조(재화등의 공급)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 이용자와 재화등의 공급시기에 관하여 별도의 약정이
+              없는 이상, 이용자가 청약을 한 날부터 7일 이내에 재화 등을 배송할
+              수 있도록 주문제작, 포장 등 기타의 필요한 조치를 취합니다. 다만,
+              “몰”이 이미 재화 등의 대금의 전부 또는 일부를 받은 경우에는 대금의
+              전부 또는 일부를 받은 날부터 2영업일 이내에 조치를 취합니다. 이때
+              “몰”은 이용자가 재화등의 공급 절차 및 진행 사항을 확인할 수 있도록
+              적절한 조치를 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”은 이용자가 구매한 재화에 대해 배송수단, 수단별
+              배송비용 부담자, 수단별 배송기간 등을 명시합니다. 만약 “몰”이 약정
+              배송기간을 초과한 경우에는 그로 인한 이용자의 손해를 배상하여야
+              합니다. 다만 “몰”이 고의?과실이 없음을 입증한 경우에는 그러하지
+              아니합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>
+              제14조(환급) “몰”은 이용자가 구매신청한 재화등이 품절 등의 사유로
+              인도 또는 제공을 할 수 없을 때에는 지체없이 그 사유를 이용자에게
+              통지하고 사전에 재화 등의 대금을 받은 경우에는 대금을 받은 날부터
+              2영업일 이내에 환급하거나 환급에 필요한 조치를 취합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제15조(청약철회 등)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”과 재화등의 구매에 관한 계약을 체결한 이용자는
+              수신확인의 통지를 받은 날부터 7일 이내에는 청약의 철회를 할 수
+              있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② 이용자는 재화등을 배송받은 경우 다음 각호의 1에 해당하는
+              경우에는 반품 및 교환을 할 수 없습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; &nbsp; 1. 이용자에게 책임 있는 사유로 재화 등이 멸실 또는
+              훼손된 경우(다만, 재화 등의 내용을 확인하기 위하여 포장 등을
+              훼손한 경우에는 청약철회를 할 수 있습니다)
+            </p>
+            <p>
+              &nbsp; &nbsp; 2. 이용자의 사용 또는 일부 소비에 의하여 재화 등의
+              가치가 현저히 감소한 경우
+            </p>
+            <p>
+              &nbsp; &nbsp; 3. 시간의 경과에 의하여 재판매가 곤란할 정도로
+              재화등의 가치가 현저히 감소한 경우
+            </p>
+            <p>
+              &nbsp; &nbsp; 4. 같은 성능을 지닌 재화등으로 복제가 가능한 경우 그
+              원본인 재화 등의 포장을 훼손한 경우
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ 제2항제2호 내지 제4호의 경우에 “몰”이 사전에 청약철회
+              등이 제한되는 사실을 소비자가 쉽게 알 수 있는 곳에 명기하거나
+              시용상품을 제공하는 등의 조치를 하지 않았다면 이용자의
+              청약철회등이 제한되지 않습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ 이용자는 제1항 및 제2항의 규정에 불구하고 재화등의 내용이
+              표시·광고 내용과 다르거나 계약내용과 다르게 이행된 때에는 당해
+              재화등을 공급받은 날부터 3월이내, 그 사실을 안 날 또는 알 수
+              있었던 날부터 30일 이내에 청약철회 등을 할 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제16조(청약철회 등의 효과)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 이용자로부터 재화 등을 반환받은 경우 3영업일
+              이내에 이미 지급받은 재화등의 대금을 환급합니다. 이 경우 “몰”이
+              이용자에게 재화등의 환급을 지연한 때에는 그 지연기간에 대하여
+              「전자상거래등에서의 소비자보호에 관한 법률 시행령」이 정하는
+              지연이자율(연 100분의 24)을 곱하여 산정한 지연이자를 지급합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”은 위 대금을 환급함에 있어서 이용자가 신용카드 또는
+              전자화폐 등의 결제수단으로 재화등의 대금을 지급한 때에는 지체없이
+              당해 결제수단을 제공한 사업자로 하여금 재화등의 대금의 청구를 정지
+              또는 취소하도록 요청합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ 청약철회등의 경우 공급받은 재화등의 반환에 필요한 비용은
+              이용자가 부담합니다. “몰”은 이용자에게 청약철회등을 이유로 위약금
+              또는 손해배상을 청구하지 않습니다. 다만 재화등의 내용이 표시·광고
+              내용과 다르거나 계약내용과 다르게 이행되어 청약철회등을 하는 경우
+              재화등의 반환에 필요한 비용은 “몰”이 부담합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ 이용자가 재화등을 제공받을때 발송비를 부담한 경우에
+              “몰”은 청약철회시 그 비용을 누가 부담하는지를 이용자가 알기 쉽도록
+              명확하게 표시합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제17조(개인정보보호)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 이용자의 정보수집시 구매계약 이행에 필요한
+              최소한의 정보를 수집합니다. 다음 사항을 필수사항으로 하며 그 외
+              사항은 선택사항으로 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>&nbsp; &nbsp; 1. 성명</p>
+            <p>
+              &nbsp; &nbsp; 2. 주민등록번호(회원의 경우) 또는 외국인등록번호
+            </p>
+            <p>&nbsp; &nbsp; 3. 주소</p>
+            <p>&nbsp; &nbsp; 4. 전화번호</p>
+            <p>&nbsp; &nbsp; 5. 희망ID(회원의 경우)</p>
+            <p>&nbsp; &nbsp; 6. 비밀번호(회원의 경우)</p>
+            <p>&nbsp; &nbsp; 7. 전자우편주소(또는 이동전화번호)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”이 이용자의 개인식별이 가능한 개인정보를 수집하는
+              때에는 반드시 당해 이용자의 동의를 받습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ 제공된 개인정보는 당해 이용자의 동의없이 목적외의
+              이용이나 제3자에게 제공할 수 없으며, 이에 대한 모든 책임은 몰이
+              집니다. 다만, 다음의 경우에는 예외로 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; &nbsp; 1. 배송업무상 배송업체에게 배송에 필요한 최소한의
+              이용자의 정보(성명, 주소, 전화번호)를 알려주는 경우
+            </p>
+            <p>
+              &nbsp; &nbsp; 2. 통계작성, 학술연구 또는 시장조사를 위하여 필요한
+              경우로서 특정 개인을 식별할 수 없는 형태로 제공하는 경우
+            </p>
+            <p>
+              &nbsp; &nbsp; 3. 재화등의 거래에 따른 대금정산을 위하여 필요한
+              경우
+            </p>
+            <p>&nbsp; &nbsp; 4. 도용방지를 위하여 본인확인에 필요한 경우</p>
+            <p>
+              &nbsp; &nbsp; 5. 법률의 규정 또는 법률에 의하여 필요한 불가피한
+              사유가 있는 경우
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ “몰”이 제2항과 제3항에 의해 이용자의 동의를 받아야 하는
+              경우에는 개인정보관리 책임자의 신원(소속, 성명 및 전화번호, 기타
+              연락처), 정보의 수집목적 및 이용목적, 제3자에 대한 정보제공
+              관련사항(제공받은자, 제공목적 및 제공할 정보의 내용) 등
+              정보통신망이용촉진등에관한법률 제22조제2항이 규정한 사항을 미리
+              명시하거나 고지해야 하며 이용자는 언제든지 이 동의를 철회할 수
+              있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ⑤ 이용자는 언제든지 “몰”이 가지고 있는 자신의 개인정보에
+              대해 열람 및 오류정정을 요구할 수 있으며 “몰”은 이에 대해 지체없이
+              필요한 조치를 취할 의무를 집니다. 이용자가 오류의 정정을 요구한
+              경우에는 “몰”은 그 오류를 정정할 때까지 당해 개인정보를 이용하지
+              않습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ⑥ “몰”은 개인정보 보호를 위하여 관리자를 한정하여 그 수를
+              최소화하며 신용카드, 은행계좌 등을 포함한 이용자의 개인정보의
+              분실, 도난, 유출, 변조 등으로 인한 이용자의 손해에 대하여 모든
+              책임을 집니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ⑦ “몰” 또는 그로부터 개인정보를 제공받은 제3자는 개인정보의
+              수집목적 또는 제공받은 목적을 달성한 때에는 당해 개인정보를
+              지체없이 파기합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제18조(“몰“의 의무)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 법령과 이 약관이 금지하거나 공서양속에 반하는
+              행위를 하지 않으며 이 약관이 정하는 바에 따라 지속적이고,
+              안정적으로 재화?용역을 제공하는데 최선을 다하여야 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”은 이용자가 안전하게 인터넷 서비스를 이용할 수 있도록
+              이용자의 개인정보(신용정보 포함)보호를 위한 보안 시스템을 갖추어야
+              합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ “몰”이 상품이나 용역에 대하여
+              「표시?광고의공정화에관한법률」 제3조 소정의 부당한
+              표시?광고행위를 함으로써 이용자가 손해를 입은 때에는 이를 배상할
+              책임을 집니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ④ “몰”은 이용자가 원하지 않는 영리목적의 광고성 전자우편을
+              발송하지 않습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제19조(회원의 ID 및 비밀번호에 대한 의무)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① 제17조의 경우를 제외한 ID와 비밀번호에 관한 관리책임은
+              회원에게 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② 회원은 자신의 ID 및 비밀번호를 제3자에게 이용하게 해서는
+              안됩니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ 회원이 자신의 ID 및 비밀번호를 도난당하거나 제3자가
+              사용하고 있음을 인지한 경우에는 바로 “몰”에 통보하고 “몰”의 안내가
+              있는 경우에는 그에 따라야 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제20조(이용자의 의무) 이용자는 다음 행위를 하여서는 안됩니다.</p>
+            <p>
+              <br />
+            </p>
+            <p>&nbsp; &nbsp; 1. 신청 또는 변경시 허위 내용의 등록</p>
+            <p>&nbsp; &nbsp; 2. 타인의 정보 도용</p>
+            <p>&nbsp; &nbsp; 3. “몰”에 게시된 정보의 변경</p>
+            <p>
+              &nbsp; &nbsp; 4. “몰”이 정한 정보 이외의 정보(컴퓨터 프로그램 등)
+              등의 송신 또는 게시
+            </p>
+            <p>
+              &nbsp; &nbsp; 5. “몰” 기타 제3자의 저작권 등 지적재산권에 대한
+              침해
+            </p>
+            <p>
+              &nbsp; &nbsp; 6. “몰” 기타 제3자의 명예를 손상시키거나 업무를
+              방해하는 행위
+            </p>
+            <p>
+              &nbsp; &nbsp; 7. 외설 또는 폭력적인 메시지, 화상, 음성, 기타
+              공서양속에 반하는 정보를 몰에 공개 또는 게시하는 행위
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제21조(연결“몰”과 피연결“몰” 간의 관계)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① 상위 “몰”과 하위 “몰”이 하이퍼 링크(예: 하이퍼 링크의
+              대상에는 문자, 그림 및 동화상 등이 포함됨)방식 등으로 연결된 경우,
+              전자를 연결 “몰”(웹 사이트)이라고 하고 후자를 피연결
+              “몰”(웹사이트)이라고 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② 연결“몰”은 피연결“몰”이 독자적으로 제공하는 재화등에
+              의하여 이용자와 행하는 거래에 대해서 보증책임을 지지 않는다는 뜻을
+              연결“몰”의 초기화면 또는 연결되는 시점의 팝업화면으로 명시한
+              경우에는 그 거래에 대한 보증책임을 지지 않습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제22조(저작권의 귀속 및 이용제한)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰“이 작성한 저작물에 대한 저작권 기타 지적재산권은
+              ”몰“에 귀속합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② 이용자는 “몰”을 이용함으로써 얻은 정보 중 “몰”에게
+              지적재산권이 귀속된 정보를 “몰”의 사전 승낙없이 복제, 송신, 출판,
+              배포, 방송 기타 방법에 의하여 영리목적으로 이용하거나 제3자에게
+              이용하게 하여서는 안됩니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ “몰”은 약정에 따라 이용자에게 귀속된 저작권을 사용하는
+              경우 당해 이용자에게 통보하여야 합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제23조(분쟁해결)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”은 이용자가 제기하는 정당한 의견이나 불만을 반영하고
+              그 피해를 보상처리하기 위하여 피해보상처리기구를 설치?운영합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”은 이용자로부터 제출되는 불만사항 및 의견은
+              우선적으로 그 사항을 처리합니다. 다만, 신속한 처리가 곤란한
+              경우에는 이용자에게 그 사유와 처리일정을 즉시 통보해 드립니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ③ “몰”과 이용자간에 발생한 전자상거래 분쟁과 관련하여
+              이용자의 피해구제신청이 있는 경우에는 공정거래위원회 또는
+              시·도지사가 의뢰하는 분쟁조정기관의 조정에 따를 수 있습니다.
+            </p>
+            <p>
+              <br />
+            </p>
+
+            <p>제24조(재판권 및 준거법)</p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ① “몰”과 이용자간에 발생한 전자상거래 분쟁에 관한 소송은
+              제소 당시의 이용자의 주소에 의하고, 주소가 없는 경우에는 거소를
+              관할하는 지방법원의 전속관할로 합니다. 다만, 제소 당시 이용자의
+              주소 또는 거소가 분명하지 않거나 외국 거주자의 경우에는
+              민사소송법상의 관할법원에 제기합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+            <p>
+              &nbsp; ② “몰”과 이용자간에 제기된 전자상거래 소송에는 한국법을
+              적용합니다.
+            </p>
+            <p>
+              <br />
+            </p>
+          </div>
+          <div class="join_arg1_cont">
+            <input type="checkbox" name="agree" id="join_agr1" required />
+            <label for="join_agr1">회원가입약관에 동의합니다.</label>
+          </div>
+        </div>
+        <div class="member_join_cont1">
+          <h2 class="member_join_header">개인정보 취급방침</h2>
+          <div class="member_join_box">
+            <p>※ 총 칙</p>
+            <p>
+              1. 위즈몰 는 "정보통신망이용촉진및정보보호등에관한법률"상의
+              개인정보보호 규정과 정보통신부가 제정한 "개인정보보
+            </p>
+            <p>
+              &nbsp; &nbsp; 호지침" 및 "개인정보의 기술적/관리적 보호조치
+              기준"을 준수하고 있습니다. 또한 위즈몰는 "개인정보보호정책"을
+            </p>
+            <p>
+              &nbsp; &nbsp; 제정하여 회원들의 개인정보 보호를 위해 최선을
+              다하겠음을 선언합니다.
+            </p>
+            <p>
+              2. 위즈몰의 "개인정보보호정책"은 관련 법률 및 정부 지침의 변경과
+              위즈몰의 내부 방침 변경에 의해 변경될 수 있습
+            </p>
+            <p>
+              &nbsp; &nbsp; 니다. 위즈몰의 "개인정보보호방침"이 변경될 경우
+              변경사항은 위즈몰 홈페이지의 공지사항에
+            </p>
+            <p>&nbsp; &nbsp; 최소 7일간 게시됩니다.</p>
+            <p><br /></p>
+
+            <p>※ 개인정보</p>
+            <p>
+              위즈몰는 귀하께서 위즈몰의 이용약관의 내용에 대해 "동의한다" 버튼
+              또는 "동의하지 않는다" 버튼을 클릭할 수 있는 절차를 마련하여,
+              "동의한다" 버튼을 클릭하면 개인정보 수집에 대해 동의한 것으로
+              봅니다. 또한, 귀하께서 “동의한다” 버튼을 클릭하면 아래의 개인정보
+              수집 항목 중 “비밀번호”와 “주민등록번호”를 제외한 나머지 항목들은
+              위즈몰가 서비스
+            </p>
+            <p>
+              를 이행하기 위해 외주업체에 제공하는 것에 대해 동의한 것으로
+              간주합니다.
+            </p>
+            <p><br /></p>
+
+            <p>
+              1. "개인정보"의 범위는
+              정보통신망이용촉진및정보보호등에관한법률에서 규정하는 내용에 따라,
+              "생존하는 개인에 관한
+            </p>
+            <p>
+              &nbsp; &nbsp; 정보로서 당해 정보에 포함되어 있는 성명,
+              주민등록번호 등의 사항에 의하여 당해 개인을 식별할 수 있는
+              정보(당해
+            </p>
+            <p>
+              &nbsp; &nbsp; 정보만으로는 특정 개인을 식별할 수 없더라도 다른
+              정보와 용이하게 결합하여 식별할 수 있는 것을 포함한다)"를 의미
+            </p>
+            <p>&nbsp; &nbsp; 합니다.</p>
+            <p>
+              2. 위즈몰는 이용자 확인, 대금결제, 이용 서비스의 소유자 확인,
+              개별회원에게 맞춤화된 서비스, 기타 부가서비스 등을
+            </p>
+            <p>
+              &nbsp; &nbsp; 위하여 회원들의 개인정보를 수집ㆍ이용 합니다.
+              수집하는 개인정보 항목에 따른 구체적인 수집목적 및 이용 목적은
+            </p>
+            <p>&nbsp; &nbsp; 다음과 같습니다.</p>
+            <p>
+              -&nbsp; 성명, 아이디, 비밀번호, 주민등록번호/사업자등록번호 :
+              회원제 서비스 이용에 따른 본인 확인 절차에 이용,
+            </p>
+            <p>-&nbsp; 이용 서비스의 소유자 확인</p>
+            <p>
+              -&nbsp; 이메일주소, 전화번호, 팩스번호 : 도메인 관리 규정에 따른
+              필수 정보 확보, 고지사항 전달, 불만처리 등을 위한 원활
+            </p>
+            <p>&nbsp; &nbsp; 한 의사 소통</p>
+            <p>
+              -&nbsp; 경로의 확보, 새로운 서비스 및 신상품이나 이벤트 정보 등의
+              안내
+            </p>
+            <p>
+              -&nbsp; 은행정보, 신용카드 정보 : 유료정보 이용 및 구매에 대한
+              결제
+            </p>
+            <p>
+              -&nbsp; 주소 : 도메인 정보조회 제공, 청구서 및 쇼핑몰 물품 배송에
+              대한 정확한 배송지 확인
+            </p>
+            <p>
+              &nbsp; &nbsp; 쿠키 ( 아이디 ) : 쿠키 운영을 통해 방문자들의
+              아이디를 자동 분석하여 등급별 차등화된 가격 혜택 적용.
+            </p>
+            <p>
+              &nbsp; &nbsp; 고객께서는 웹브라우저에서 옵션을 설정함으로써 쿠키가
+              저장될 때마다 확인을 거치거나, 아니면 모든 쿠키의 저장을
+            </p>
+            <p>
+              &nbsp; &nbsp; 거부할 수도 있습니다. 그러나 쿠키의 저장을 거부할
+              경우 웹서비스 이용이 제한될 수 있습니다.
+            </p>
+            <p>3. 위즈몰은 회원 개인정보를 위탁관리하지 않습니다.</p>
+            <p>
+              4. 이용자의 기본적 인권 침해의 우려가 있는 민감한 개인정보(인종 및
+              민족, 사상 및 신조, 출신지 및 본적 지, 정치적 성향
+            </p>
+            <p>
+              &nbsp; &nbsp; 및 범죄기록, 건강상태 및 성생활 등)는 요구하지
+              않습니다.
+            </p>
+            <p>
+              5. 개인정보의 보유 기간은 "회원이 위즈몰에 가입하는 순간부터 해지
+              신청 순간까지"입니다. 위즈몰의 회원DB는 탈퇴
+            </p>
+            <p>
+              &nbsp; &nbsp; 신청자의 개인정보가 탈퇴 즉시 삭제토록 되어
+              있습니다.
+            </p>
+            <p>
+              &nbsp; &nbsp; 단, 수집목적 및 제공받은 목적이 달성된 경우에도
+              법률의 규정에 의하여 보존할 필요성이 있는 경우에는 법률의
+            </p>
+            <p>
+              &nbsp; &nbsp; 규정에 따라 고객의 개인정보를 보유할 수 있습니다.
+            </p>
+            <p>-&nbsp; 계약 또는 청약철회 등에 관한 기록 : 5년</p>
+            <p>-&nbsp; 대금결제 및 재화등의 공급에 관한 기록 : 5년</p>
+            <p>-&nbsp; 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 등</p>
+            <p><br /></p>
+
+            <p>※ 제3자에 대한 정보 제공</p>
+            <p>
+              1. 위즈몰는 회원들의 개인정보를 무단으로 타인 또는 다른 회사나
+              기관에 제공하지 않습니다.
+            </p>
+            <p>&nbsp; &nbsp; 단, 다음에 해당하는 경우는 예외로 합니다.</p>
+            <p>
+              -&nbsp; 도메인 이름 등록을 위하여 해당 도메인의 등록사업자에게
+              신청자의 정보를 제공하는 경우
+            </p>
+            <p>
+              -&nbsp; 도메인 이름에 대한 WHOIS 서비스를 위하여 제공하는 경우
+            </p>
+            <p>
+              -&nbsp; 정보통신망이용촉진및정보보호등에관한법률 등 관계법령에
+              의하여 국가기관 또는 정부에서 지정한 소비자단체들의
+            </p>
+            <p>&nbsp; &nbsp; 요청에 의한 경우</p>
+            <p>
+              -&nbsp; 분쟁에 연루된 도메인 등록자의 연락처를 분쟁 조정 기구나
+              법원이 요청하는 경우
+            </p>
+            <p>
+              -&nbsp; 범죄에 대한 수사상의 목적이 있거나 정보통신윤리위원회,
+              한국정보보호진흥원 등 법정단체의 요청이 있는 경우
+            </p>
+            <p>
+              -&nbsp; 업무상 연락을 위하여 회원의 정보(성명, 주소, 전화번호)를
+              사용하는 경우
+            </p>
+            <p>
+              -&nbsp; 통계작성, 홍보자료, 학술연구 또는 시장조사를 위하여 필요한
+              경우로서 특정 고객임을 식별할 수 없는 형태로 제공
+            </p>
+            <p>&nbsp; &nbsp; 되는 경우</p>
+            <p>
+              -&nbsp; 회원들이 위즈몰의 서비스를 신청하여 위즈몰가 서비스 이행을
+              위해 배송업체, 외주콜센터업체, 지로발송 업체 등
+            </p>
+            <p>
+              &nbsp; &nbsp; 에 해당 회원의 비밀번호, 주민등록번호를 포함하지
+              않는 주문정보, 주소지 정보, 연락처 등을 제공하는 경우
+            </p>
+            <p><br /></p>
+            <p>
+              2. 위즈몰는 보다 다양한 서비스 제공을 위하여 회원들의 개인정보를
+              제휴사에게 제공하거나, 제휴사와 공유하고자 할 때
+            </p>
+            <p>
+              &nbsp; &nbsp; 는 반드시 사전에 회원 개개인의 동의를 구하겠습니다.
+              제휴사가 어디인지, 제공 또는 공유되는 개인정보항목이 무엇인
+            </p>
+            <p>
+              &nbsp; &nbsp; 지, 왜 그러한 개인정보가 공유되어야 하는지, 그리고
+              언제까지 어떻게 보호, 관리되는지에 대해 개별적으로 전자우편을
+            </p>
+            <p>
+              &nbsp; &nbsp; 통해 고지하여 동의를 구하는 절차를 거치게 되며,
+              귀하께서 동의하지 않는 경우에는 제휴사에게 제공하거나 제휴사와
+            </p>
+            <p>&nbsp; &nbsp; 공유하지 않습니다.</p>
+            <p><br /></p>
+
+            <p>※ 개인정보의 열람 및 정정</p>
+            <p>
+              1. 위즈몰의 회원은 언제든지 자신의 개인정보를 열람하거나 정정하실
+              수 있습니다. 개인정보 열람 및 정정을 원하시는
+            </p>
+            <p>
+              &nbsp; &nbsp; 분은 위즈몰 사이트에 로그온 하신 후, 로그아웃 버튼
+              옆의 "정보변경" 버튼을 클릭하십시오.
+            </p>
+            <p>
+              2. 만일 ID와 비밀번호를 잃어버리신 회원은 홈페이지에서 "ID
+              확인/비밀번호 확인"서비스를 통해 ID나 비밀번호를 확인하
+            </p>
+            <p>&nbsp; &nbsp; 실 수 있습니다.</p>
+            <p>
+              3. 위즈몰 회원 ID와 비밀번호에 대한 관리 책임은 본인에게 있습니다.
+            </p>
+            <p>
+              &nbsp; &nbsp; 본인의 개인정보를 효과적으로 보호하기 위해서 자신의
+              회원ID 와 비밀번호를 적절하게 관리하고 책임을 져야 합니다.
+            </p>
+            <p>
+              &nbsp; &nbsp; 본인의 ID와 비밀번호를 유출하였다면 이에 대해서
+              위즈몰는 책임을 지지않습니다. 다만, 위즈몰의 과실 혹은 고의
+            </p>
+            <p>
+              &nbsp; &nbsp; 에 의한 회원 ID와 비밀번호 유출에 대해서는 해당
+              고객이 위즈몰의 책임을 물을 수 있습니다.
+            </p>
+            <p>
+              &nbsp; &nbsp; 이용자는 위즈몰의 계정을 이용해서 웹사이트를 이용한
+              뒤에는 해당 계정을 종료하시고 웹 브라우저의 창을 닫아주십
+            </p>
+            <p>
+              &nbsp; &nbsp; 시오. 특히 컴퓨터를 타인과 공유하거나 공공장소에서
+              사용하는 경우 반드시 로그아웃하시거나 웹 브라우저를 종료하여
+            </p>
+            <p>&nbsp; &nbsp; 야 합니다.</p>
+            <p><br /></p>
+
+            <p>※ 회원 탈퇴</p>
+            <p>
+              위즈몰 회원은 언제든지 본인이 원할 때 탈퇴가 가능합니다. 회원
+              탈퇴는 회원 정보 관리 화면에서 신청 가능합니다.
+            </p>
+            <p>
+              단, 회원이 가비아에서 이용 중인 서비스의 만기일이 지나지 않은
+              경우, 회원 탈퇴는 가능하지 않습니다.
+            </p>
+            <p><br /></p>
+
+            <p>※ 개인정보보호를 위한 기술적 대책</p>
+            <p>
+              위즈몰는 회원들의 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지
+              않도록 다음과 같은 기술적 대책을 마련하고 있습
+            </p>
+            <p>니다.</p>
+            <p>
+              1. 회원 개개인의 개인정보는 비밀번호에 의해 보호되며, 개인정보
+              데이터는 별도의 보안기능을 통해 보호 되고 있습니다.
+            </p>
+            <p>
+              2. 회원 개개인의 비밀번호는 이용자 및 개인정보취급자가 생일,
+              주민등록번호, 전화번호 등 추측하기 쉬운 숫자를 비밀
+            </p>
+            <p>
+              &nbsp; &nbsp; 번호로 이용하지 않도록 패스워드 작성 규칙을 수립하고
+              이행합니다.
+            </p>
+            <p>
+              3. 위즈몰는 백신 프로그램 및 악성코드 방어 소프트웨어을 이용하여
+              컴퓨터 바이러스에 의한 피해를 방지하고 있으며,
+            </p>
+            <p>
+              &nbsp; &nbsp; 해당 소프트웨어는 매일 주기적으로 업데이트하고
+              있습니다.
+            </p>
+            <p>
+              4. 위즈몰는 침입차단 기능과 침입탐지 기능을 탑재하고 있는 고가의
+              라우터와 L3 스위치 장비를 사용하여 이중으로
+            </p>
+            <p>
+              &nbsp; &nbsp; 네트워크 상의 개인정보를 안전하게 보호하고 있습니다.
+            </p>
+            <p>
+              5. 위즈몰는 또한 별도의 침입차단시스템(Firewall)을 구축하여 3중
+              개인정보보호시스템을 운영하고 있습니다.
+            </p>
+            <p>
+              6. 위즈몰는 개인정보를 개인정보보호시스템에 암호화하여 저장하고
+              있으며, 위즈몰의 정보통신망 외부로 개인정보를
+            </p>
+            <p>
+              &nbsp; &nbsp; 송신하거나 PC에 저장할 경우 암호화하여 저장하도록
+              시스템을 운영하고 있습니다.
+            </p>
+            <p><br /></p>
+
+            <p>※ 의견수렴 및 불만처리</p>
+            <p>
+              위즈몰 회원 중 위즈몰의 개인정보보호와 관련하여 불만이 있으신 분은
+              개인정보 관리책임자에게 의견을 주시면, 접수 즉시 조치하여
+              처리결과를 통보해 드리겠습니다. 개인정보 무단 유출이나 기타 심각한
+              개인정보 침해 시에는 정부에서 설치하여 운영중인 개인정보침해
+              신고센터(
+              <a href="http://www.cyberpr">http://www.cyberpr</a> ivacy.or.kr,
+              <a href="http://www.1336.or.kr,">http://www.1336.or.kr,</a>
+              전화 02-1336,)에 불만처리 또는 중재를 신청하실 수도 있습니다.
+            </p>
+            <p><br /></p>
+
+            <p>※ 개인정보관리 계획의 수립 및 시행</p>
+            <p>
+              위즈몰는 회사 규정에 별도의 전산관리규정을 마련하여 다음과 같은
+              사항을 준수하겠습니다.
+            </p>
+            <p>
+              1. 개인정보관리책임자의 지정 등 개인정보보호 조칙의 구성, 운영에
+              관한 사항
+            </p>
+            <p>2. 개인정보취급자의 교육에 관한 사항</p>
+            <p>3. 개인정보처리시스템의 접속 기록 유지 및 정기적인 확인 감독</p>
+            <p>4. 개인정보 출력 및 복사시의 보호조치</p>
+            <p>5. 기타 개인정보 보호를 위해 필요한 사항</p>
+            <p><br /></p>
+
+            <p>※ 개인정보 관리 담당자</p>
+            <p>
+              위즈몰는 개인정보에 대한 의견수렴 및 불만처리를 담당하는 개인정보
+              관리담당자를 지정하고 있습니다.
+            </p>
+            <p>-&nbsp; 개인정보 관리 담당자</p>
+            <p>성 명 : xxxx</p>
+            <p>직 책 : xxxx</p>
+            <p>전화번호 : 1544-0713</p>
+            <p>E-mail : help@anywiz.co.kr</p>
+            <p><br /></p>
+
+            <p>※ 아동의 회원 가입에 대해</p>
+            <p>
+              1. 위즈몰는 아동의 개인정보를 보호하기 위하여 만 14세 미만의
+              아동이 회원 가입을 신청할 경우 법정대리인(부모)의
+            </p>
+            <p>
+              &nbsp; &nbsp; 동의가 있어야 합니다. 부모님의 허락을 받지않은 14세
+              미만의 미성년자에 대해서는 위즈몰가 임의로 회원에서 제외
+            </p>
+            <p>&nbsp; &nbsp; 할 수 있습니다.</p>
+            <p>
+              2. 만 14세 미만 미성년자의 법정대리인은 대리인의 책임하에 있는
+              미성년자의 개인정보에 대한 열람, 정정, 동의철회를
+            </p>
+            <p>
+              &nbsp; &nbsp; 요청할 수 있으며, 이러한 요청이 있을 경우 위즈몰는
+              지체없이 필요한 조치를 취하겠습니다.
+            </p>
+            <p><br /></p>
+
+            <p>※ 미성년자 거래시 철회에 대해</p>
+            <p>
+              위즈몰는 미성년자와의 거래시 사전에 법정대리인(부모)의 동의를 구할
+              의무가 있으며, 법정대리인(부모)의 동의를 얻지 못한 거래의 경우,
+              거래를 취소할 수 있습니다. 또한 거래 당사자 인 미성년자의
+              법정대리인(부모)이 거래 성립 후 7일 이내에 철회를 요청할 경우,
+              거래를 철회(환불)하겠습니다.
+            </p>
+            <p><br /></p>
+
+            <p>※ 광고성 정보 전송에 대해</p>
+            <p>
+              1. 위즈몰는 회원을 대상으로 위즈몰가 제공하고 있는 서비스에 대한
+              안내, 서비스에 대한 공지 등에 대한 메일을 자유
+            </p>
+            <p>&nbsp; &nbsp; 롭게 보낼 수 있습니다.</p>
+            <p>
+              2. 위즈몰는 회원을 대상으로 광고성 정보를 전송할 수 있습니다. 단,
+              이러한 경우에는 (광고)라는 문구를 표시하여 회원
+            </p>
+            <p>
+              &nbsp; &nbsp; 들이 광고성 정보임을 쉽게 파악할 수 있게 하며,
+              수신거부 의사를 밝힌 회원에게는 광고성 정보를 전송하지 않겠습니다.
+            </p>
+          </div>
+          <div class="join_arg1_cont">
+            <input type="checkbox" name="agree" id="join_agr1" required />
+            <label for="join_agr1">개인정보취급방침에 동의합니다.</label>
+          </div>
+        </div>
+        <div class="join_agree_all">
+            <input type="checkbox" id="join_agr2">
+            <label for="join_agr2">전체 이용약관에 동의합니다.</label> 
+        </div>
+        <div class="button_list_conts btn_mobile_hidden">
+            <div></div>
+            <div class="link_btn_container">
+              <a href="/dist/store_company_terms.html" class="submit_btn"
+                >동의함</a
+              >
+              <a href="#" class="cancel_btn">동의안함</a>
+            </div>
+            <div></div>
+          </div>
+          <div class="all_btn_container">
+            <div class="button_list_conts_pc_hidden">
+              <a href="/dist/store_company_terms.html" class="submit_btn"
+                >동의함</a
+              >
+              <a href="#" class="cancel_btn">동의안함</a>
+          </div>
+          </div>
+      </div>
+    </div>
+    <footer class="footer">
+    <div class="foot_left foot_left_hidden">
+        <ul class="foot_menu">
+            <li><a href="/dist/center_company.html">회사소개</a></li>
+            <li><a href="/dist/center_guide.html">이용안내</a></li>
+            <li><a href="/dist/center_privacy.html">개인정보처리방침</a></li>
+            <li><a href="/dist/member_mall_info.html">입점문의</a></li>
+        </ul>
+    </div>
+    <div class="footer_inn container">
+        <div class="foot_right foot_right_hidden">
+            <img src="/assets/imgs/icons/logo_mb.png" alt="logo">
+        </div>
+        <div class="foot_left">
+            <ul class="foot_menu">
+                <li><a href="/dist/center_company.html">회사소개</a></li>
+                <li><a href="/dist/center_guide.html">이용안내</a></li>
+                <li><a href="/dist/center_privacy.html">개인정보처리방침</a></li>
+                <li><a href="/dist/member_mall_info.html">입점문의</a></li>
+            </ul>
+            <div class="foot_info">
+                <div>
+                    <p>데모몰</p>
+                    <p>대표자 : <span>대표자</span></p>
+                    <p>주소 : <span>서울 금천구 가산디지털1로 000</span></p>
+                    <p>사업자등록번호 : <span>000-00-000000</span></p>
+                </div>
+                <div class="foot_info_sub">
+                    <p>고객센터 : <span>0000-0000</span></p>
+                    <p>이메일 : <span> help@avan.co.kr</span></p>
+                    <p>통신판매업  : <span>제2000-서울서초-0000호</span></p>
+                </div>
+            </div>
+            <span class="foot_cr">
+                Copyright(C) by 데모몰. All rights reserved.
+            </span>
+        </div>
+        <div class="foot_right">
+            <img src="/assets/imgs/foot_logo.png" alt="logo">
+        </div>
+    </div>
+
+</footer>
+
+  </body>
+</html>

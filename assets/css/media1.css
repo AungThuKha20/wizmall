@@ -31,9 +31,7 @@
   .product_search_image .product_search_item {
     height: auto;
   }
-  .product_search_list li .wish_btn {
-    left: 130px;
-  }
+ 
   .product_search_table th {
     width: 14%;
     text-align: end;
@@ -45,7 +43,7 @@
     width: 180px;
   }
   .product_search_list li .wish_btn {
-    left: 130px;
+    left: 230px;
   }
   .product_search_table .input {
     width: 160px;
@@ -324,9 +322,8 @@
   }
   /* product search */
   .product_search_table th {
-    width: 10%;
-    padding-left: 10px;
-    font-size: 10px;
+    
+    font-size: 13px;
   }
   .product_search_table .name_td {
     width: 170px;
@@ -344,8 +341,15 @@
     padding-right: 60px;
   }
   .product_search_table .price_input {
-    width: 100px;
+    width: 80px;
     height: 25px;
+  }
+  .prodcut_search_table .name_th{
+    width: 8%;
+  }
+
+  .product_search_list li .wish_btn {
+    left: 220px;
   }
   /* shopping Cart  */
   .shopping_cart .order_member_btn {
@@ -428,6 +432,12 @@
   .shopping_cart .order_member_btn .shop_btn{
     margin-left:10px;
     margin-right: 0;
+  }
+  .shopping_cart .order_member_btn .shop_btn1{
+    margin-left:0px;
+    margin-right: 0;
+    border: none;
+    background:#555;
   }
   .mobile_hidden_m {
     display: none;
@@ -1028,6 +1038,7 @@
     color: #999;
     font-size: 12px;
     margin-left: 18px;
+    margin-bottom: 10px;
   }
   .shopping_cart .order_member_btn .shop_btn {
     background: #333;
@@ -1180,20 +1191,24 @@
 
   /* product search */
   .product_search_table select {
-    width: 210px;
+    width: 170px;
     height: 30px;
     font-size: 12px;
     line-height: 20px;
   }
+  .product_search_table select {
+    padding: 0 30px 0 10px;
+}
   .product_search_table th {
-    font-size: 10px;
-    width: 100px;
+    font-size: 13px;
+    padding-left: 0;
   }
-  .product_search_table th {
-    width: 8%;
-    font-size: 9px;
+  .product_search_table .name_th{
+    width: 9%;
   }
-
+  .product_search_table .price_input{
+    width: 60px;
+  }
   .product_search_table td {
     width: 15%;
   }
@@ -1203,10 +1218,7 @@
   .product_search_table .price_td {
     width: 30%;
   }
-  .product_search_table .price_input {
-    width: 80px;
-    height: 25px;
-  }
+  
   .product_search_table .submit_btn {
     width: 90px;
     height: 100px;
@@ -1779,7 +1791,7 @@
     left: 160px;
   }
   .product_search_list .search_detail {
-    font-size: 15px;
+    display: none;
   }
   .product_search_list .img_box {
     width: 200px;
@@ -1815,32 +1827,14 @@
     width: 200px;
     height: 25px;
     line-height: 20px;
-    font-size: 11px;
   }
-  .product_search_table td {
-    width: 20%;
-  }
-  .product_search_table .name_td {
-    min-width: 90px;
-  }
-  .product_search_table .price_input {
-    width: 60px;
-    height: 25px;
-  }
-  .product_search_table .submit_btn {
-    width: 70px;
-    height: 80px;
-    font-size: 14px;
+  .product_search select{
+    font-size: 13px;
   }
 
-  .product_search_table .input {
-    width: 80px;
-    height: 25px;
-    font-size: 10px;
-  }
+ 
   .product_search_area {
-    padding-left: 10px;
-    padding-right: 10px;
+   display: none;
   }
   .reserve_ttl {
     display: none;
@@ -2374,51 +2368,7 @@
   }
 
   /* product search */
-  .product_search_area {
-    padding-left: 5px;
-    padding-right: 0px;
-  }
-  .product_search_table .price_box {
-    display: none;
-  }
-  .product_search_table th {
-    font-size: 10px;
-    width: 100px;
-  }
-  .product_search_table th {
-    width: 19%;
-    font-size: 8px;
-  }
-  .product_search_table select {
-    width: 200px;
-    height: 25px;
-    font-size: 11px;
-  }
-  .product_search_table td {
-    width: 25%;
-  }
-  .product_search_table .name_td {
-    min-width: 70px;
-  }
-  .product_search_table .price_input {
-    width: 60px;
-    height: 20px;
-  }
-  .product_search_table .submit_btn {
-    width: 50px;
-    height: 60px;
-    font-size: 8px;
-  }
 
-  .product_search_table .input {
-    width: 60px;
-    height: 20px;
-    font-size: 10px;
-  }
-  /* shopping  */
-  /* .shopping_order_table {
-    min-height: 550px;
-  } */
 
   .shopping_order_table.shop_order_table {
     height: 600px;

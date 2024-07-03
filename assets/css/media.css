@@ -984,6 +984,7 @@
   .product_content_container select {
     height: 36px;
     width: 200px;
+    font-size: 13px;
   }
   .product_cards_container {
     grid-template-columns: 1fr 1fr;
