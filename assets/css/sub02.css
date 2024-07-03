@@ -308,6 +308,9 @@
   height: 13px;
   width: 13px;
 }
+.my_favorite.pc_hidden_p1{
+  display: none !important;
+}
 /* mypage_favorite end */
 
 .center_company {
@@ -578,13 +581,16 @@
 }
 .data_table dd button {
   height: 2.2rem;
-  background-color: #888;
+  background-color: var(--bs-gray);
   color: #fff;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   padding: 0 0.75rem;
   border-radius: 3px;
   border: 1px solid #888;
+}
+.data_table dd button:hover{
+  background-color: var(--bs-black);
 }
 .order_list_wrap {
   width: 100%;

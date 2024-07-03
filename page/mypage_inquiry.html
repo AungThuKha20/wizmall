@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    ${require('./include/_meta.html')}
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    ${require('./include/_header.html')}
+    <div style="width: 100%" class="gry_bar_pc_hidden">
+      ${require('./include/_subMenuCate.html')}
+      <div class="gry_bar"></div>
+    </div>
+    ${require('./include/_quick_menu.html')}
+    <div class="container inquiry">
+      <div class="my_page">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
+        </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li class="active">
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="inquiry_title_box">
+          <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+          <h2>답변완료</h2>
+        </div>
+        <div class="category_list clearfix">
+          <a href="#" target="_blank">홍길동</a>
+          |
+          <a href="#" target="_blank">010-1234-5678 </a>
+          |
+          <a href="#" target="_blank">2024.03.22 15:26:10</a>
+        </div>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <span
+                class="faq_ttl"
+                style="font-weight: 400; color: #111; margin-right: 12px"
+                >Q.</span
+              >
+              <span>
+                [반품/교환]
+                <a
+                  href="community_faq_category.html"
+                  class="accordion-text"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  자주하는 질문 입니다. 자주하는 질문 입니다.
+                </a>
+              </span>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body d-flex">
+                <div class="inquiry_ttl">A.</div>
+                <span style="text-align: left; word-break: break-all">
+                  자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button_list">
+            <a href="#">수정</a>
+            <a href="#" class="btn_on">목록</a>
+        </div>
+      </div>
+    </div>
+
+    ${require('./include/_footer.html')}
+  </body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     ${require('./include/_meta.html')}
@@ -147,13 +147,13 @@
             <dl class="data_table">
               <dt>비밀번호*</dt>
               <dd>
-                <input name="passwd" type="password" class="input_style">
+                <input name="passwd" type="password" class="input_style" />
               </dd>
             </dl>
             <dl class="data_table">
-              <dt>수취인명* </dt>
+              <dt>수취인명*</dt>
               <dd>
-                <input name="passwd2" type="password" class="input_style">
+                <input name="passwd2" type="password" class="input_style" />
               </dd>
             </dl>
             <dl class="data_table">
@@ -164,23 +164,37 @@
                   <option value="011">011</option>
                   <option value="012">012</option>
                   <option value="013">013</option>
-                </select> -
-                <input name="tphone2" value="" type="text" class="input_style" style="width: 80px;"> -
-                <input name="tphone3" value="" type="text" class="input_style" style="width: 80px;">
+                </select>
+                -
+                <input
+                  name="tphone2"
+                  value=""
+                  type="text"
+                  class="input_style"
+                  style="width: 80px"
+                />
+                -
+                <input
+                  name="tphone3"
+                  value=""
+                  type="text"
+                  class="input_style"
+                  style="width: 80px"
+                />
               </dd>
             </dl>
             <dl class="data_table">
               <dt>주소*</dt>
               <dd>
                 <div class="dd_btn_inner">
-                  <input name="post" type="text" class="input_style" readonly>
+                  <input name="post" type="text" class="input_style" readonly />
                   <button type="button">우편번호 찾기</button>
                 </div>
-                <div style="margin: 5px 0 0;">
-                  <input name="address" type="text" class="input_style">
+                <div style="margin: 5px 0 0">
+                  <input name="address" type="text" class="input_style" />
                 </div>
-                <div style="margin: 5px 0 0;">
-                  <input name="address2" type="text" class="input_style">
+                <div style="margin: 5px 0 0">
+                  <input name="address2" type="text" class="input_style" />
                 </div>
               </dd>
             </dl>
@@ -190,17 +204,17 @@
       </div>
       <div class="button_list_conts btn_mobile_hidden">
         <div></div>
-        <div>
-          <button type="submit" class="submit_btn">확인</button>
-          <button type="button" class="cancel_btn">취소</button>
+        <div class="link_btn_container">
+          <a href="/dist/mypage_address.html" class="submit_btn">확인</a>
+          <a href="/dist/mypage_address.html" class="cancel_btn">취소</a>
         </div>
         <div></div>
       </div>
       <div class="all_btn_container">
         <div class="button_list_conts_pc_hidden">
-          <button type="submit" class="submit_btn">확인</button>
-          <button type="button" class="cancel_btn">취소</button>
-      </div>
+          <a href="/dist/mypage_address.html" class="submit_btn">확인</a>
+          <a href="/dist/mypage_address.html" class="cancel_btn">취소</a>
+        </div>
       </div>
     </div>
 

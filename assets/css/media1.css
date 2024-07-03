@@ -6,6 +6,8 @@
 -------------------------------------------------------------------*/
 
 @media screen and (max-width: 1470.98px) {
+  /* login */
+  /* login form */
 }
 
 @media screen and (max-width: 1300.98px) {
@@ -351,11 +353,6 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .shopping_cart .order_member_btn a {
-    width: 100px;
-    font-size: 13px;
-    margin: 10px;
-  }
   .shopping_cart .order_member_btn a,
   .shopping_cart .order_member_btn button {
     min-width: 100px;
@@ -422,6 +419,16 @@
   }
 }
 @media screen and (max-width: 767.98px) {
+  .shopping_cart .order_member_btn .on {
+    height: 50px;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  .shopping_cart .order_member_btn .shop_btn{
+    margin-left:10px;
+    margin-right: 0;
+  }
   .mobile_hidden_m {
     display: none;
   }
@@ -451,16 +458,17 @@
   }
   .shopping_order_table_m .tax_table1 td {
     padding: 2px;
-    width: 80%;
+    width: 100%;
     text-align: left;
     font-size: 15px;
     letter-spacing: -0.025rem;
     color: #555;
-    border-top: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    /* border-right: 1px solid #ddd; */
   }
   .shopping_order .shopping_m .crt_del {
     padding: 5px 0 10px;
+    width: 100%;
   }
   .shopping_order .shopping_m .order_member_btn .on {
     width: 100%;
@@ -479,6 +487,10 @@
   .shopping_order .shopping_m .order_member_btn {
     margin-top: 0px;
   }
+  .shopping_cart .order_member_btn {
+    display: block;
+    
+}
   .shopping_order .shopping_m .agree_box {
     width: 100%;
     padding: 16px 14px;
@@ -512,18 +524,28 @@
     color: #333;
     border: 1px solid #ddd;
   }
-  .shopping_order .shopping_m .agree_box button {
+  .shopping_order .shopping_m .agree_box,
+  .shopping_order .shopping_m .agree_box1 {
+    font-size: 13px;
+  }
+  .shopping_order .shopping_m .agree_box a {
     height: 35px;
     background: #888;
     color: #fff;
-    font-size: 13px;
-    line-height: 10px;
     border: none;
     margin: 0;
-    padding: 0px 12px;
+    padding: 8px 12px;
     border-radius: 3px;
   }
-
+  .shopping_order .shopping_m .agree_box1 a {
+    height: 35px;
+    background: #888;
+    color: #fff;
+    border: none;
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
   .shopping_order .shopping_m .agree_box .send_post_text {
     margin: 10px 0px 0px;
   }
@@ -623,6 +645,11 @@
   .tax_table1 {
     display: block;
   }
+  .tax_table1{
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
   .tax_table {
     margin-left: 0;
   }
@@ -693,17 +720,19 @@
   }
 
   .tax_table1 .radio_content_input {
-    border-bottom: 1px solid #ddd;
-    border-bottom: none;
+    /* border-bottom: 1px solid #ddd;
+    border-bottom: none; */
     width: 60%;
   }
   .tax_table1 .radio_content {
     width: 22%;
     font-size: 12px;
-    border: 1px solid #ddd;
-    border-bottom: none;
+    /* border: 1px solid #ddd;
+    border-bottom: none; */
     height: 40px;
     line-height: 40px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
   }
   .shopping_order_table .radio_label {
     display: block;
@@ -737,11 +766,27 @@
     font-size: 12px;
     color: #999;
   }
-  .shopping_order .button_common button {
+  .shopping_order .button_common .button_common_item {
+    display: flex;
+    justify-content: center;
+  }
+  .shopping_order .button_common .cancel_btn {
     display: block;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
+    width: 200px;
+    height: 55px;
+    line-height: 53px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background: #444;
+    border: none;
+  }
+  .shopping_order .button_common .submit_btn {
+    display: block;
+    width: 200px;
+    height: 55px;
+    line-height: 53px;
     text-align: center;
     color: #fff;
     font-size: 18px;
@@ -795,7 +840,7 @@
 
   .shopping_m .shopping_cont1 {
     display: flex;
-    height: 150px;
+    height: 130px;
     justify-content: space-between;
     margin: 20px 0;
   }
@@ -892,8 +937,8 @@
   .shopping_cart .shopping_m .shopping_cont_right_text {
     padding: 4px 8px;
     font-size: 13px;
-   
   }
+
   .shopping_cart .shopping_m .shopping_cont_right_text .input_number {
     width: 40px;
     float: left;
@@ -982,7 +1027,7 @@
   .shopping_cart .shopping_m .order_member_btn .crt_del {
     color: #999;
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 18px;
   }
   .shopping_cart .order_member_btn .shop_btn {
     background: #333;
@@ -998,7 +1043,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
   .shopping_cart .order_member_btn .on {
     width: 50%;
@@ -1024,7 +1068,12 @@
     text-align: right;
   }
   /* mobile end */
+  .inquiry .button_list a {
+    padding: 10px 50px;
+    font-size: 13px;
+  }
 
+  /* login */
   .login_page .menu {
     display: none;
   }
@@ -1046,24 +1095,17 @@
     padding: 0px;
     border: none;
   }
-  /* .login_page_wrap .input_list label {
-    position: absolute;
-    top: 26%;
-    left:20px;
-    font-size: 14px;
-    transform: translateY(-50%);
+  .login-form {
+    display: block;
   }
-  .login_page_wrap .input_list .label2 {
-    position: absolute;
-    top: 80%;
-    left:40%;
-    font-size: 14px;
-    transform: translateY(-50%);
-  } */
-
-  .login_page_wrap .input_list {
+  .login_page_wrap .input_lists {
+    display: block;
+  }
+  .login-form .input {
     width: 100%;
-    position: relative;
+  }
+  .login-form .input input {
+    width: 100%;
   }
 
   .login_page_wrap .login-check {
@@ -1176,7 +1218,8 @@
     height: 25px;
   }
   .product_search_area {
-   display: none;
+    padding-left: 20px;
+    padding-right: 10px;
   }
   /* table scroll */
   .table_container3 {
@@ -1302,7 +1345,7 @@
   }
   .shopping_m .shopping_cont1 {
     display: flex;
-    height: 150px;
+    height: 130px;
     justify-content: space-between;
     margin-top: 20px;
   }
@@ -1396,7 +1439,6 @@
   .shopping_cart .shopping_m .shopping_cont .shopping_cont_left_text,
   .shopping_cart .shopping_m .shopping_cont .shopping_cont_right_text {
     font-size: 12px;
-    width: 100px;
   }
   .shopping_cart .shopping_m .shopping_cont .shopping_cont_text1 {
     line-height: 35px;
@@ -1549,6 +1591,43 @@
   }
   .shopping_cart .shopping_m .crt_total_cont_right {
     text-align: right;
+  }
+
+  /* login */
+  .login_page_wrap .input_list {
+    width: 100%;
+    position: relative;
+  }
+  .login-form .input_list input {
+    z-index: 8;
+    width: 100%;
+    height: 50px;
+    padding-left: 130px;
+    color: #333;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .login-form .input_list label {
+    position: absolute;
+    left: 10%;
+    top: 3%;
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    z-index: 9;
+  }
+  .login-form .input_list .label2 {
+    position: absolute;
+    left: 10%;
+    top: 55%;
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    z-index: 9;
   }
 
   /* mobile end */
@@ -2054,16 +2133,27 @@
 }
 
 @media screen and (max-width: 483px) {
-  /* mobile notice */
+  .notice select {
+    padding: 7px 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
 
   .notice .section_select {
     margin: 20px 0;
+    font-size: 12px;
     float: right;
+  }
+  .section_select .select {
+    height: 30px;
+    padding: 0px 10px 0px 5px;
   }
   .notice .input {
     border: 1px solid #ddd;
-    width: 100px;
-    height: 35px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
     box-sizing: border-box;
   }
   .notice .title_container {
@@ -2080,11 +2170,9 @@
     font-size: 12px;
   }
   .section_select .btns {
-    padding: 8px 10px;
-    box-sizing: border-box;
-    border: 0;
     font-size: 12px;
-    height: 35px;
+    width: 50px;
+    height: 30px;
     background: #111;
     color: #fff;
     text-align: center;
@@ -2138,6 +2226,23 @@
   .faq .accordion-item .faq_ttl {
     font-size: 20px;
   }
+  .community_board_btn .right {
+    float: left;
+  }
+  .community_board_btn .right .btn {
+    display: none;
+  }
+  .community_board_btn a {
+    height: 30px;
+    padding: 0 12px;
+    line-height: 24px;
+  }
+  .notice .qna_footer {
+    display: none;
+  }
+  .notice .page_btns {
+    margin: 30px 0 10px;
+  }
   /* mobile faq */
   .faq .title_container {
     display: flex;
@@ -2150,26 +2255,39 @@
     height: 30px;
   }
   .faq .input {
-    padding: 3px;
     border: 1px solid #ddd;
-    width: 100px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
     box-sizing: border-box;
   }
   .faq .section_select .btns {
     font-size: 12px;
+    width: 50px;
     height: 30px;
+    line-height: 10px;
+    background: #111;
+    color: #fff;
+    text-align: center;
   }
-
+  .faq .qna_footer {
+    display: none;
+  }
+  .faq .community_board_btn {
+    display: none;
+  }
   .faq .title_container .title {
     display: none;
   }
   .faq .section_select {
     display: block;
+    font-size: 12px;
   }
   .faq .community_list_menu {
     display: none;
   }
   /* mobile faq end */
+
   /*********** faq ***************/
   .faq_body_table td {
     font-size: 11px;
@@ -2202,7 +2320,13 @@
     font-family: "NotoSans", sans-serif;
     font-size: 12px;
   }
-
+  /* shopping_order */
+  .shopping_order .button_common .cancel_btn {
+    font-size: 13px;
+  }
+  .shopping_order .button_common .submit_btn {
+    font-size: 13px;
+  }
   /* qna responsive */
 
   .qna_common_table th {
@@ -2231,6 +2355,15 @@
   .text-td {
     padding-left: 0;
     font-size: 12px;
+  }
+  /* mobile order */
+  .shopping_cart .shopping_m .shopping_cont_left_text {
+    width: 60px;
+    padding: 0px;
+  }
+  .shopping_cart .shopping_m .shopping_cont1 .check_box {
+    width: 15px;
+    height: 15px;
   }
   /*  */
   .qna_prd_info .ttl .name {
@@ -2391,6 +2524,27 @@
 
   .product_search .select {
     width: 150px;
+  }
+
+  /* inquiry  */
+  .inquiry .inquiry_title_box {
+    font-size: 12px;
+  }
+  .inquiry .category_list a {
+    font-size: 13px;
+  }
+  .inquiry .accordion a {
+    font-size: 12px;
+  }
+  .inquiry .button_list a {
+    padding: 6px 50px;
+    font-size: 13px;
+  }
+  .inquiry .faq_ttl {
+    font-size: 17px;
+  }
+  .inquiry .inquiry_ttl {
+    font-size: 17px;
   }
   /**************** main ******************************/
   .main section {

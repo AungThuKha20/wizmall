@@ -1751,7 +1751,7 @@ a.link_btn {
 }
 
 .product_card_item:hover .product_img img {
-  height: 270px;
+  /* height: 270px; */
   transform: scale(1.1);
 }
 .product_cards_container .product_img {

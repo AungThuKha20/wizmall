@@ -618,7 +618,7 @@
                       <th
                         bgcolor="#F9F9F9"
                         class="radio_content"
-                        style="height: auto;"
+                        style="height: auto; border-bottom: 1px solid #ddd"
                       >
                         &nbsp; 신청정보
                       </th>
@@ -811,7 +811,7 @@
               style="width: 80px"
               class="input_style input_send_post"
             />
-            <button type="button">우편번호 찾기</button>
+            <a type="button">우편번호 찾기</a>
             <input
               name="send_address"
               value=""
@@ -850,7 +850,7 @@
                 style="width: 120px"
                 class="input_style"
               />
-              <button type="button">배송지 목록</button>
+              <a>배송지 목록</a>
             </div>
           </div>
           <h4>전화번호</h4>
@@ -935,7 +935,7 @@
               style="width: 80px"
               class="input_style input_send_post"
             />
-            <button type="button">우편번호 찾기</button>
+            <a>우편번호 찾기</a>
             <input
               name="send_address"
               value=""
@@ -970,7 +970,7 @@
                 class="input_style"
               />
               원
-              <button type="button">쿠폰조회</button>
+              <a>쿠폰조회</a>
             </div>
           </div>
           <div class="data_total">
@@ -1268,14 +1268,14 @@
                     <th
                       bgcolor="#F9F9F9"
                       class="radio_content"
-                      style="border-bottom: 1px solid #ddd"
+                    
                     >
                       &nbsp; 신청자명
                     </th>
                     <td
                       bgcolor="#FFFFFF"
                       class="radio_content_input"
-                      style="border-bottom: 1px solid #ddd"
+                      
                     >
                       <input
                         type="text"
@@ -1294,7 +1294,10 @@
           <div class="cart_del">
             <span>"결제방식"별 할인/적립 및 쿠폰은 결제 시 반영됩니다.</span>
           </div>
-          <button type="submit">결제하기</button>
+          <div class="button_common_item">
+            <button type="submit" class="submit_btn">결제하기</button>
+            <button type="button" class="cancel_btn btn_item">주문취소</button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Shopping Mall</title>
@@ -55,19 +55,40 @@
 <!-- route js   -->
 <script src="../assets/js/route_path.js"></script>
 
-        <script>
-            (function(d) {
-              var config = {
-                kitId: 'adw8piw',
-                scriptTimeout: 3000,
-                async: true
-              },
-              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-            })(document);
-        </script>
-    </head>
-    <body>
-        <header class="head mobile_hidden">
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "adw8piw",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header class="head mobile_hidden">
   <div class="head_top_menu container">
     <ul>
       <li>
@@ -396,8 +417,8 @@
 </div>
 </header>
 
-        <div style="width: 100%" class="gry_bar_pc_hidden">
-          <div class="sub_banner ">
+    <div style="width: 100%" class="gry_bar_pc_hidden">
+      <div class="sub_banner ">
        <ul class="sub_cate_gp container">
         <li class="home_icon">
             <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
@@ -433,9 +454,9 @@
         <li class="pc_hidden breadcrumbsEl "></li>
      </ul>
 </div>
-          <div class="gry_bar"></div>
-        </div>
-        <div class="quick_menu mobile_hidden">
+      <div class="gry_bar"></div>
+    </div>
+    <div class="quick_menu mobile_hidden">
   <ul class="head_shop_menu">
     <li>
       <a href="/dist/shopping_cart.html" title="장바구니">
@@ -474,277 +495,95 @@
   </div>
 </div>
 
-        <div class="container order_complete">
-          <div class="shopping_cart_step">
-            <ul class="shopping_card_step_item">
-              <li>
-                <span class="icon1"></span>
-                <small> STEP 01</small><br />
-                <strong>장바구니 </strong>
-              </li>
-              <li>
-                <i></i>
-                <span class="icon2"></span>
-                <small>STEP 02</small><br />
-                <strong>주문하기</strong>
-              </li>
-              <li>
-                <i></i>
-                <span class="icon3"></span>
-                <small>STEP 03</small><br />
-                <strong>결제하기</strong>
-              </li>
-              <li>
-                <i></i>
-                <span class="icon4  on"></span>
-                <small class="on_color">STEP 04</small><br />
-                <strong class="on_color">주문완료</strong>
-              </li>
-            </ul>
-          </div>
-          <div class="order_complete order_detail_cont" style="margin-top: 30px;">
-            <table class="order_detail_cont table_cont">
-              <thead>
-                <tr>
-                  <th class="th_label2" style="width: 7%;">이미지</th>
-                  <th class="th_label2" style="text-align: center;">구매상품정보</th>
-                  <th class="th_label2" style="width: 10%;">제품가격</th>
-                  <th class="th_label2" style="width: 10%;">구매수량</th>
-                  <th class="th_label2" style="width: 10%;">합계</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="td_label4">
-                    <a href=""><img src="/assets/imgs/sub02/my_order/toy.jpg" alt="img"></a>
-                  </td>
-                  <td class="td_label4_sub">
-                    <p>
-                      <a href="">UV 칫솔살균기 리틀어피치</a>
-                      <br>  (상품별 배송비 : 3,000원)
-                    </p>
-                  </td>
-                  <td class="td_label4">23,750원</td>
-                  <td class="td_label4">1</td>
-                  <td class="td_label4">1,187원</td>
-                </tr>
-                <tr>
-                  <td colspan="7" class="td_label5">
-                    <p>판매자 : 입점업체2 (000-0000-0000)</p>
-                    <span class="span_container">
-                      <span>배송비 : 50,000원 이상구매시 무료</span>
-                      <span class="order_prd_price"
-                        >상품가격 23,750원 + 배송비 3,000원</span
-                      >
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="order_complete order_detail_cont2">
-            <h2 class="order_title">주문상품 정보</h2>
-            <table class="order_detail_cont table_cont">
-              <tbody>
-                <tr>
-                  <td class="td_label6_sub" style="width: 20%;">주문번호</td>
-                  <td class="td_label6" style="width: 30%;">240621153007737</td>
-                  <td class="td_label6_sub" style="width: 20%;">주문일시</td>
-                  <td class="td_label6" style="width: 30%;">2024-06-21 15:30:07</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">결제방법</td>
-                  <td class="td_label6" colspan="3">무통장입금</td>
-                </tr>
-              </tbody>
-            </table>
-            <h2 class="order_title">주문상품 정보</h2>
-            <table class="order_detail_cont2 table_cont">
-              <tbody>
-                <tr>
-                  <td class="td_label6_sub">주문하시는 분</td>
-                  <td class="td_label6">ghj</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">전화번호</td>
-                  <td class="td_label6">456-134-333</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">휴대전화번호</td>
-                  <td class="td_label6">333-244-24</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">이메일</td>
-                  <td class="td_label6">44@gmail.com</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">주소</td>
-                  <td class="td_label6">[166] 1144 1144</td>
-                </tr>
-              </tbody>
-            </table>
-            <h2 class="order_title">배송지 정보</h2>
-            <table class="order_detail_cont2 table_cont">
-              <tbody>
-                <tr>
-                  <td class="td_label6_sub">받으시는 분</td>
-                  <td class="td_label6">ghj</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">전화번호</td>
-                  <td class="td_label6">456-134-333</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">휴대전화번호</td>
-                  <td class="td_label6">333-244-24</td>
-                </tr>
-                <tr>
-                  <td class="td_label6_sub">주소</td>
-                  <td class="td_label6">[166] 1144 1144</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="container inquiry">
+      <div class="my_page">
+        <div class="title_container">
+          <h2 class="title">마이페이지</h2>
         </div>
-        <div class="order_pay_container">
-          <div class="order_pay_m">
-            <div class="order_pay_cont1 order_pay_cont2 order_pay_cont">
-              <div class="order_pay_cont1_left">
-                <div class="img_box">
-                  <img src="/assets/imgs/sub02/my_order/toy.jpg" alt="" />
-                </div>
-                <div class="order_pay_cont_text">
-                  <div class="prd_tit">
-                    <a href="#">
-                      UV 칫솔살균기 리틀어피치 (상품별 배송비 : 3,000원)
-                    </a>
-                  </div>
-                  <div class="order_pay_cont_text_list">
-                    <div class="order_pay_cont_left_text">
-                      <span>상품가격</span> <br />
-                      <span>적립금</span> <br />
-                      <span class="order_pay_cont_text1">수량</span>
-                      <br />
-                    </div>
-                    <div class="order_pay_cont_right_text">
-                      <span class="prd_price">23,750원</span> <br />
-                      <span> 1,187원</span><br />
-                      <span>1</span>
-                    </div>
-                  </div>
-                </div>
+        <div class="my_page list_menu_container">
+          <ul class="list_menu">
+            <li>
+              <a href="mypage.html">회원정보</a>
+            </li>
+            <li>
+              <a href="mypage_my_order.html">주문 · 배송조회</a>
+            </li>
+            <li>
+              <a href="mypage_qna.html">1:1문의</a>
+            </li>
+            <li>
+              <a href="mypage_address.html">배송지관리</a>
+            </li>
+            <li>
+              <a href="mypage_favorite.html">관심상품</a>
+            </li>
+            <li>
+              <a href="mypage_point.html">내 적립금</a>
+            </li>
+            <li class="active">
+              <a href="mypage_coupon.html">내 쿠폰함</a>
+            </li>
+          </ul>
+        </div>
+        <div class="inquiry_title_box">
+          <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+          <h2>답변완료</h2>
+        </div>
+        <div class="category_list clearfix">
+          <a href="#" target="_blank">홍길동</a>
+          |
+          <a href="#" target="_blank">010-1234-5678 </a>
+          |
+          <a href="#" target="_blank">2024.03.22 15:26:10</a>
+        </div>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <span
+                class="faq_ttl"
+                style="font-weight: 400; color: #111; margin-right: 12px"
+                >Q.</span
+              >
+              <span>
+                [반품/교환]
+                <a
+                  href="community_faq_category.html"
+                  class="accordion-text"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  자주하는 질문 입니다. 자주하는 질문 입니다.
+                </a>
+              </span>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body d-flex">
+                <div class="inquiry_ttl">A.</div>
+                <span style="text-align: left; word-break: break-all">
+                  자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                  <br />자주하는 질문 입니다. 자주하는 질문 입니다.
+                </span>
               </div>
             </div>
-            <p class="line_hide"></p>
-            <div class="order_pay_info">
-              <div class="order_pay_info_cont_left">
-                <span> 판매자 : 입점업체(00-0000-0000)</span><br />
-                <span>[배송비 : 50,000원 이상구매시 무료]</span>
-              </div>
-              <div class="order_pay_info_cont_right">
-                <span> 상품가격 23,750원</span><br />
-                <span>배송비3,000원</span>
-              </div>
-            </div>
-            <p class="line_hide"></p>
-            <div class="crt_total">
-              <h3 style="margin: 0px 0px 12px">결제금액 안내</h3>
-              <div class="crt_total_cont">
-                <div class="crt_total_cont_left">
-                  <span> 상품가격</span><br />
-                  <span>배송비</span><br />
-                  <span>주문총액</span>
-                </div>
-                <div class="crt_total_cont_right">
-                  <span> 23,750원</span><br />
-                  <span>3,000원</span><br />
-                  <span style="font-size: 17px; color: #ef4023">26,750원 </span>
-                </div>
-              </div>
-            </div>
-            <div class="gry_bar"></div>
           </div>
         </div>
-        <div class="container order_complete_pc_hidden order_detail_cont2">
-          <h2 class="order_title">주문상품 정보</h2>
-          <table class="order_detail_cont table_cont">
-            <tbody>
-              <tr>
-                <td class="td_label6_sub" style="width: 20%;">주문번호</td>
-                <td class="td_label6" style="width: 30%;">240621153007737</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">결제방법</td>
-                <td class="td_label6">무통장입금</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub" style="width: 20%;">주문일시</td>
-                <td class="td_label6" style="width: 30%;">2024-06-21 15:30:07</td>
-              </tr>
-            </tbody>
-          </table>
-          <h2 class="order_title">주문상품 정보</h2>
-          <table class="order_detail_cont2 table_cont">
-            <tbody>
-              <tr>
-                <td class="td_label6_sub">주문하시는 분</td>
-                <td class="td_label6">ghj</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">전화번호</td>
-                <td class="td_label6">456-134-333</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">휴대전화번호</td>
-                <td class="td_label6">333-244-24</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">이메일</td>
-                <td class="td_label6">44@gmail.com</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">주소</td>
-                <td class="td_label6">[166] 1144 1144</td>
-              </tr>
-            </tbody>
-          </table>
-          <h2 class="order_title">배송지 정보</h2>
-          <table class="order_detail_cont2 table_cont">
-            <tbody>
-              <tr>
-                <td class="td_label6_sub">받으시는 분</td>
-                <td class="td_label6">ghj</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">전화번호</td>
-                <td class="td_label6">456-134-333</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">휴대전화번호</td>
-                <td class="td_label6">333-244-24</td>
-              </tr>
-              <tr>
-                <td class="td_label6_sub">주소</td>
-                <td class="td_label6">[166] 1144 1144</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="button_list">
+            <a href="#">수정</a>
+            <a href="#" class="btn_on">목록</a>
         </div>
-        <div class="button_list_conts btn_mobile_hidden">
-          <div></div>
-          <div class="link_btn_container">
-            <a href="/dist/mypage_my_order.html" class="submit_btn">주문 · 배송조회</a>
-            <a href="#" class="cancel_btn">프린트 하기</a>
-          </div>
-          <div></div>
-        </div>
-        <div class="all_btn_container">
-          <div class="button_list_conts_pc_hidden" style="padding: 16px 12px;">
-            <a href="/dist/mypage_my_order.html" class="submit_btn">주문 · 배송조회</a>
-            <a href="#" class="cancel_btn">프린트 하기</a>
-        </div>
-        </div>
-        <footer class="footer">
+      </div>
+    </div>
+
+    <footer class="footer">
     <div class="foot_left foot_left_hidden">
         <ul class="foot_menu">
             <li><a href="/dist/center_company.html">회사소개</a></li>
@@ -788,5 +627,5 @@
 
 </footer>
 
-    </body>
+  </body>
 </html>

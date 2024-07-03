@@ -19,6 +19,15 @@
   .head_gnb .gnb_items li a {
     font-size: 16px;
   }
+  .main_cus_tit {
+    font-size: 20px;
+  }
+  .sec_03 .sec_03_product_desc h5 {
+    font-size: 25px;
+  }
+  .sec_05 .sec_05_right_tit {
+    font-size: 18px;
+  }
   /* productdetail */
   .product_detail .pd_detail .mydetail_Swiper img {
     width: 90%;
@@ -95,7 +104,7 @@
   .head .mobile_menu_sideBar {
     width: 50vw;
   }
- 
+
   /* mb_sidebar */
   .product_detail .pd_detail,
   .product_detail .pd_detail .mydetail_Swiper img,
@@ -110,7 +119,7 @@
   .sub_cate_gp .pc_hidden {
     display: inline-block;
   }
- 
+
   .mobile_hidden {
     display: none;
   }
@@ -287,12 +296,12 @@
   .li_ico:nth-child(2):after {
     display: none;
   }
- .pc_hiddens {
-  display: inline-block;
- }
- .mobile_hiddens {
-  display: none;
- }
+  .pc_hiddens {
+    display: inline-block;
+  }
+  .mobile_hiddens {
+    display: none;
+  }
   /* main swiper  */
   .swiper-button-next,
   .swiper-button-prev {
@@ -448,16 +457,22 @@
   .product_detail .pd_rw_qna_mb {
     display: flex;
     width: 100%;
-  } 
- 
-
+  }
 }
 @media screen and (max-width: 575.98px) {
   /*  */
   .head .mobile_menu_sideBar {
     width: 100vw;
   }
-
+  .main_cus_tit {
+    font-size: 18px;
+  }
+  .sec_03 .sec_03_product_desc h5 {
+    font-size: 22px;
+  }
+  .sec_05 .sec_05_right_tit {
+    font-size: 16px;
+  }
   /*  */
   .sub_cate_gp .pc_hidden {
     display: inline-block;
@@ -500,7 +515,7 @@
     font-size: 12px;
   }
   .product_detail .list_menu_container .list_menu li {
-    border-right:none;
+    border-right: none;
     border-left: none;
   }
   .product_detail .guide_list li {
@@ -713,7 +728,7 @@
   .product_detail .accordion_table2 .pd_accordion_items td img {
     max-width: 140px;
   }
-  
+
   /* store_company   */
 
   .store_company .store_info_content .pd_review_btn,

@@ -17,10 +17,23 @@ body {
 
 .notice .section_select {
   margin: 20px 0;
+  font-size: 13px;
   float: right;
 }
+.section_select .select {
+  appearance: none;
+  background: url(/assets/imgs/sub02/mypage_qna/sel_arr.png) calc(100% - 16px)
+    50% no-repeat;
+  height: 40px;
+  padding: 0px 35px 0px 5px;
+  border: 1px solid #ccc;
+  background-color: var(--bs-white);
+  color: #333;
+  margin: 0;
+}
 .notice .input {
-  padding: 8px;
+  height: 40px;
+
   border: 1px solid #ddd;
   width: 180px;
   box-sizing: border-box;
@@ -29,16 +42,12 @@ body {
   font-size: 25px;
   margin-top: 10px;
 }
-.notice select {
-  padding: 8px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-}
+
 .section_select .btns {
-  padding: 8px 20px;
+  height: 40px;
+  width: 80px;
   box-sizing: border-box;
   border: 0;
-  height: 40px;
   background: #111;
   color: #fff;
   text-align: center;
@@ -633,7 +642,7 @@ body {
 .shopping_cart_p .shop_order_table2 .tax_td1 {
   padding: 8px 0 0 16px;
 }
-.shopping_cart_p .shop_order_table2 .tax_td{
+.shopping_cart_p .shop_order_table2 .tax_td {
   padding-top: 16px;
 }
 .shopping_cart_p .shop_order_table2 td {
@@ -1319,8 +1328,69 @@ textarea {
 }
 
 /* login form */
+
+/* .login-form .input_list input {
+  z-index: 8;
+  width: 100%;
+  height: 50px;
+  padding-left: 100px;
+  color: #333;
+  font-size: 15px;
+  border: 0;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.login-form .input_list label {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  z-index: 9;
+} */
+/* .login-form .input_list .label2 {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  z-index: 9;
+} */
+
 .login_page .title_container .title_span {
   display: none;
+}
+.login-form {
+  display: flex;
+  justify-content: space-between;
+}
+.login-form .input {
+  position: relative;
+  height: 50px;
+  width: 363px;
+}
+.login-form .input input {
+  display: block;
+  height: 50px;
+  font-size: 16px;
+  width: 363px;
+  padding: 0 0 0 25%;
+  border: 1px solid #ddd;
+  border-radius: 0.2rem;
+  outline: none;
+}
+.login-form .input label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.025rem;
+  transform: translateY(-50%);
 }
 .login_page_wrap {
   width: 100%;
@@ -1337,20 +1407,21 @@ textarea {
 .login_page_wrap .login-form {
   height: 113px;
 }
-.login_page_wrap .input_list {
+/* .login_page_wrap .input_list {
   float: left;
   display: block;
   margin-right: 10px;
-}
-.login_page_wrap .input_list input {
+} */
+/* .login_page_wrap .input_list input {
   padding: 1px 2px 1px 100px;
   height: 50px;
   width: 365px;
   border: 1px solid #ddd;
-}
+} */
 .login_page_wrap .login-form button {
   width: 25%;
   height: 115px;
+  float: right;
   line-height: 115px;
   font-size: 15px;
   color: #fff;
@@ -1684,7 +1755,7 @@ textarea {
   background: #555;
   color: white;
   padding: 10px 20px 0 20px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .inquiry .category_list {
   margin-top: 20px;
@@ -1728,7 +1799,7 @@ textarea {
   text-align: center;
 }
 .inquiry .button_list a {
-  padding: 15px 50px;
+  padding: 13px 70px;
   margin-right: 10px;
   border: 1px solid #555;
 }
