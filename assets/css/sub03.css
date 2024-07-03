@@ -680,8 +680,11 @@
   background-color: var(--bs-gray);
   color:var(--bs-white);
 }
+
 .product_detail .pd_detail_review .pd_rw_img img {
+  transition: all 0.1s linear;
   width: 65px;
+  border: 1px solid transparent;
   height:65px;
 }
 .product_detail .pd_detail_review .rw_para {
@@ -693,7 +696,15 @@
   display: flex;
   font-weight: 500;
   align-items: start;
+  transition: all 0.2s linear;
   gap: 8px;
+}
+.product_detail .modal-trigger:hover {
+  color: var(--bs-primary);
+}
+.product_detail .pd_detail_review .pd_rw_img img:hover {
+  border: 1px solid var(--bs-black);
+  
 }
 .pd_review_mb h3 .rw_para_gif {
   display: flex;
