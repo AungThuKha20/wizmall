@@ -1061,7 +1061,9 @@
   .shopping_cart .shopping_m .order_member_btn .shopping_cart_btn {
     display: none;
   }
-
+  .shopping_cart.shopping_delete .shopping_m .crt_total{
+    padding:0;
+   }
   .shopping_cart .shopping_m .crt_total {
     padding: 20px 15px;
   }
@@ -1079,6 +1081,10 @@
     text-align: right;
   }
   /* mobile end */
+
+  .shopping_delete .order_member_btn .on {
+    width: 45%;
+}
   .inquiry .button_list a {
     padding: 10px 50px;
     font-size: 13px;
@@ -1587,7 +1593,7 @@
   .shopping_cart .shopping_m .order_member_btn .shopping_cart_btn {
     display: none;
   }
-
+ 
   .shopping_cart .shopping_m .crt_total {
     padding: 20px 15px;
   }

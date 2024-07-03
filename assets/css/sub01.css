@@ -940,7 +940,46 @@ body {
   box-sizing: border-box;
   cursor: pointer;
 }
-
+.shopping_delete .order_member_btn .on {
+  width: 30%;
+}
+.shopping_delete .order_member_btn .on.shop_btn {
+background: #555;
+}
+.shopping_cart.shopping_delete{
+  width: 100%;
+}
+.shopping_cart.shopping_delete .shopping_m .shopping_info {
+  display: flex;
+  padding: 12px 11px;
+  height: 107px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: space-between;
+}
+.shopping_delete .shopping_m .shopping_btn {
+  margin: 20px auto;
+  padding: 0 8px;
+}
+.shopping_delete .shopping_m .crt_total h2{
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.shopping_delete .shopping_m .shopping_btn .btn_small {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 17px;
+  font-size: 12px;
+  color: #444;
+  background: #f7f7f7;
+  border-radius: 2px;
+  margin-left: 5px;
+  border: 1px solid #ddd;
+  border-right-color: #bbb;
+  border-bottom-color: #bbb;
+}
 /**************************shopping order *************/
 .shopping_cart .order_member_btn .on {
   background: #ef4023;
@@ -1066,6 +1105,13 @@ body {
 /* brand */
 .brand_shop .product_search_list  li{
   height: auto;
+}
+/*  */
+.cart_total h2{
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  margin: 0 0 12px;
 }
 /************************ product Search **********************/
 .product_search_list .search_detail {
