@@ -283,10 +283,7 @@
   .pd_detail_reviews {
     display: none;
   }
-  .sub_cate_select1,
-  .sub_cate_select2 {
-    display: none;
-  }
+
   .community_parent .sub_cate_select1,
   .community_parent .sub_cate_select2 {
     display: flex !important;
