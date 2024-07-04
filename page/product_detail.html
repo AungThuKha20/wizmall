@@ -77,7 +77,44 @@
   <body>
     ${require('./include/_header.html')}
     ${require('./include/_quick_menu.html')}
-    ${require('./include/_subMenuCate.html')}
+    <div class="sub_banner ">
+      <ul class="sub_cate_gp container">
+       <li class="home_icon">
+           <a href="/dist/main.html"><img src="/assets/imgs/icons/home_ico.png" alt=""></a>
+       </li>
+       <li class="li_ico mobile_hidden"></li>
+       <li class="sub_cate_select1 mobile_hidden ">
+           <div class="custom-select">
+               <select>
+                 <option value="option1">전체보기</option>
+                 <option value="option2">여성의류</option>
+                 <option value="option3" selected>남성의류</option>
+                 <option value="option4">패션잡화</option>
+                 <option value="option5">화장품/뷰티</option>
+                 <option value="option6">출산/완구/아동용품</option>
+                 <option value="option7">가구/인테리어/리빙</option>
+                 <option value="option8">취미/스포츠/자동차</option>
+                 <option value="option9">디지털/가전</option>
+                 <option value="option10">도서/상품권</option>
+               </select>
+             </div>
+       </li>
+       <li class="li_ico"></li>
+       <li class="sub_cate_select2 mobile_hidden ">
+           <div class="custom-select">
+               <select>
+                 <option value="option2">전체보기</option>
+                 <option value="option3">하위분류 1</option>
+                 <option value="option4">하위분류 2</option>
+                 <option value="option5">하위분류 3</option>
+               </select>
+             </div>
+       </li>
+       <li style="display: none;" class="pc_hidden breadcrumbEl2 "></li>
+       <li style="display: none;" class="li_ico"></li>
+       <li class="pc_hidden breadcrumbsEl "></li>
+    </ul>
+    </div>
 
     <div class="container product_detail">
       <div class="pd_detail">
@@ -917,49 +954,6 @@
               2024-05-21
             </td>
           </tr>
-          <div class="pd_detail_swiper_gp">
-            <span class="close">&times;</span>
-            <div
-              style="
-                --swiper-navigation-color: #fff;
-                --swiper-pagination-color: #fff;
-              "
-              class="swiper mySwiper_rw2"
-            >
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210011_R.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210014_R.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210015_R.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210016_R.jpg" />
-                </div>
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-            </div>
-            <div thumbsSlider="" class="swiper mySwiper_rw">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210011_R.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210014_R.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210015_R.jpg" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="/assets/imgs/sub02/2004210016_R.jpg" />
-                </div>
-              </div>
-            </div>
-          </div>
         </table>
         <div class="pd_reviews_mb pc_hiddens">
           <div class="pd_review_mb">
@@ -975,11 +969,11 @@
             </div>
 
             <div class="pd_rw_img_mb">
-              <img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" />
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" /> </a>
             </div>
             <div class="pd_mb_date">
               <h4>홍*동 <span>2013.11.11 </span></h4>
@@ -1016,11 +1010,91 @@
             </div>
 
             <div class="pd_rw_img_mb">
-              <img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" />
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" /> </a>
+            </div>
+            <div class="pd_mb_date">
+              <h4>홍*동 <span>2013.11.11 </span></h4>
+            </div>
+            <h3>
+              <a href="" class="modal-trigger"
+                >[마이템] 시원에어 무릎케어 안마기 GKNM-001
+              </a>
+              <div class="rw_para_gif">
+                <img src="/assets/imgs/sub02/icon_hit.gif" alt="" />
+                <img src="/assets/imgs/sub02/icon_new.gif" alt="" />
+                <img src="/assets/imgs/sub02/icon_sale.gif" alt="" />
+              </div>
+            </h3>
+            <div class="pd_mb_para">
+              <p>
+                열이많은 신랑이라 요즘처럼 살짝 따뜻해지면 두꺼운티를
+                불편해하더라구요 <br />
+                적당히 얇으면서 핏이 예쁘게 떨어지는 티를 찾아보았는데 <br />
+                이제품이 기본디자인에 깔끔해서 맘에들었어요..
+              </p>
+            </div>
+          </div> <div class="pd_review_mb">
+            <div class="pd_rw_header">
+              <h4>판매자 : 주식회사 도움</h4>
+              <div class="pd_rw_stars">
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+              </div>
+            </div>
+
+            <div class="pd_rw_img_mb">
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" /> </a>
+            </div>
+            <div class="pd_mb_date">
+              <h4>홍*동 <span>2013.11.11 </span></h4>
+            </div>
+            <h3>
+              <a href="" class="modal-trigger"
+                >[마이템] 시원에어 무릎케어 안마기 GKNM-001
+              </a>
+              <div class="rw_para_gif">
+                <img src="/assets/imgs/sub02/icon_hit.gif" alt="" />
+                <img src="/assets/imgs/sub02/icon_new.gif" alt="" />
+                <img src="/assets/imgs/sub02/icon_sale.gif" alt="" />
+              </div>
+            </h3>
+            <div class="pd_mb_para">
+              <p>
+                열이많은 신랑이라 요즘처럼 살짝 따뜻해지면 두꺼운티를
+                불편해하더라구요 <br />
+                적당히 얇으면서 핏이 예쁘게 떨어지는 티를 찾아보았는데 <br />
+                이제품이 기본디자인에 깔끔해서 맘에들었어요..
+              </p>
+            </div>
+          </div> <div class="pd_review_mb">
+            <div class="pd_rw_header">
+              <h4>판매자 : 주식회사 도움</h4>
+              <div class="pd_rw_stars">
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+                <img src="/assets/imgs/icons/star.png" alt="" />
+              </div>
+            </div>
+
+            <div class="pd_rw_img_mb">
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" /> </a>
+              <a href="" class="modal-trigger"><img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" /> </a>
             </div>
             <div class="pd_mb_date">
               <h4>홍*동 <span>2013.11.11 </span></h4>
@@ -1044,86 +1118,47 @@
               </p>
             </div>
           </div>
-          <div class="pd_review_mb">
-            <div class="pd_rw_header">
-              <h4>판매자 : 주식회사 도움</h4>
-              <div class="pd_rw_stars">
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
+        </div>
+        <div class="pd_detail_swiper_gp">
+          <span class="close">&times;</span>
+          <div
+            style="
+              --swiper-navigation-color: #fff;
+              --swiper-pagination-color: #fff;
+            "
+            class="swiper mySwiper_rw2"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210011_R.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210014_R.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210015_R.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210016_R.jpg" />
               </div>
             </div>
-
-            <div class="pd_rw_img_mb">
-              <img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" />
-            </div>
-            <div class="pd_mb_date">
-              <h4>홍*동 <span>2013.11.11 </span></h4>
-            </div>
-            <h3>
-              <a href="" class="modal-trigger"
-                >[마이템] 시원에어 무릎케어 안마기 GKNM-001
-              </a>
-              <div class="rw_para_gif">
-                <img src="/assets/imgs/sub02/icon_hit.gif" alt="" />
-                <img src="/assets/imgs/sub02/icon_new.gif" alt="" />
-                <img src="/assets/imgs/sub02/icon_sale.gif" alt="" />
-              </div>
-            </h3>
-            <div class="pd_mb_para">
-              <p>
-                열이많은 신랑이라 요즘처럼 살짝 따뜻해지면 두꺼운티를
-                불편해하더라구요 <br />
-                적당히 얇으면서 핏이 예쁘게 떨어지는 티를 찾아보았는데 <br />
-                이제품이 기본디자인에 깔끔해서 맘에들었어요..
-              </p>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
-          <div class="pd_review_mb">
-            <div class="pd_rw_header">
-              <h4>판매자 : 주식회사 도움</h4>
-              <div class="pd_rw_stars">
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
-                <img src="/assets/imgs/icons/star.png" alt="" />
+          <div thumbsSlider="" class="swiper mySwiper_rw">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210011_R.jpg" />
               </div>
-            </div>
-
-            <div class="pd_rw_img_mb">
-              <img src="/assets/imgs/sub02/2004210015_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210016_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210020_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210033_R.jpg" alt="" />
-              <img src="/assets/imgs/sub02/2004210022_R.jpg" alt="" />
-            </div>
-            <div class="pd_mb_date">
-              <h4>홍*동 <span>2013.11.11 </span></h4>
-            </div>
-            <h3>
-              <a href="" class="modal-trigger"
-                >[마이템] 시원에어 무릎케어 안마기 GKNM-001
-              </a>
-              <div class="rw_para_gif">
-                <img src="/assets/imgs/sub02/icon_hit.gif" alt="" />
-                <img src="/assets/imgs/sub02/icon_new.gif" alt="" />
-                <img src="/assets/imgs/sub02/icon_sale.gif" alt="" />
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210014_R.jpg" />
               </div>
-            </h3>
-            <div class="pd_mb_para">
-              <p>
-                열이많은 신랑이라 요즘처럼 살짝 따뜻해지면 두꺼운티를
-                불편해하더라구요 <br />
-                적당히 얇으면서 핏이 예쁘게 떨어지는 티를 찾아보았는데 <br />
-                이제품이 기본디자인에 깔끔해서 맘에들었어요..
-              </p>
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210015_R.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/imgs/sub02/2004210016_R.jpg" />
+              </div>
             </div>
           </div>
         </div>

@@ -280,7 +280,7 @@ $(document).ready(function () {
   var swiper_rw2 = new Swiper(".mySwiper_rw2", {
     loop: true,
     slidesPerView: 1,
-    spaceBetween:400,
+    spaceBetween:100,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

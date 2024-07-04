@@ -8,7 +8,7 @@ $(document).ready(function () {
     mypage_my_order_detail2: "주문 · 배송조회",
     mypage_my_order_return: "주문반품",
     mypage_qna: "1:1문의",
-    mypage_navLinks:"마이페이지",
+    mypage_navLinks: "마이페이지",
     mypage_qna_create: "1:1문의",
     mypage_qna_view: "문의상세",
     mypage_withdrawal: "회원탈퇴",
@@ -48,16 +48,39 @@ $(document).ready(function () {
     store_company_terms: "입점업체 가입 약관",
     store_company: "입점업체",
   };
-  // let breadcrumbsEl = document.querySelector(".title_container .menu span");
-  let breadcrumbsEl = document.querySelector(".pc_hidden.breadcrumbsEl");
-  console.log("breadcrumbsEl", breadcrumbsEl);
-  if (breadcrumbsEl === null) return;
 
-  let origin = breadcrumbsEl.textContent.split(">")[0].trim();
+  const BreadcrumbsDisplay2 = {
+    // -- mypage
+    mypage: " 마이페이지 ",
+    // // -- community
+    // community: "bbbbb",
+    // -- product
+    product: "전체보기 ",
+
+  };
+
+  let breadcrumbsEl = document.querySelector(".pc_hidden.breadcrumbsEl");
+  let breadcrumbsEl2 = document.querySelector(".pc_hidden.breadcrumbEl2");
+
+  console.log("breadcrumbsEl", breadcrumbsEl);
+  console.log("breadcrumbsEl2", breadcrumbsEl2);
+
+  if (breadcrumbsEl === null || breadcrumbsEl2 === null) return;
+     
   let current = window.location.href
     .split("/")
     .slice(-1)[0]
     .replace(".html", "");
 
+  let origin = breadcrumbsEl.textContent.split(">")[0].trim();
   breadcrumbsEl.textContent = `${origin} ${BreadcrumbsDisplay[current]}`;
+
+  for (const key in BreadcrumbsDisplay2) {
+    if (BreadcrumbsDisplay2.hasOwnProperty(key) && current.includes(key) ) {
+
+        breadcrumbsEl2.textContent = BreadcrumbsDisplay2[key];
+        
+      
+    }
+  }
 });
