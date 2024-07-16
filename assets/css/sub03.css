@@ -1388,3 +1388,23 @@
   font-size: 0.8rem;
   color: #777;
 }
+/* mobile_version */
+.myorder_detail_mb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.myorder_detail_mb .order_dt {
+  max-width: 200px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.myorder_detail_mb .order_dt p {
+  text-align: center;
+}
+.myorder_detail_mb .order_dt img {
+  width: 75px;
+  height:75px;
+} 

@@ -34,14 +34,14 @@
       })(document);
     </script>
   </head>
-  <body>
+  <body class="my_order_dt">
     ${require('./include/_header.html')}
     <div style="width: 100%" class="gry_bar_pc_hidden">
       ${require('./include/_subMenuCate.html')}
       <div class="gry_bar"></div>
     </div>
     ${require('./include/_quick_menu.html')}
-    <div class="container">
+    <div class="container my_order mobile_hiddens">
       <div class="my_page my_order_detail">
         <div class="title_container">
           <h2 class="title">마이페이지</h2>
@@ -80,12 +80,12 @@
             </li>
           </ul>
         </div>
-        <div class="my_page my_order_detail order_detail_cont">
+        <div class="my_page my_order_detail order_detail_cont ">
           <table class="order_detail_cont table_cont">
             <thead>
               <tr>
                 <th class="th_label2" style="width: 7%">이미지</th>
-                <th class="th_label2 label2_mobile" style="text-align: center">
+                <th class="th_label2" style="text-align: center">
                   구매상품정보
                 </th>
                 <th class="th_label2" style="width: 10%">제품가격</th>
@@ -165,8 +165,18 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <div class="my my_order_detail order_detail_cont2">
+        <!-- </div>
+        <div class="my_page myorder_detail_mb">
+          <div class="myorder_mb">
+            <div class="order_dt">
+              <img src="/assets/imgs/sub02/my_order/fun.jpg" alt="">
+              <p class="order_ttl_mb">
+                [디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)
+              </p>
+            </div>
+          </div>
+        </div> -->
+        <div class="my my_order_detail order_detail_cont2 ">
           <h2 class="order_title">주문자 정보</h2>
           <table class="order_detail_cont2 table_cont">
             <tbody>
@@ -217,11 +227,129 @@
         <div class="button_list_conts">
           <div></div>
           <div class="link_btn_container">
-            <a href="/dist/mypage_my_order_cancel.html" class="submit_btn">주문취소</a>
+            <a href="/dist/mypage_my_order_cancel.html" class="submit_btn">주문반품</a>
             <a href="#" class="cancel_btn">프린트하기</a>
           </div>
           <div></div>
         </div>
+      </div>
+    </div>
+    </div>
+    <div class="container my_order shopping_cart shopping_order pc_hiddens">
+      <div class="shopping_m">
+        <div class="shopping_cont shopping_order_cont">
+          <div class="img_box">
+            <img src="/assets/imgs/sub02/my_order/fun.jpg" alt="" />
+          </div>
+          <div class="shopping_cont_text">
+            <div class="prd_tit">
+              <a href="#">
+                [디버거] THE FAN 3in1 멀티선풍기 핸디/접이식_(1011021)</a
+              >
+            </div>
+
+            <div class="shopping_cont_text_list">
+              <div class="shopping_cont_left_text">
+                <span style="font-size: 12px">상품가격</span> <br />
+                <span style="font-size: 12px">적립금</span> <br />
+                <span style="font-size: 12px">수량</span>
+              </div>
+              <div class="shopping_cont_right_text">
+                <span class="prd_price">22,000</span> <br />
+                <span style="font-size: 12px"> 1,100원</span>
+                <br />
+                <span>1</span>
+              </div>
+            </div>
+          </div>
+          <input type="checkbox" class="check_box" />
+        </div>
+        <hr />
+        <div class="shopping_info">
+          <div class="shopping_info_cont_left">
+            <span> 판매자 : 입점업체2(000-0000-0000)</span><br />
+            <span>[배송비 : 50,000원 이상구매시 무료]</span>
+          </div>
+          <div class="shopping_info_cont_right">
+            <span> 상품가격 22,000원</span><br />
+            <span>배송비3,000원</span>
+          </div>
+        </div>
+        <table class="order_detail_cont table_cont" >
+          <tbody>
+            <tr>
+              <td class="td_label6_sub" style="width: 20%">주문번호</td>
+              <td class="td_label6" style="width: 30%">231219163703141</td>
+              <td class="td_label6_sub" style="width: 20%">주문일</td>
+              <td class="td_label6" style="width: 30%">
+                2023-12-19 16:37:03
+              </td>
+            </tr>
+            <tr>
+              <td class="td_label6_sub">결제방법</td>
+              <td class="td_label6" colspan="3">무통장입금</td>
+            </tr>
+            <tr>
+              <td class="td_label6_sub" style="width: 20%">입금계좌</td>
+              <td class="td_label6" style="width: 30%">
+                신한은행 000-000-00000 테스트
+              </td>
+              <td class="td_label6_sub" style="width: 20%">입금자명</td>
+              <td class="td_label6" style="width: 30%">관리자</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="my my_order_detail order_detail_cont2 ">
+          <h2 class="order_title">주문자 정보</h2>
+          <table class="order_detail_cont2 table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub">주문하시는 분</td>
+                <td class="td_label6">d</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">휴대전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">이메일</td>
+                <td class="td_label6">123@123.com</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">주소</td>
+                <td class="td_label6">[05237] 서울 강동구 아리수로 46 123</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="order_title">배송지 정보</h2>
+          <table class="order_detail_cont2 table_cont">
+            <tbody>
+              <tr>
+                <td class="td_label6_sub">주문하시는 분</td>
+                <td class="td_label6">d</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">휴대전화번호</td>
+                <td class="td_label6">123-123-123</td>
+              </tr>
+              <tr>
+                <td class="td_label6_sub">주소</td>
+                <td class="td_label6">[05237] 서울 강동구 아리수로 46 123</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      
       </div>
     </div>
     ${require('./include/_footer.html')}

@@ -300,8 +300,11 @@
   .pc_hiddens {
     display: inline-block;
   }
-  .mobile_hiddens {
+  .my_order_dt .pc_hiddens {
     display: none;
+  }
+  .my_order_dt .mobile_hiddens {
+    display: inline-block;
   }
   /* main swiper  */
   .swiper-button-next,
@@ -625,6 +628,12 @@
   .store_company .store_mail_basic .mail_basic_table td {
     font-size: 12px;
     font-weight: 500;
+  }
+  .my_order_dt .pc_hiddens {
+    display: inline-block;
+  }
+  .my_order_dt .mobile_hiddens {
+    display: none;
   }
 }
 @media screen and (max-width: 483px) {
