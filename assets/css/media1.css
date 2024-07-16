@@ -1454,6 +1454,17 @@
     /* width: 332px; */
     padding: 5px;
   }
+  .my_order_dt .shopping_cont_text {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    height: fit-content;
+  }
+  .my_order_dt .shopping_m .shopping_cont {
+    height: fit-content;
+  }
+ 
+ 
   .shopping_cart .shopping_m .shopping_cont .shopping_cont_left_text,
   .shopping_cart .shopping_m .shopping_cont .shopping_cont_right_text {
     font-size: 12px;
@@ -2139,7 +2150,9 @@
     box-sizing: border-box;
     font-size: 12px;
   }
-
+  .my_order_dt .shopping_m .shopping_cont_left_text {
+    margin-top: 5px;
+  }
   .notice .section_select {
     margin: 20px 0;
     font-size: 12px;
